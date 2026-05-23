@@ -1,0 +1,66 @@
+=============
+>> TECHNOS << 
+=============
+	#--- Targeted positions   : Dev Back-end, Dev FullStack, Tech-Lead, Chef de Projet                              ---#
+	#--- Main Skills acquired : Java(Springboot), PHP(Symfony), Javascript(Node.js,Angular*), Talend, SQL(PL/SQL)   ---#
+
+
+Front-end
+  -HTML/CSS, SCSS*, SASS*
+  -Javascript, TypeScript*
+  -CMS : Drupal, Wordpress*
+  -Frameworks : Angular*, ReactJS*
+
+
+
+Back-end
+  -Java, Apache Spark for Java, Framework Springboot
+  -PHP, Framework Symfony
+  -NodeJS* (développer des APIs, manipuler des fichiers, communiquer avec une bdd)
+
+
+
+Databases
+  -Langage : SQL, PL/SQL (Procedural SQL for Relationnels Databases)
+  -Relationnels : MySQL, PostgreSQL, SQL Server, Oracle
+  -NoSQL : MongoDB* (bdd orienté documents), Redis* (bdd orienté key value)
+
+
+
+Autres (par catégorie)
+  -OS : Windows, Linux
+  -Postman : Postman est une application (desktop ou web) permettant d’envoyer des requêtes HTTP à un serveur et de visualiser les réponses. 
+	     Il remplace l’utilisation manuelle de la ligne de commande (comme curl) par une interface graphique simple et puissante.
+             Chez Bouygues je l'ai utilisé pour tester des APIs , Single Sign On (SSO) , Micro Services
+  -Gestion de versions : Git avec code hébergé sur GitLab ou GitHub et géré via client comme TortoiseGit, Gitkraken*, Fork*
+  -Single Sign On : OpenID, OAuth2
+  -Cloud AWS : EC2, RDS, Bucket S3 Storage, AWS Lambda
+  -Architecture : Monolithique, Client-Serveur, MVC, micro-services, API, SOA (orienté services)
+  -ETL : Talend Open Studio for Data Integration (version 7.3)
+  -Tests unitaires : Slf4J, Log4J2, JUnit, Mockito*
+  -Mapping ORM : Hibernate(Java), Spring Data JPA(SpringBoot), Doctrine(PHP Symfony)
+  -Stream distribué : Apache Kafka, RabbitMQ, Amazon SQS (Simple Queue Service)
+  -CI/CD : GitLab CI/CD, Jenkins*
+  -Build : Maven, Gradle*, NPM
+  -Gestion dépendences : Maven, NPM, Composer, Yum
+  -Gestion Configuration et Déploiment : Ansible
+  -Gestion Artifactory : JFrog Artifactory
+  -Conteneurisation : Docker*, Kubernetes* avec utilisaton de helm* (gestionnaire de paquets pour kubernetes)
+  -Quality code : SonarQube*
+  -Observabilité : Grafana , ELK (ElasticSearch, Loki, Kibana)
+  -IA : ia générative, auto-complétion de code, agents ia (GitHub Copilot, Diffblue cover, …)
+
+
+
+Plateformes codes en ligne : Account created : user => mouhamadoulo39@gmail.com || password => CMDER25metzo??
+--------------------------
+=> codecademy
+=> freeCodeCamp
+=> Codewars
+=> leetcode (username = MOLO-92)
+=> Grafikart user : Mouhamadou0710 => password : CMDER25metzo??
+
+
+
+
+(*) : not enough knowledge or experience yet

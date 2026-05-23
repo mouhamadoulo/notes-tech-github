@@ -1,0 +1,98 @@
+Vision & périmètre fonctionnel
+------------------------------
+=> Quel est le rôle exact de chaque service ?
+=> Quels processus métier sont couverts ? 
+	- Vente ?
+	- Encaissement ?
+	- Retours / annulations ?
+	- Gestion des stocks ?
+	- Ouverture / fermeture de caisse ?
+=> Quelle est la criticité métier de chaque service ?
+=> Qui sont les utilisateurs finaux ?
+	- Vendeurs en boutique ?
+	- autres users ?
+=> Quels sont les flux critiques en temps réel (paiement, ticket, validation) ?
+
+
+Architecture globale
+--------------------
+=> Combien y a-t-il de microservices ?
+=> Sont-ils vraiment indépendants ou plutôt un modular monolith déguisé ?
+=> Comment communiquent-ils ?
+	- REST ?
+	- Kafka / JMS ?
+	- Synchrone vs asynchrone ?
+=> Existe-t-il un schéma d’architecture à jour ?
+=> Y a-t-il un API Gateway ?
+
+
+Stack technique Java
+--------------------
+=> Version de Java utilisée ?
+=> Framework principal ? Spring Boot ? quelle version ?
+=> Tests :
+	- Unitaires ?
+	- Intégration ?
+	- Tests contractuels ?
+=> Y a-t-il des librairies internes SFR ?
+=> Combien d'environnements ?
+
+
+Données & persistance
+---------------------
+=> Quelles bases de données ?
+=> Une base par service ou base partagée ?
+
+
+Sécurité & conformité
+---------------------
+Indispensable dans un contexte SFR / paiement :
+- Authentification ?
+	-OAuth2 ?
+	-JWT ?
+- Gestion des rôles (vendeur, manager, admin) ?
+- Données sensibles :
+	-PCI-DSS ?
+	-Données clients ?
+- Journalisation légale des transactions ?
+- Gestion des droits par magasin ?
+
+
+Déploiement & exploitation
+--------------------------
+Pour éviter les surprises en prod :
+- Environnements existants ?
+	-DEV / INT / REC / PROD ?
+- Conteneurisation ?
+	-Docker ?
+	-Kubernetes ?
+- Fréquence de déploiement ?
+- CI/CD :
+	-Jenkins ?
+	-GitLab CI ?
+-Monitoring :
+	-Logs centralisés ?
+	-Alerting ?
+-Que se passe-t-il si un service tombe en pleine vente ?
+
+Résilience & performance
+------------------------
+Montée en charge :
+- Pic d’activité (soldes, Noël) ?
+
+Organisation & process
+----------------------
+Pour savoir comment bosser efficacement :
+- Qui est référent technique ?
+- Qui valide le fonctionnel ?
+- Y a-t-il de la documentation métier ?
+- Comment sont gérés :
+	-Les incidents ?
+	-Les urgences prod ?
+- Méthodologie :
+	-Scrum ?
+	-Kanban ?
+- Définition du “Done” ?
+
+
+

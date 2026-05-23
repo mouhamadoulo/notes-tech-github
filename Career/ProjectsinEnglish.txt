@@ -1,0 +1,41 @@
+Projects in English
+
+🔷 Global Context (Introduction)
+I worked for seven years as a Fullstack Java developer on several internal business applications related to billing, roaming, special numbers and international routing.
+These tools were initially developed by business teams and were running on legacy and non-secure infrastructures.
+The IT department took ownership of these applications to make them compliant with Bouygues security standards.
+
+🔹 Project 1 – Migration to a Secured Zone
+The first project consisted in migrating legacy business tools to a secured on-premise environment.
+
+Responsibilities:
+- Setting up new production servers with proper storage and RAM
+- Installing and configuring databases, application servers and web servers
+- Migrating frontend applications and backend processing
+- Implementing secure file transfer flows between systems
+- Performing connectivity, functional and non-regression tests
+- Working closely with business users during testing phases
+- Spending time with end users to understand their workflows and usage of the tools
+
+👉 Mots clés à placer : legacy migration, security compliance, on-premise infrastructure
+
+
+🔹 Project 2 – Cloud Migration to AWS
+The second project focused on migrating these applications to the AWS cloud.
+
+Responsibilities:
+- Cloudifying applications, databases and file systems
+- Using AWS services such as EC2, RDS, S3 and Lambda
+- Collaborating with multiple teams: cloud, DevOps, DBAs, SSO, operations and business teams
+- Setting up CI/CD pipelines using GitLab CI/CD, Artifactory and iDeploy
+- Cost estimation and optimization
+- Working in an agile environment with daily stand-ups
+- Ensuring test environments were properly set up
+- Regular meetings with operations and business teams during UAT
+
+👉 Mots clés forts : cloud migration, CI/CD, DevOps, cross-team collaboration
+
+🔹Project 3: Development of Spring Boot Batch Processing for a Data Warehouse with 4 Oracle Schemas (SHELTER)
+- Design and development of Spring Boot batch jobs for loading data from databases to databases and from files to databases
+- Refactoring of existing Talend jobs into pure Java implementations using the Apache Spark library
+- Development of Spring Boot batch modules (file comparison module, rejected ticket recycling module from RabbitMQ queues)
