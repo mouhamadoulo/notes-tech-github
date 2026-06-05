@@ -186,10 +186,3 @@ SCRUM fonctionne mieux avec :
 * une communication fluide
 * un objectif clair par sprint
 
----
-
-Si tu veux, je peux aussi te faire :
-
-* une **fiche ultra simplifiée pour réviser**
-* un **exemple concret de projet en SCRUM**
-* ou un **quiz pour t’entraîner** 👍
