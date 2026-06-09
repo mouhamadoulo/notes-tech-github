@@ -1,6 +1,6 @@
 # KUBERNETES
 <div align="center">
-	<img src="images/kubernetes.png" height="400" width="400" />
+	<img src="../images/kubernetes.png" height="400" width="400" />
 </div>
 
 ## 🌍 <ins>Kubernetes (K8s) — c’est quoi exactement ?</ins>
@@ -28,7 +28,7 @@ Avec Kubernetes :
 
 ## 🧱 <ins>Les concepts fondamentaux (ultra important)</ins>
 <div align="center">
-	<img src="images/kubernetes2.png" height="600" width="600" />
+	<img src="../images/kubernetes2.png" height="600" width="600" />
 </div>
 
 **Cluster**<br>
