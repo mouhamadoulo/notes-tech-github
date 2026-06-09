@@ -1,6 +1,6 @@
 # VERCEL
 <div align="center">
-	<img src="images/Vercel-Logo.jpg" height="650" width="650" />
+	<img src="../images/Vercel-Logo.jpg" height="650" width="650" />
 </div>
 
 Vercel est devenu le standard de l'industrie pour déployer des applications Frontend.
