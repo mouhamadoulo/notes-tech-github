@@ -1,6 +1,6 @@
 # DOCKER
 <div align="center">
-	<img src="images/docker.png" height="450" width="450" />
+	<img src="../images/docker.png" height="450" width="450" />
 </div>
 
 ## 1.C’est quoi Docker (en une phrase)
