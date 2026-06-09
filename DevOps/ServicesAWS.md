@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="images/aws.png" height="350" width="350" />
+	<img src="../images/aws.png" height="350" width="350" />
 </div>
 
 ```
@@ -13,7 +13,7 @@ et des agences fédérales de premier plan) utilisent AWS pour réduire leurs co
 
 ## AWS CloudFormation
 <div align="center">
-	<img src="images/cloudformation.png" height="350" width="350" />
+	<img src="../images/cloudformation.png" height="350" width="350" />
 </div>
 
 ```
@@ -26,7 +26,7 @@ Use cases : Gérer l'infrastructure avec DevOps, Mettre à l'échelle des piles 
 ```
 ## Amazon EC2 (Elastic Compute Cloud)
 <div align="center">
-	<img src="images/ec2.jpeg" height="350" width="350" />
+	<img src="../images/ec2.jpeg" height="350" width="350" />
 </div>
 
 ```
@@ -42,7 +42,7 @@ Use cases : Exécuter des applications métier et natives cloud
 
 ## Amazon RDS
 <div align="center">
-	<img src="images/rds.png" height="350" width="350" />
+	<img src="../images/rds.png" height="350" width="350" />
 </div>
 
 ```
@@ -61,7 +61,7 @@ Use cases : Créer des apps web et mobiles, passer aux bases de données gérée
 
 ## Amazon S3 (Simple Storage Service)
 <div align="center">
-	<img src="images/s3.jpg" height="350" width="350" />
+	<img src="../images/s3.jpg" height="350" width="350" />
 </div>
 
 ```
@@ -80,7 +80,7 @@ Use cases : Créer un lac de données, Sauvegarder et restaurer des données, Ar
 
 ## AWS Lambda
 <div align="center">
-	<img src="images/lambda.jpg" height="350" width="350" />
+	<img src="../images/lambda.jpg" height="350" width="350" />
 </div>
 
 ```
