@@ -96,7 +96,7 @@ docker run -d -p 8080:80 nginx
 
 ## 6.Gérer les conteneurs
 <div align="center">
-	<img src="images/docker2.png" height="450" width="450" />
+	<img src="../images/docker2.png" height="450" width="450" />
 </div>
 
 **Lister les conteneurs**
