@@ -1,6 +1,6 @@
 # CI/CD
 <div align="center">
-	<img src="images/cicdimg.png" height="650" width="650" />
+	<img src="../images/cicdimg.png" height="650" width="650" />
 </div>
 
 ## 1. Qu’est-ce que le CI/CD ?
