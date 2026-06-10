@@ -119,7 +119,7 @@ orders(id, user_id, amount)
 
 🔹**INNER JOIN (jointure interne)**<br>
 <div align="center">
-	<img src="images/innerjoin.png" height="200" width="200" />
+	<img src="../images/innerjoin.png" height="200" width="200" />
 </div>
 
 **Principe :**<br>
@@ -133,7 +133,7 @@ INNER JOIN orders o ON u.id = o.user_id;
 
 🔹**LEFT JOIN (ou LEFT OUTER JOIN)**<br>
 <div align="center">
-	<img src="images/leftjoin.png" height="200" width="200" />
+	<img src="../images/leftjoin.png" height="200" width="200" />
 </div>
 
 **Principe :**<br>
@@ -148,7 +148,7 @@ LEFT JOIN orders o ON u.id = o.user_id;
 
 🔹**RIGHT JOIN**<br>
 <div align="center">
-	<img src="images/rightjoin.png" height="200" width="200" />
+	<img src="../images/rightjoin.png" height="200" width="200" />
 </div>
 Inverse du LEFT JOIN (peu utilisé)
 ```sql
@@ -159,7 +159,7 @@ RIGHT JOIN orders o ON u.id = o.user_id;
 
 🔹**FULL OUTER JOIN**<br>
 <div align="center">
-	<img src="images/fullouterjoin.png" height="200" width="200" />
+	<img src="../images/fullouterjoin.png" height="200" width="200" />
 </div>
 - Toutes les lignes des deux tables
 - NULL quand pas de correspondance
@@ -172,7 +172,7 @@ FULL OUTER JOIN orders o ON u.id = o.user_id;
 
 🔹**CROSS JOIN**<br>
 <div align="center">
-	<img src="images/crossjoin.png" height="450" width="450" />
+	<img src="../images/crossjoin.png" height="450" width="450" />
 </div>
 Produit cartésien
 ```sql 
@@ -184,7 +184,7 @@ CROSS JOIN orders;
 
 🔹**SELF JOIN**<br>
 <div align="center">
-	<img src="images/selfjoin.png" height="200" width="200" />
+	<img src="../images/selfjoin.png" height="200" width="200" />
 </div>
 
 Une table jointe à elle-même
