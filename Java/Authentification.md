@@ -1,4 +1,7 @@
 # 🔐 1. <ins>Authentification vs Autorisation</ins>
+<div align="center">
+	<img src="../images/authen-vs-autho.jpg" />
+</div>
 **Avant tout :**
 - Authentification (AuthN) = Qui es-tu ?
 - Autorisation (AuthZ) = Qu’as-tu le droit de faire ?
@@ -8,6 +11,9 @@
 - Accéder à ```/admin``` → Autorisation
 
 # 🧾 2. <ins>JWT (JSON Web Token)</ins>
+<div align="center">
+	<img src="../images/jwt.png" />
+</div>
 👉 **Concept**
 Un JWT est un token signé qui contient des informations (claims).
 
@@ -15,6 +21,9 @@ Un JWT est un token signé qui contient des informations (claims).
 ```
 header.payload.signature
 ```
+<div align="center">
+	<img src="../images/jwt-structure.png" />
+</div>
 
 **Exemple :**
 ```
@@ -71,6 +80,9 @@ String user = claims.getSubject();
 
 # 🔐 3. <ins>OAuth2</ins>
 👉 OAuth2 = protocole d’autorisation, PAS d’authentification.
+<div align="center">
+	<img src="../images/oauth2-flow.png" />
+</div>
 
 🧠 **Idée principale**<br>
 Permet à une app d’accéder à une autre sans donner ton mot de passe.
@@ -120,7 +132,9 @@ http
 
 # 🔐 4. <ins>OpenID Connect (OIDC)</ins>
 👉 Extension de OAuth2 pour l’authentification
-
+<div align="center">
+	<img src="../images/openid-c.png" />
+</div>
 👉 Ajoute :
 - ID Token (JWT)
 
@@ -140,7 +154,9 @@ http
 # 🔐 5. <ins>SSO (Single Sign-On)</ins>
 **Concept**<br>
 👉 Un seul login pour plusieurs applications.
-
+<div align="center">
+	<img src="../images/sso.jpg" />
+</div>
 Exemple :
 - Tu te connectes à Google
 - Tu accèdes à Gmail, YouTube sans te reconnecter
@@ -163,7 +179,9 @@ SSO repose souvent sur :
 
 # 🔐 6. <ins>SAML (ancien mais encore utilisé)</ins>
 👉 XML-based (très utilisé en entreprise)
-
+<div align="center">
+	<img src="../images/saml.png" />
+</div>
 🔄 **Flow**
 - 1.Redirection vers IdP
 - 2.Authentification
