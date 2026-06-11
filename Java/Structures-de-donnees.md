@@ -188,3 +188,29 @@ System.out.println(set); // [A, B]
 - Logique pile ? → ```Stack```
 - Logique file ? → ```Queue```
 - Beaucoup d’insertions ? → ```LinkedList```
+
+### Tableau de décision rapide
+| Besoin                                       | Structure                    | Cas d'usage concrets                                                                                                                                                                    |
+| -------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Liste simple                                 | `ArrayList`                  | Liste de produits d'un catalogue, résultats de recherche, liste de commandes, données affichées dans un tableau UI, collection d'objets parcourue fréquemment                           |
+| Nombreuses insertions/suppressions au milieu | `LinkedList`                 | Éditeur de texte (insertion entre caractères), gestion de playlists modifiées fréquemment, simulation de files d'attente complexes, structures manipulées principalement par itérateurs |
+| Éléments uniques                             | `HashSet`                    | Vérification d'unicité d'emails, liste d'utilisateurs connectés, déduplication de données importées, ensemble de permissions, détection de doublons                                     |
+| Éléments uniques + ordre d'insertion         | `LinkedHashSet`              | Historique de recherches sans doublons, liste de tags conservant l'ordre de saisie, export de données dans l'ordre d'arrivée, favoris utilisateur                                       |
+| Éléments uniques + tri automatique           | `TreeSet`                    | Classement de scores, liste triée de dates, dictionnaire de mots triés alphabétiquement, gestion d'intervalles, récupération rapide du minimum ou maximum                               |
+| Accès clé → valeur rapide                    | `HashMap`                    | Cache d'objets, index utilisateur par ID, configuration applicative, dictionnaire de traductions, comptage de fréquences (`mot → nombre d'occurrences`)                                 |
+| Map avec ordre d'insertion                   | `LinkedHashMap`              | Génération de rapports dans l'ordre d'ajout, conservation de l'ordre des paramètres, implémentation de cache LRU, journalisation d'événements                                           |
+| Map triée                                    | `TreeMap`                    | Carnet d'ordres financiers, statistiques par date, classement d'utilisateurs, recherche de clés dans une plage de valeurs, navigation dans des données triées                           |
+| FIFO                                         | `ArrayDeque` (comme `Queue`) | File de traitement de tâches, système de messagerie, gestion des requêtes en attente, parcours en largeur (BFS), pipeline de traitement                                                 |
+| LIFO (pile)                                  | `ArrayDeque`                 | Fonctionnalité Undo/Redo, navigation précédent/suivant, évaluation d'expressions mathématiques, parcours en profondeur (DFS), gestion d'appels récursifs simulés                        |
+| Priorités                                    | `PriorityQueue`              | Ordonnancement de tâches, gestion des urgences, algorithme de Dijkstra, moteur de recommandations basé sur un score, simulation d'événements chronologiques                             |
+
+### Mémo rapide
+| Si vous devez...                                | Utilisez généralement  |
+| ----------------------------------------------- | ---------------------- |
+| Stocker une liste d'objets                      | `ArrayList`            |
+| Retrouver rapidement un objet par identifiant   | `HashMap`              |
+| Vérifier l'existence d'un élément unique        | `HashSet`              |
+| Garder les données triées en permanence         | `TreeSet` / `TreeMap`  |
+| Gérer une file d'attente                        | `ArrayDeque` (`Queue`) |
+| Gérer une pile                                  | `ArrayDeque`           |
+| Extraire toujours l'élément le plus prioritaire | `PriorityQueue`        |
