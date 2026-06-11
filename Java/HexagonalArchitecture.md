@@ -100,7 +100,7 @@ public class StripePaymentAdapter implements PaymentPort {
 ```
 
 **Adapter PayPal**
-```
+```java
 public class PaypalPaymentAdapter implements PaymentPort {
 
     @Override
