@@ -15,7 +15,7 @@ Java fournit tout dans le package :<br>
 
 On va voir les plus importantes :<br>
 <div align="center">
-	<img src="../images/strdata.png" height="500" width="500" />
+	<img src="../images/strdata.png" />
 </div>
 
 # 📚 3. <ins>Liste (ArrayList)</ins>
@@ -77,7 +77,7 @@ liste.add("C");
 
 # 🥞 5. <ins>Pile (Stack)</ins>
 <div align="center">
-	<img src="../images/pile-lifo.png" />
+	<img src="../images/pile-lifo.png" height="400" width="400" />
 </div>
 
 ✔️ **Idée**<br>
@@ -110,7 +110,7 @@ System.out.println(pile.pop()); // C
 
 # 🚶 6. <ins>File (Queue)</ins>
 <div align="center">
-	<img src="../images/queue-fifo.png" />
+	<img src="../images/queue-fifo.png" height="400" width="400" />
 </div>
 
 ✔️ **Idée**<br>
@@ -140,7 +140,7 @@ System.out.println(file.poll()); // A
 
 # 🗂️ 7. <ins>Map (HashMap)</ins>
 <div align="center">
-	<img src="../images/hashmap.jpg" />
+	<img src="../images/hashmap.jpg" height="400" width="400" />
 </div>
 
 ✔️ **Idée**<br>
@@ -170,7 +170,7 @@ System.out.println(map.get("Alice")); // 25
 
 # 🌳 8. <ins>Set (HashSet)</ins>
 <div align="center">
-	<img src="../images/hashset.jpeg" />
+	<img src="../images/hashset.jpeg" height="400" width="400" />
 </div>
 
 ✔️ **Idée**<br>
