@@ -26,9 +26,9 @@ Une mauvaise communication = bugs, malentendus, retards.
 - Participer activement aux réunions (standups, sprint review)
 
 ## Formations recommandées
-- :contentReference[oaicite:0]{index=0} → cours sur la communication professionnelle
-- :contentReference[oaicite:1]{index=1} → “Improving Communication Skills”
-- :contentReference[oaicite:2]{index=2} → “Communication Foundations”
+-  cours sur la communication professionnelle
+-  “Improving Communication Skills”
+-  “Communication Foundations”
 
 ---
 
@@ -44,8 +44,8 @@ En fullstack, tu travailles rarement seul. Tu fais partie d’une équipe Agile.
 - Comprendre les rôles de chacun dans une équipe Agile
 
 ## Formations recommandées
-- :contentReference[oaicite:3]{index=3} → “Agile Development Specialization”
-- :contentReference[oaicite:4]{index=4} → parcours “Chef de projet Agile”
+- “Agile Development Specialization”
+- parcours “Chef de projet Agile”
 
 ---
 
@@ -61,8 +61,8 @@ Le cœur du métier : transformer un besoin métier en solution technique.
 - Toujours se demander “quel est le vrai problème ?”
 
 ## Formations recommandées
-- :contentReference[oaicite:5]{index=5} → “Problem Solving Using Computational Thinking”
-- :contentReference[oaicite:6]{index=6} → cours sur algorithmes et logique de programmation
+- “Problem Solving Using Computational Thinking”
+- cours sur algorithmes et logique de programmation
 
 ---
 
@@ -78,8 +78,8 @@ Entre bugs, nouvelles features et réunions, tu dois prioriser efficacement.
 - Estimer ton travail (story points en Agile)
 
 ## Formations recommandées
-- :contentReference[oaicite:7]{index=7} → “Time Management Fundamentals”
-- :contentReference[oaicite:8]{index=8} → cours Agile / gestion de projet
+- “Time Management Fundamentals”
+- cours Agile / gestion de projet
 
 ---
 
@@ -87,8 +87,8 @@ Entre bugs, nouvelles features et réunions, tu dois prioriser efficacement.
 
 ## Pourquoi ?
 Le monde du dev change constamment :
-- nouvelles versions de :contentReference[oaicite:9]{index=9}
-- évolution de :contentReference[oaicite:10]{index=10}
+- nouvelles versions de :
+- évolution de :
 - nouveaux outils DevOps
 
 ## Comment progresser ?
@@ -98,9 +98,9 @@ Le monde du dev change constamment :
 - Suivre des blogs techniques
 
 ## Formations recommandées
-- :contentReference[oaicite:11]{index=11} → parcours Angular & Java
-- :contentReference[oaicite:12]{index=12} → spécialisations techniques
-- :contentReference[oaicite:13]{index=13} → formations Angular avancé
+- parcours Angular & Java
+- spécialisations techniques
+- formations Angular avancé
 
 ---
 
@@ -116,8 +116,8 @@ Un bon dev ne code pas juste une feature : il comprend **pourquoi elle existe**.
 - Relier chaque feature à un objectif business
 
 ## Formations recommandées
-- :contentReference[oaicite:14]{index=14} → “Product Management Fundamentals”
-- :contentReference[oaicite:15]{index=15} → parcours Product Owner
+- “Product Management Fundamentals”
+- parcours Product Owner
 
 ---
 
@@ -133,8 +133,8 @@ En fullstack, tu es responsable de la robustesse de ton code.
 - Refactoriser régulièrement
 
 ## Formations recommandées
-- :contentReference[oaicite:16]{index=16} → “Clean Code & Design Patterns”
-- :contentReference[oaicite:17]{index=17} → tests Java & Angular
+- “Clean Code & Design Patterns”
+- tests Java & Angular
 
 ---
 
@@ -150,8 +150,8 @@ Les deadlines, bugs en production et incidents sont inévitables.
 - Travailler en binôme sur les incidents critiques
 
 ## Formations recommandées
-- :contentReference[oaicite:18]{index=18} → “Stress Management Techniques”
-- :contentReference[oaicite:19]{index=19} → “Resilience Skills in the Workplace”
+- “Stress Management Techniques”
+- “Resilience Skills in the Workplace”
 
 ---
 
@@ -165,9 +165,3 @@ Un développeur fullstack Java / Angular performant combine :
 - 🎯 Vision produit
 
 Les soft skills ne remplacent pas la technique — elles la **démultiplient**.
-
----
-
-Si tu veux, je peux aussi te faire :
-👉 un **plan d’évolution sur 6 mois**  
-👉 ou une **roadmap pour devenir lead developer**
