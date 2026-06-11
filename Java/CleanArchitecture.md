@@ -1,4 +1,7 @@
 # Clean Architecture
+<div align="center">
+	<img src="../images/clean-architecture.jpg" />
+</div>
 La Clean Architecture est un style d’architecture logicielle proposé par Robert C. Martin.<br>
 Son objectif principal est de séparer clairement les responsabilités afin que le cœur métier de l’application<br>
 ne dépende pas des détails techniques (framework, base de données, UI, etc.).
