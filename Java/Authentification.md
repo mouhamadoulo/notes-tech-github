@@ -15,6 +15,7 @@
 <div align="center">
 	<img src="../images/jwt.png" />
 </div>
+
 👉 **Concept**
 Un JWT est un token signé qui contient des informations (claims).
 
@@ -183,6 +184,7 @@ SSO repose souvent sur :
 <div align="center">
 	<img src="../images/saml.png" />
 </div>
+
 🔄 **Flow**
 - 1.Redirection vers IdP
 - 2.Authentification
