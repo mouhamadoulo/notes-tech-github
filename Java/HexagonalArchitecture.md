@@ -1,4 +1,7 @@
 # Hexagonal Architecture
+<div align="center">
+	<img src="../images/hexa-architecture.png" />
+</div>
 L’architecture hexagonale (aussi appelée Ports & Adapters) est un style d’architecture logicielle inventé par Alistair Cockburn.<br>
 Son objectif principal est de séparer la logique métier du reste du monde (base de données, API, UI, frameworks).
 
