@@ -19,6 +19,10 @@ On va voir les plus importantes :<br>
 </div>
 
 # 📚 3. <ins>Liste (ArrayList)</ins>
+<div align="center">
+	<img src="../images/arraylist.png" />
+</div>
+
 ✔️ **Idée**<br>
 Une liste ordonnée d’éléments.
 
@@ -46,6 +50,10 @@ System.out.println(liste.get(1)); // B
 - Taille dynamique ✔️
 
 # 🔗 4. <ins>Liste chaînée (LinkedList)</ins>
+<div align="center">
+	<img src="../images/linkedlist.png" />
+</div>
+
 ✔️ **Idée**<br>
 Chaque élément pointe vers le suivant.
 
@@ -68,6 +76,10 @@ liste.add("C");
 - Accès lent (parcours) ❌
 
 # 🥞 5. <ins>Pile (Stack)</ins>
+<div align="center">
+	<img src="../images/pile-lifo.png" />
+</div>
+
 ✔️ **Idée**<br>
 LIFO = Last In, First Out
 
@@ -97,6 +109,10 @@ System.out.println(pile.pop()); // C
 - peek() → regarder
 
 # 🚶 6. <ins>File (Queue)</ins>
+<div align="center">
+	<img src="../images/queue-fifo.png" />
+</div>
+
 ✔️ **Idée**<br>
 FIFO = First In, First Out
 
@@ -123,6 +139,10 @@ System.out.println(file.poll()); // A
 - poll() → sortir
 
 # 🗂️ 7. <ins>Map (HashMap)</ins>
+<div align="center">
+	<img src="../images/hashmap.jpg" />
+</div>
+
 ✔️ **Idée**<br>
 Associer une clé → valeur
 
@@ -149,6 +169,10 @@ System.out.println(map.get("Alice")); // 25
 - Pas d’ordre ❌
 
 # 🌳 8. <ins>Set (HashSet)</ins>
+<div align="center">
+	<img src="../images/hashset.jpeg" />
+</div>
+
 ✔️ **Idée**<br>
 Collection sans doublons
 
