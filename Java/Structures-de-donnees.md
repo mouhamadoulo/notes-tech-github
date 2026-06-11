@@ -31,6 +31,25 @@ Une liste ordonnée d’éléments.
 Index :   0    1    2    3
 Valeur: ["A", "B", "C", "D"]
 ```
+```mermaid
+flowchart LR
+    subgraph Avant
+        A0["0: Alice"]
+        A1["1: Bob"]
+        A2["2: Charlie"]
+    end
+
+    AJOUT["add('David')"]
+
+    subgraph Après
+        B0["0: Alice"]
+        B1["1: Bob"]
+        B2["2: Charlie"]
+        B3["3: David"]
+    end
+
+    Avant --> AJOUT --> Après
+```
 👉 Tu accèdes avec un index.
 
 💻 **Exemple Java**
