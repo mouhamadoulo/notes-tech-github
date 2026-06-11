@@ -1,6 +1,6 @@
 # 🔐 1. <ins>Authentification vs Autorisation</ins>
 <div align="center">
-	<img src="../images/authen-vs-autho.jpg" />
+	<img src="../images/authen-vs-autho.jpeg" />
 </div>
 **Avant tout :**
 - Authentification (AuthN) = Qui es-tu ?
