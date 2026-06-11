@@ -1,7 +1,8 @@
 # 🔐 1. <ins>Authentification vs Autorisation</ins>
 <div align="center">
-	<img src="../images/authen-vs-autho.jpeg" />
+	<img src="../images/authen-vs-autho.jpeg" width="400" height="400" />
 </div>
+
 **Avant tout :**
 - Authentification (AuthN) = Qui es-tu ?
 - Autorisation (AuthZ) = Qu’as-tu le droit de faire ?
