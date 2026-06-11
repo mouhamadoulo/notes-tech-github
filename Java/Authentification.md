@@ -1,6 +1,6 @@
 # 🔐 1. <ins>Authentification vs Autorisation</ins>
 <div align="center">
-	<img src="../images/authen-vs-autho.jpeg" width="400" height="400" />
+	<img src="../images/authen-vs-autho.jpeg" width="600" height="600" />
 </div>
 
 **Avant tout :**
