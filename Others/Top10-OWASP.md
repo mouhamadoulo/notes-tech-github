@@ -1,4 +1,4 @@
-# Comprendre clairement le Top 10 OWASP dans le développement web
+# Top 10 OWASP dans le développement web
 
 ## Qu'est-ce que le Top 10 OWASP ?
 
