@@ -1,4 +1,4 @@
-# Cours Magistral Complet : Les Hooks en Développement Agentique
+# Les Hooks en Développement Agentique
 
 ## Table des matières
 
