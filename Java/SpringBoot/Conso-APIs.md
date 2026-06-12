@@ -1,4 +1,4 @@
-# Tutoriel complet : Intégrer et consommer des API externes et internes avec Spring Boot
+# Intégrer et consommer des API externes et internes avec Spring Boot
 
 ## Objectifs
 
