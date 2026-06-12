@@ -21,7 +21,7 @@
 ```mermaid
 flowchart LR
 
-A[Frontend React Angular Vue]
+A[Frontend React/Angular/Vue]
 B[API Spring Boot]
 C[API Externe Météo]
 D[API Externe Paiement]
