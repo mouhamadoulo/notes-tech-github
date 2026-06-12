@@ -1,4 +1,4 @@
-# Cours Magistral Ultra Complet : Stratégie de Tests pour Applications Angular + Java
+# Stratégie de Tests pour Applications Angular + Java
 
 ---
 
