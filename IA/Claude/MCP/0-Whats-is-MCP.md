@@ -1,4 +1,4 @@
-# Cours magistral complet : Model Context Protocol (MCP)
+# Model Context Protocol (MCP)
 
 > Niveau : Intermédiaire à avancé  
 > Public : Développeurs, architectes IA, équipes produits, ingénieurs LLM, CTO  
