@@ -1,4 +1,4 @@
-# Les hooks dans Claude Code (explication simple)
+# Les hooks dans Claude Code
 
 Les **hooks** sont des points d'accroche qui permettent d'exécuter automatiquement un script ou une commande à certains moments du fonctionnement de Claude Code.
 
