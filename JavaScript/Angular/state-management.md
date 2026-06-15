@@ -1,4 +1,4 @@
-# 🧠 Tutoriel complet : Gestion d’état (State Management) en Angular (v18+)
+# 🧠 Gestion d’état (State Management) en Angular (v18+)
 Angular moderne (≥18) propose plusieurs approches pour gérer l’état d’une application : des solutions réactives natives (Signals) aux bibliothèques robustes comme NgRx ou NGXS.
 
 
