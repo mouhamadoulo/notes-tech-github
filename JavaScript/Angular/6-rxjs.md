@@ -1,4 +1,4 @@
-# Cours Magistral RxJS & Programmation Réactive en Angular
+# RxJS & La Programmation Réactive en Angular
 
 > Niveau : Développeur Angular professionnel
 >
