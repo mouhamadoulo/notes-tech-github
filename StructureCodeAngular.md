@@ -1,4 +1,4 @@
-# Cours Magistral : Structurer un Frontend Angular Moderne
+# Structurer un Frontend Angular Moderne
 
 > Niveau : Intermédiaire → Expert  
 > Version cible : Angular 17+ (Standalone Components, Signals, Lazy Loading moderne)
