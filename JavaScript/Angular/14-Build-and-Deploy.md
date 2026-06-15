@@ -1,4 +1,4 @@
-# Tutoriel Complet : Build et Déploiement d'une Application Angular
+# Build et Déploiement d'une Application Angular
 
 ## Objectif
 
