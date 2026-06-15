@@ -158,3 +158,54 @@ flowchart TB
     K8S --> APIGW
     K8S --> BACKEND
 ```
+
+# Principes d'architecture appliqués
+
+## Frontend Angular
+- Architecture par feature modules.
+- Standalone Components (Angular 17+).
+- State management avec NgRx Signals ou Signal Store.
+- Interceptors pour JWT, gestion erreurs et refresh token.
+- Guards pour l'autorisation.
+
+## Backend Spring Boot
+- Architecture Clean Architecture / Hexagonale.
+- Séparation :
+  - Controller
+  - Use Case
+  - Domain
+  - Repository
+- DTO obligatoires entre API et domaine.
+- Validation avec Bean Validation.
+
+## Sécurité
+- OAuth2 / OIDC.
+- JWT stateless.
+- Keycloak/Auth0.
+- Spring Security.
+- RBAC (Role Based Access Control).
+
+## Base de données
+- PostgreSQL.
+- Flyway ou Liquibase pour les migrations.
+- Redis pour le cache.
+
+## Communication
+- REST pour le synchrone.
+- Kafka pour l'asynchrone.
+- Event-driven architecture.
+
+## Observabilité
+- Actuator.
+- Micrometer.
+- Prometheus.
+- Grafana.
+- ELK.
+- OpenTelemetry + Zipkin/Tempo.
+
+## DevOps
+- Docker.
+- Kubernetes.
+- GitHub Actions / GitLab CI.
+- Déploiement Blue/Green ou Canary.
+- Infrastructure as Code (Terraform recommandé).
