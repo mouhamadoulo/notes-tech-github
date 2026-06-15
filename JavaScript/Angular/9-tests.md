@@ -1,5 +1,5 @@
 
-I'll verify the current state of Angular testing tooling first, since this area has changed significantly in recent versions.# Tutoriel complet : les tests en Angular (versions 19, 20 et 21)
+# Les tests en Angular (versions 19, 20 et 21)
 
 ## 1. Ce qui a changé depuis Angular 18 (à lire avant tout)
 
