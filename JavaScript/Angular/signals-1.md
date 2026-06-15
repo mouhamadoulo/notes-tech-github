@@ -142,8 +142,9 @@ increment() {
   this.count.update(v => v + 1);
 }
 ```
-
 👉 beaucoup plus lisible.
+
+
 
 # 🧩 Conclusion
 Les signals marquent un changement majeur dans Angular :
