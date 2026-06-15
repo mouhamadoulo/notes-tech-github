@@ -154,7 +154,7 @@ Les signals marquent un changement majeur dans Angular :
 - base pour un Angular sans Zone.js
 
 
-# Tutoriel complet : les Signals en Angular (v18, v19, v20+)
+# les Signals en Angular (v18, v19, v20+)
 
 ## 1. Introduction
 
