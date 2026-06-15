@@ -1,3 +1,4 @@
+```mermaid
 flowchart TB
     %% ===================== CLIENTS =====================
     subgraph CLIENTS["🌐 Clients"]
@@ -98,3 +99,4 @@ flowchart TB
     class BROKER async
     class ACT,PROM,LOG,TRACE obs
     class VAULT conf
+```
