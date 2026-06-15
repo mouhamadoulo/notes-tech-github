@@ -1,4 +1,4 @@
-# Cours Magistral TypeScript pour Développeur Angular
+# TypeScript pour Développeur Angular
 
 > Objectif : maîtriser TypeScript de manière professionnelle pour développer des applications Angular modernes, maintenables, robustes et fortement typées.
 
