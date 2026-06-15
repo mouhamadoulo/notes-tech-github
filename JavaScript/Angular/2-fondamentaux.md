@@ -1,4 +1,4 @@
-# Cours Magistral : Les Fondamentaux d'Angular
+# Les Fondamentaux d'Angular
 
 # 1. Introduction à Angular
 
