@@ -1,4 +1,4 @@
-# 🔷 Qu’est-ce qu’Angular ?
+# 🔷 <ins>Qu’est-ce qu’Angular ?</ins>
 Angular est un framework front-end open source développé par Google, basé sur TypeScript.
 Il permet de créer des applications web dynamiques, robustes et maintenables, notamment des Single Page Applications (SPA).
 
@@ -339,7 +339,7 @@ Met à jour Angular et ses dépendances.
 - Applications à long terme
 - Projets nécessitant une architecture solide
 
-# 🔍 Top Repos Github
+# 🔍 <ins>Top Repos Github</ins>
 
 ### 📦 Expense Tracker
 Link : https://github.com/erickboyzo/expense-tracker
@@ -441,7 +441,7 @@ A social media platform must have a smooth user interface that lets users produc
 and delete posts and include features that enable users to like and comment on others’ posts. 
 ```
 
-# <ins>I.Exemple d'applications à créer avec Angular</ins> (pour monter en compétences)
+# <ins>Exemple d'applications à créer avec Angular (pour monter en compétences)</ins> 
 
 ## <1> Application To-Do avancée
 **Objectif :** Découvrir les bases solides d’Angular <br>
@@ -451,7 +451,7 @@ and delete posts and include features that enable users to like and comment on o
 - Filtrage (toutes / en cours / terminées)
 - Sauvegarde locale
 
-**Concepts Angular maîtrisés : **
+**Concepts Angular maîtrisés :**
 - Architecture Angular (modules, composants)
 - Data binding (interpolation, property, event, two-way)
 - Directives (*ngIf, *ngFor, ngClass)
@@ -605,8 +605,10 @@ and delete posts and include features that enable users to like and comment on o
 - Google Calendar
 - Notion
 
-# <ins>II.Exemples de projets d’entreprise où Angular et Java Spring Boot cohabitent</ins>
+# <ins>Exemples de projets d’entreprise où Angular et Java Spring Boot cohabitent</ins>
+
 ## 1️.Système d’information bancaire (Banque / Assurance)
+
 ### 🔷 Contexte
 Portail bancaire interne + applications clients (gestion de comptes, crédits, KYC, sinistres, etc.)
 
@@ -796,7 +798,7 @@ Gestion finance, achats, stocks, logistique.
 ✅ Scalabilité (microservices)<br>
 ✅ Écosystème énorme<br>
 
-# ✅ Best Practices Angular (2026)
+# ✅ <ins>Best Practices Angular (2026)</ins>
 
 ## 🧱 Architecture
 - Architecture **feature-based** (par domaine métier, pas technique)
