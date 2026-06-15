@@ -1,4 +1,4 @@
-# 🧭 Cours magistral : Routing en Angular 18 (Guide complet développeur)
+# 🧭 Routing en Angular 18+
 
 Le **routing dans Angular 18** est un système central qui permet de construire des **applications SPA (Single Page Applications)** avec navigation entre vues sans rechargement de page.
 
