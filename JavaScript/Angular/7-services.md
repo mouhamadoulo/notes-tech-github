@@ -1,4 +1,4 @@
-# Cours Magistral Angular : Services et Injection de Dépendances (Dependency Injection)
+# Services et Injection de Dépendances (Dependency Injection)
 
 ---
 
