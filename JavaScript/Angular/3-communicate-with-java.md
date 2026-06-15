@@ -1,4 +1,4 @@
-# Cours Magistral : Communication Angular ↔ Backend Java (Spring Boot)
+# Communication Angular ↔ Backend Java (Spring Boot)
 
 > Objectif : maîtriser tout ce qu'un développeur Angular doit savoir pour communiquer efficacement avec un backend Java (principalement Spring Boot), depuis les bases jusqu'aux pratiques avancées utilisées en entreprise.
 
