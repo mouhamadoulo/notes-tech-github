@@ -1,4 +1,4 @@
-# Cours magistral Java : Concurrence, Multithreading, JVM et Gestion Mémoire
+# Concurrence, Multithreading, JVM et Gestion Mémoire
 
 ---
 
