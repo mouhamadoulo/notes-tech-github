@@ -107,3 +107,316 @@ Le piège : Dans une longue discussion, le 10ème message coûte beaucoup plus c
 ## En résumé
 - Le fonctionnement : C'est une calculatrice géante qui prédit statistiquement le morceau de mot suivant.
 - L'épuisement : Soit la mémoire du modèle est pleine (il oublie le début), soit ton quota payant est consommé par l'accumulation des messages échangés.
+
+
+Pour comprendre un **LLM (Large Language Model)**, il est utile de maîtriser quelques notions fondamentales, des plus simples aux plus avancées.
+
+## 1. Qu'est-ce qu'un LLM ?
+
+Un LLM est un modèle d'intelligence artificielle entraîné sur de très grandes quantités de texte afin de prédire le mot (ou token) suivant dans une séquence.
+
+Exemples :
+
+* OpenAI GPT
+* Anthropic Claude
+* Google Gemini
+* Meta Llama
+
+---
+
+## 2. Les tokens
+
+Un LLM ne lit pas directement des mots mais des **tokens**.
+
+Exemple :
+
+> "J'aime l'intelligence artificielle"
+
+peut être découpé en :
+
+* "J'"
+* "aime"
+* " l'"
+* "intelligence"
+* " artificielle"
+
+La taille du contexte et les coûts sont souvent exprimés en nombre de tokens.
+
+---
+
+## 3. Le contexte (Context Window)
+
+Le contexte correspond à la mémoire temporaire disponible pendant une conversation.
+
+Il comprend :
+
+* la question actuelle ;
+* les messages précédents ;
+* les documents éventuellement fournis.
+
+Exemple :
+
+* contexte de 8 000 tokens ;
+* contexte de 128 000 tokens ;
+* contexte de plusieurs millions de tokens pour certains modèles récents.
+
+---
+
+## 4. Les embeddings
+
+Les embeddings sont des représentations numériques du texte.
+
+Ils permettent de mesurer la proximité sémantique entre deux phrases.
+
+Exemple :
+
+* « voiture rouge »
+* « automobile rouge »
+
+auront des embeddings proches.
+
+Applications :
+
+* recherche sémantique ;
+* recommandation ;
+* systèmes RAG.
+
+---
+
+## 5. Transformer
+
+L'architecture dominante des LLM est le Transformer, introduite dans le papier :
+
+Attention Is All You Need (2017)
+
+Le Transformer repose sur le mécanisme d'attention.
+
+---
+
+## 6. Attention
+
+L'attention permet au modèle d'identifier les mots importants dans une phrase.
+
+Exemple :
+
+> "Marie a donné son livre à Sophie parce qu'elle en avait besoin."
+
+Le modèle doit déterminer à qui correspond « elle ».
+
+L'attention aide à établir cette relation.
+
+---
+
+## 7. Paramètres
+
+Les paramètres sont les poids appris pendant l'entraînement.
+
+Ordres de grandeur :
+
+* millions ;
+* milliards ;
+* centaines de milliards.
+
+Plus de paramètres ne signifie pas toujours un meilleur modèle, mais généralement une plus grande capacité d'apprentissage.
+
+---
+
+## 8. Entraînement (Training)
+
+Pendant l'entraînement :
+
+1. le modèle lit des textes ;
+2. masque un token ;
+3. tente de le prédire ;
+4. ajuste ses paramètres.
+
+Cette étape nécessite :
+
+* beaucoup de données ;
+* beaucoup de calcul ;
+* des GPU spécialisés.
+
+---
+
+## 9. Fine-tuning
+
+Le fine-tuning consiste à spécialiser un modèle déjà entraîné.
+
+Exemples :
+
+* assistance juridique ;
+* médecine ;
+* support client ;
+* finance.
+
+---
+
+## 10. Prompt
+
+Le prompt est l'instruction donnée au modèle.
+
+Exemple :
+
+> "Explique-moi les réseaux neuronaux comme à un enfant de 10 ans."
+
+La qualité du prompt influence fortement la réponse.
+
+---
+
+## 11. Prompt Engineering
+
+Le prompt engineering consiste à structurer les instructions pour obtenir de meilleurs résultats.
+
+Techniques courantes :
+
+* rôle ("Tu es un expert...") ;
+* exemples ;
+* contraintes ;
+* format de sortie.
+
+---
+
+## 12. Température
+
+La température contrôle l'aléatoire.
+
+* Température faible (0–0,3) :
+
+  * réponses stables ;
+  * plus déterministes.
+
+* Température élevée (0,8–1,5) :
+
+  * plus créatives ;
+  * plus variées.
+
+---
+
+## 13. Hallucination
+
+Une hallucination survient lorsque le modèle produit une information plausible mais fausse.
+
+Exemple :
+
+* inventer une référence ;
+* citer un livre inexistant ;
+* donner une date erronée.
+
+C'est l'une des limites majeures des LLM.
+
+---
+
+## 14. RAG (Retrieval-Augmented Generation)
+
+Le RAG combine :
+
+1. une recherche documentaire ;
+2. un LLM.
+
+Flux :
+
+```
+Question utilisateur
+        ↓
+Recherche
+        ↓
+Documents pertinents
+        ↓
+LLM
+        ↓
+Réponse
+```
+
+Cela réduit les hallucinations et permet d'utiliser des données récentes.
+
+---
+
+## 15. Agents IA
+
+Un agent IA est un LLM capable d'utiliser des outils :
+
+* recherche web ;
+* base de données ;
+* calculatrice ;
+* API ;
+* exécution de code.
+
+Le modèle peut alors agir et non seulement répondre.
+
+---
+
+## 16. Inférence
+
+L'inférence est la phase d'utilisation du modèle après son entraînement.
+
+Quand vous posez une question à un chatbot, il est en phase d'inférence.
+
+---
+
+## 17. Alignement
+
+L'alignement vise à faire en sorte que le modèle :
+
+* respecte les consignes ;
+* soit utile ;
+* soit sûr ;
+* évite les comportements dangereux.
+
+---
+
+## 18. RLHF
+
+RLHF signifie :
+
+**Reinforcement Learning from Human Feedback**
+
+Des humains évaluent les réponses du modèle afin d'améliorer son comportement.
+
+Cette technique est utilisée dans de nombreux assistants conversationnels modernes.
+
+---
+
+## 19. MCP (Model Context Protocol)
+
+Le MCP est un protocole permettant à un LLM de se connecter à des outils externes :
+
+* bases de données ;
+* CRM ;
+* systèmes internes ;
+* API métier.
+
+Il standardise la communication entre modèles et outils.
+
+---
+
+## 20. Métriques importantes
+
+Quelques métriques courantes :
+
+* précision ;
+* rappel (recall) ;
+* F1-score ;
+* perplexité ;
+* latence ;
+* coût par token.
+
+---
+
+### Résumé des notions essentielles
+
+Si vous débutez, concentrez-vous d'abord sur :
+
+1. Tokens
+2. Contexte
+3. Transformer
+4. Attention
+5. Paramètres
+6. Entraînement
+7. Prompt
+8. Température
+9. Hallucinations
+10. RAG
+11. Fine-tuning
+12. Agents IA
+
+Ces 12 concepts permettent déjà de comprendre le fonctionnement de la majorité des systèmes basés sur les LLM modernes.
