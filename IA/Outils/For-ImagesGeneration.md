@@ -95,3 +95,8 @@ Selon la qualité d'image, la facilité d'utilisation et les possibilités créa
 🥈 **ChatGPT Images** pour les visuels professionnels, le texte dans l'image et l'édition.
 
 
+Pour un créateur de contenu (YouTube, TikTok, formation en ligne), une combinaison très populaire aujourd'hui est :
+
+* **Midjourney** ou **ChatGPT Images** pour les visuels
+* **ElevenLabs** pour la voix
+* [Runway](https://runwayml.com?utm_source=chatgpt.com) pour l'animation et le montage vidéo IA.
