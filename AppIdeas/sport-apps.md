@@ -356,8 +356,6 @@ D --> E[Badges]
 
 ---
 
-# Mon classement des meilleures idées en 2026
-
 ### Si tu es développeur solo
 
 Je choisirais :
@@ -372,13 +370,4 @@ Ces projets peuvent être lancés avec un MVP en 1 à 3 mois et ont un bon poten
 
 Potentiel estimé des idées sportives
 
-Évaluation indicative combinant potentiel business, faisabilité technique et différenciation.
 
-idee	score
-Coach IA personnalisé	95
-Analyse vidéo IA	92
-Marketplace coachs	88
-Partenaires de sport	85
-Analyse running	82
-Tournois amateurs	80
-Défis sportifs	78
