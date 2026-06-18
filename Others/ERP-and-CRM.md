@@ -1,15 +1,3 @@
-Très bonne base. Pour rendre ce document plus pédagogique, je te conseille d'ajouter :
-
-1. **Une comparaison visuelle ERP vs CRM**
-2. **Un schéma des flux d'information**
-3. **Un diagramme montrant comment ERP et CRM collaborent**
-4. **Une représentation du cycle client**
-5. **Une architecture simplifiée de l'entreprise**
-
-Voici une version enrichie avec des diagrammes Mermaid.
-
----
-
 # ERP (Enterprise Resource Planning)
 
 **ERP** = Enterprise Resource Planning
