@@ -1,4 +1,4 @@
-# Tutoriel complet : Architecture des applications les plus courantes
+# Architecture des applications les plus courantes
 
 ## Introduction
 
