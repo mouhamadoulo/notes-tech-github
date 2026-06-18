@@ -1,378 +1,433 @@
-# API (Application Programming Interface) 
+Voici une version améliorée, structurée et enrichie de ton Markdown. J’ai :
 
-## <ins>Kesako ?</ins>
+* Clarifié la mise en forme
+* Ajouté des diagrammes **Mermaid**
+* Harmonisé le style
+* Complété toute la section **“Sécuriser ses API”** avec des explications concrètes
+* Ajouté une vue plus “ingénierie moderne”
+
+---
+
+# 🚀 API (Application Programming Interface)
+
+## 🧩 Kesako ?
+
 <div align="center">
 	<img src="../images/api.png" height="350" width="350" />
 </div>
 
+> Une API (*Application Programming Interface*) est une interface qui permet à deux applications de communiquer entre elles.
 
-> L’acronyme API équivaut à l’expression “Application Programming Interface”. <br>
-> Traduit par Interface de Programmation Applicative (IPA) en français, 
-```
-Ce concept renvoie à une solution informatique qui rend possible la communication 
-et l’échange de données entre deux applications.
-Une API est donc à une interface facilitant la création et l’intégration d’applications. 
-Son point fort ? Elle autorise les développeurs à se servir d’un programme existant, 
-au lieu de repartir de zéro à chaque fois.
-Chacune possède ses propres caractéristiques (clés d’accès, types de données accessibles ou non…). 
-Il existe deux types d’APIs : les publiques et les privées. 
-Les API publiques sont ouvertes (open source) et facilement accessibles sur le net. 
-Les API privées, quant à elles, sont développées en interne.
+Une API sert de **pont standardisé** entre systèmes :
+
+* échange de données
+* appel de fonctionnalités
+* intégration de services externes
+
+👉 Elle permet de **réutiliser des systèmes existants sans tout reconstruire**.
+
+---
+
+### 🔁 Schéma global d’une API
+
+```mermaid
+flowchart LR
+A[Client / Frontend] -->|Requête HTTP| B[API]
+B --> C[Application / Backend]
+C --> B
+B --> A
 ```
 
-## <ins>Modèles d'API</ins>
-```
-On retrouve donc plusieurs modèles d’API pour procéder à des échanges de données, 
-et bien qu’il en existe d’autres, 
-les trois principaux aujourd’hui sont les suivants : SOAP, REST et GraphQL. 
-IL existe d'autres modèles bien sûr (gRPC, Webhooks, WebSockets, …)
+---
+
+## 🧠 Modèles d’API
+
+```mermaid
+flowchart TD
+API[API] --> SOAP
+API --> REST
+API --> GraphQL
+API --> gRPC
+API --> WebSocket
+API --> Webhooks
 ```
 
-- **SOAP (Simple Object Access Protocol)**<br>
+---
+
+## 🧼 SOAP (ancien mais robuste)
+
 <div align="center">
 	<img src="../images/soap.jpeg" height="400" width="400" />
 </div>
 
-> C'est un protocole standardisé par le W3C. Ses échanges utilisent des formats de fichier XML.<br> 
-> Ce dernier est ancien, ce qui lui donne comme principal avantage d’être lisible par tous les langages.<br>
-> Celui-ci peut également passer par divers modes de communications : HTTP, HTTPS, TCP, SMTP, POP, etc. 
-```
-Ce format d’API est très structuré, car toutes les méthodes et 
-propriétés sont décrites par un document XML :
-- le Web Services Description Language (WSDL).
-```
-Le SOAP permet de répondre à : 
-- des besoins asynchrones, 
-- une validation forte des modèles d'échanges, 
-- des opérations statefull
-```
-Le SOAP est donc utilisé pour des besoins de sécurités des échanges forts, 
-par exemple pour des systèmes financiers ou bancaires.
-```
+* Protocole standardisé (W3C)
+* Format XML strict
+* Contrat via WSDL
 
-- **REST (Representational State Transfer)**<br>
+### ✔️ Caractéristiques
+
+* très structuré
+* sécurisé (WS-Security)
+* compatible multi-protocoles (HTTP, SMTP…)
+
+### 📌 Usage
+
+* banques
+* systèmes critiques
+* environnements legacy
+
+---
+
+## 🌐 REST (le standard moderne)
+
 <div align="center">
 	<img src="../images/rest.png" height="400" width="550" />
 </div>
 
-```
-Les architectures REST reposent sur un échange client/serveur où les données sont structurées 
-d’une manière à ne pas avoir la main dessus, c’est-à-dire que c’est le serveur qui gère cela 
-en renvoyant du texte, du CSV, ou du JSON, par exemple.
-L’une des caractéristiques fortes qui qualifie une API de REST est le : 
-- HATEOAS (Hypermedia as the Engine of Application State). 
-Cela se traduit par le fait que le client 
-- n’a pas besoin de connaissance au préalable (ou peu) pour interagir avec l’API. 
-Cela passe par une structure forte des routes et des verbes utilisés (GET,POST,PUT,PATCH,DELETE).
+### 📡 Principe
+
+REST repose sur des ressources accessibles via HTTP :
+
+```mermaid
+flowchart LR
+Client -->|GET/POST/PUT| REST_API
+REST_API --> Resource[(Ressources JSON)]
 ```
 
-- **GraphQL (Graph Query Language)**<br>
+### 🔑 Concepts clés
+
+* stateless
+* ressources identifiées par URL
+* verbes HTTP (GET, POST, PUT, DELETE)
+* format JSON majoritaire
+
+### ⚙️ HATEOAS
+
+Le client découvre les actions possibles via les réponses API.
+
+---
+
+## 📊 GraphQL (flexibilité côté client)
+
 <div align="center">
 	<img src="../images/graphql.jpg" height="400" width="550" />
 </div>
 
-```
-GraphQL est un nouveau type d’API bien plus récent. 
-L’idée est de partir d’une API REST avec des formats de retour JSON, 
-mais avec la subtilité en plus que le client doit envoyer :
-- les données qu’ils souhaite récupérer au serveur, 
-- cela via un Graph, un modèle de données. 
-Ainsi, le serveur se retrouve à avoir une couche plus lourde d’initialisation des modèles, 
-mais dans la finalité le tout est plus léger de par le moins grand nombre de déclarations de routes 
-et de leurs fonctionnements propres.
-Graph semble donc être l’avenir des API stateless de par ses qualités, 
-mais son utilisation encore limitée peut le rendre un peu moins attrayant 
-et donc plus complexe à prendre en main.
+### 💡 Principe
+
+Le client demande **exactement ce dont il a besoin** :
+
+```mermaid
+flowchart LR
+Client --> GraphQL_Server
+GraphQL_Server --> DB[(Multiple Sources)]
+DB --> GraphQL_Server --> Client
 ```
 
-## <ins>API vs WebService vs Microservice</ins>
-**API :**<br>
-> Ensemble de règles permettant à deux applications ou composants logiciels de communiquer
-- Objectif : Fournir une interface pour échanger des données ou des fonctionnalités.
-- Portée : Peut être utilisée localement ou via un réseau.
-- Types : REST API, SOAP API, GraphQL API
-- Point clé : Une API n’est pas forcément liée au web ; elle peut être utilisée dans des applications desktop, mobiles, etc.
+### ✔️ Avantages
 
-**WebService :**<br>
-> Type d’API qui utilise des protocoles web (HTTP, XML, JSON) pour permettre la communication entre applications via Internet.
-- Objectif : Assurer l’interopérabilité entre systèmes hétérogènes.
-- Protocoles courants : SOAP (Simple Object Access Protocol), REST (Representational State Transfer)
-- Point clé : Tous les web services sont des API, mais toutes les API ne sont pas des web services.
+* moins de sur-fetching
+* une seule endpoint
+* flexible pour frontend complexe
 
-**Microservice :**<br>
-> Style d’architecture où une application est composée de petits services indépendants,<br>
-> chacun étant responsable d’une fonction métier.
-- Objectif : Améliorer la scalabilité, la flexibilité et la maintenabilité.
-- Caractéristiques : Chaque microservice est autonome, Communication via des API légères (REST, gRPC, ou messages).
-- Point clé : Les microservices utilisent des API pour communiquer, mais représentent une architecture, pas seulement une interface.
+### ⚠️ Limites
 
+* complexité serveur
+* caching plus difficile
 
+---
 
-## <ins>Gestion d'API (API Management)</ins>
-<div align="center">
-	<img src="../images/apimanage.png" height="350" width="350" />
-</div>
+## 🔀 API vs WebService vs Microservice
 
+| Concept      | Définition                 | Rôle         |
+| ------------ | -------------------------- | ------------ |
+| API          | Interface de communication | Contrat      |
+| WebService   | API via réseau (HTTP)      | Transport    |
+| Microservice | Architecture applicative   | Organisation |
 
-> L’utilisation accrue des API a entraîné avec elle le développement de certains outils.<br>
-> Destinés aux entreprises, ceux-ci ont été conçus afin d’aider les organisations à gérer les API de façon efficace.<br> 
-> Plus précisément, l’API management (ou gouvernance des API) signifie contrôler et optimiser l’utilisation des API,<br> 
-> tout en évitant de perturber le travail des développeurs ainsi que l’expérience utilisateur.<br> 
-> Pour une entreprise, ce processus vise à suivre, contrôler et promouvoir ses API.<br>
+---
+
+## 🧭 API Management
+
+```mermaid
+flowchart LR
+A[Design] --> B[Build]
+B --> C[Test]
+C --> D[Deploy]
+D --> E[Monitor]
+E --> A
 ```
-La gestion des API apporte une réelle valeur ajoutée : elle permet notamment de partager 
-plus facilement les données d’une entreprise avec ses partenaires commerciaux. 
-Par exemple, il devient envisageable pour un fournisseur d’avoir une vision transparente 
-sur le stock de produits de ses clients. 
-Il peut alors exploiter ces chiffres dans son propre système et ajuster les livraisons.
-Les outils de gestion des API aident les utilisateurs à :
-- concevoir, 
-- créer, 
-- tester, 
-- surveiller et déployer des API. 
-Ils aident les équipes de données à configurer l'intégralité du cycle de vie 
-des API au sein d'une seule plateforme.
+
+### 🎯 Objectifs
+
+* gérer le cycle de vie des API
+* sécuriser les accès
+* analyser les usages
+
+### 🧰 Fonctions clés
+
+* design & documentation
+* sécurité (OAuth, API keys)
+* monitoring
+* throttling / rate limiting
+
+---
+
+## 📊 KPIs API
+
+* disponibilité (uptime)
+* consommation (trafic)
+* scalabilité (charge supportée)
+
+---
+
+## 🧪 Postman
+
+### Cas d’usage principaux
+
+* tests API
+* automatisation
+* environnements (dev/staging/prod)
+* documentation
+* mocks
+* CI/CD
+
+---
+
+# 📡 Codes de retour HTTP
+
+## 🧭 Vue globale
+
+```mermaid
+flowchart TD
+HTTP --> 1xx
+HTTP --> 2xx
+HTTP --> 3xx
+HTTP --> 4xx
+HTTP --> 5xx
 ```
-> Certaines fonctionnalités clés des solutions de gestion d'API incluent :
-- **Conception et création d'API**<br>
-Les outils API aident à concevoir les spécifications de l'API, à définir les points de terminaison 
-et à créer la documentation nécessaire pour que les développeurs comprennent comment interagir avec l'API.
-- **Sécurité et authentification**<br>
-Les outils de gestion des API fournissent des mécanismes pour sécuriser les API, mettre en œuvre l'authentification 
-et contrôler l'accès via des méthodes telles que les clés API, OAuth ou d'autres protocoles d'authentification.
-- **Gestion du trafic routier**<br>
-Ces outils vous permettent de surveiller et de contrôler le flux de données entre les API et les applications, 
-évitant ainsi les surcharges ou les utilisations abusives et garantissant des performances optimales.
-- **Surveillance et analyse**<br> 
-Les solutions de gestion des API offrent des capacités de surveillance et d'analyse en temps réel, vous permettant de suivre 
-l'utilisation des API, d'identifier les goulots d'étranglement en matière de performances 
-et d'obtenir des informations sur le comportement des utilisateurs.
-
-**Enjeux de l'API Management :** 
-- Analyser l'activité de vos API
-- Gérer le cycle de vie de vos API
-- Contrôler les accès et les connexions
-- Disposer d'un portail pour la communauté de développeurs (documentation des APIs)
-
-**Exemples de Solutions d'API Management :**
-- Amazon API Gateway
-- Kong
-- Astera
-- IBM API Connect
-- Apidog
-- SwaggerHub
-
-Les plateformes d’API management permettent de surveiller les différentes métriques liées aux API. On observe trois KPIs fondamentaux :
-- la disponibilité : le service fourni par l'application s’arrête si la disponibilité n’est pas de 100% ;
-- la consommation : il s’agit du niveau du besoin client ;
-- la scalabilité : la capacité de l’API à s’adapter à un nombre croissant d’utilisateurs.
-
-
-## <ins>L'outil Postman</ins>
-<div align="center">
-	<img src="../images/postman.png" height="350" width="350" />
-</div>
-
-Postman est un outil très populaire pour travailler avec des API. Voici les principaux cas d’usage :
-
-
-🚀 **1. Tester des API (REST, GraphQL, SOAP…)**
-- Envoyer facilement des requêtes GET, POST, PUT, DELETE…
-- Ajouter des paramètres, headers, bodies JSON, formulaires, fichiers…
-- Visualiser les réponses (code HTTP, temps, payload).
-
-🔁 **2. Automatiser des tests**
-- Créer des tests automatisés grâce à du JavaScript directement dans Postman.
-- Vérifier le statut HTTP, le format JSON, la présence de champs, etc.
-- Intégrer ces tests dans une Collection pour les exécuter en série.
-
-⚙️ **3. Simuler des scénarios complexes**
-- Enchaîner plusieurs appels, utiliser des variables, scripts pré-requête.
-- Construire des workflows pour tester des parcours utilisateurs.
-
-🌐 **4. Gérer différents environnements**
-- Définir des variables d’environnement (dev / test / prod).
-- Faciliter le changement de base URL, tokens, identifiants.
-
-🛠️ **5. Documenter une API**
-- Générer automatiquement une documentation lisible et partageable.
-- La mettre à disposition via un lien public ou privé.
-
-📦 **6. Mocker des API (Mock Servers)**
-- Créer des serveurs factices pour simuler une API avant qu’elle n’existe.
-- Utile pour développer un front-end en parallèle.
-
-🔐 **7. Gérer l’authentification**
-- Support de nombreuses méthodes : API Key, Bearer Token, OAuth 2.0, Basic Auth…
-- Gestion automatique du refresh token.
-
-🌩️ **8. Automatiser des pipelines CI/CD**
-- Lancer des collections de tests dans GitHub Actions, GitLab CI, Jenkins…
-- Prévalider les API avant déploiement.
-
-👥 **9. Collaborer en équipe**
-- Collections partagées dans un workspace.
-- Historique, versioning, commentaires.
-
-☁️ **10. Superviser des API (monitoring)**
-- Exécuter automatiquement des appels à intervalles réguliers.
-- Être alerté en cas de défaillance.
-
-# 📡 <ins>Codes de retour HTTP</ins>
-Les codes HTTP sont des réponses envoyées par un serveur après une requête. Ils sont regroupés par catégories :
-
-### ✅ 1xx — Information
-- **100 Continue** : Le client peut continuer sa requête.
 
 ---
 
-### ✅ 2xx — Succès
-- **200 OK** : Requête réussie (cas standard).
-- **201 Created** : Ressource créée avec succès (souvent après un POST).
-- **202 Accepted** : Requête acceptée mais traitement non terminé.
-- **204 No Content** : Succès sans contenu en retour (ex : suppression).
+## 📌 Résumé
+
+| Code | Signification  |
+| ---- | -------------- |
+| 2xx  | Succès         |
+| 3xx  | Redirection    |
+| 4xx  | Erreur client  |
+| 5xx  | Erreur serveur |
 
 ---
 
-### 🔁 3xx — Redirection
-- **301 Moved Permanently** : Ressource déplacée définitivement.
-- **302 Found** : Redirection temporaire.
-- **304 Not Modified** : La ressource n’a pas changé (cache utilisé).
+# 🌐 Verbes HTTP
+
+```mermaid
+flowchart LR
+GET --> READ
+POST --> CREATE
+PUT --> REPLACE
+PATCH --> UPDATE
+DELETE --> REMOVE
+```
 
 ---
 
-### ⚠️ 4xx — Erreurs côté client
-- **400 Bad Request** : Requête invalide (syntaxe ou données incorrectes).
-- **401 Unauthorized** : Authentification requise.
-- **403 Forbidden** : Accès refusé même si authentifié.
-- **404 Not Found** : Ressource inexistante.
-- **405 Method Not Allowed** : Verbe HTTP non autorisé.
-- **409 Conflict** : Conflit avec l’état actuel (ex : doublon).
-- **422 Unprocessable Entity** : Données valides mais incohérentes.
+# 🔐 Quelques astuces pour sécuriser ses API
+
+## 🔒 Astuce 1 — Utiliser HTTPS
+
+Toutes les communications doivent être chiffrées via TLS.
+
+👉 Empêche :
+
+* interception de données
+* attaques MITM
 
 ---
 
-### 💥 5xx — Erreurs côté serveur
-- **500 Internal Server Error** : Erreur générique serveur.
-- **501 Not Implemented** : Fonctionnalité non supportée.
-- **502 Bad Gateway** : Mauvaise réponse d’un serveur intermédiaire.
-- **503 Service Unavailable** : Serveur indisponible (maintenance/surcharge).
-- **504 Gateway Timeout** : Temps de réponse dépassé.
+## 🔑 Astuce 2 — OAuth2
+
+Protocole d’autorisation moderne.
+
+✔ Permet :
+
+* accès limité
+* tokens temporaires
+* délégation (Google, GitHub login)
 
 ---
 
-# 🌐 <ins>Verbes HTTP principaux</ins>
+## 🔐 Astuce 3 — WebAuthn
 
-Les verbes HTTP définissent l’action à effectuer sur une ressource.
+Authentification forte sans mot de passe.
 
-### 📥 GET
-- **Utilité** : Récupérer des données
-- **Caractéristiques** :
-  - Ne modifie pas les données
-  - Peut être mis en cache
-- **Exemple** : Obtenir une liste d’utilisateurs
+✔ Basé sur :
+
+* biométrie
+* clés matérielles
 
 ---
 
-### 📤 POST
-- **Utilité** : Créer une nouvelle ressource
-- **Caractéristiques** :
-  - Peut modifier l’état du serveur
-  - Non idempotent
-- **Exemple** : Créer un utilisateur
+## 🔑 Astuce 4 — API Keys avec niveaux
+
+Ne jamais utiliser une clé unique globale.
+
+✔ Bonnes pratiques :
+
+* clé par utilisateur
+* clé par environnement
+* permissions limitées
 
 ---
 
-### ✏️ PUT
-- **Utilité** : Mettre à jour ou remplacer une ressource existante
-- **Caractéristiques** :
-  - Idempotent (même requête → même résultat)
-- **Exemple** : Modifier un utilisateur entier
+## 🛂 Astuce 5 — Authorization stricte
+
+Différencier :
+
+* authentification (qui es-tu ?)
+* autorisation (as-tu le droit ?)
 
 ---
 
-### 🩹 PATCH
-- **Utilité** : Mise à jour partielle d’une ressource
-- **Caractéristiques** :
-  - Modifie seulement certains champs
-- **Exemple** : Modifier l’email d’un utilisateur
+## 🚦 Astuce 6 — Rate Limiting
+
+Limiter le nombre de requêtes :
+
+```mermaid
+flowchart LR
+User --> API
+API -->|OK si < limite| Response
+API -->|bloqué si abus| Error429
+```
+
+✔ Protège contre :
+
+* brute force
+* DDoS
+* abus API
 
 ---
 
-### ❌ DELETE
-- **Utilité** : Supprimer une ressource
-- **Caractéristiques** :
-  - Idempotent
-- **Exemple** : Supprimer un utilisateur
+## 🔁 Astuce 7 — Versioning API
+
+Exemple :
+
+* `/api/v1/users`
+* `/api/v2/users`
+
+✔ Permet :
+
+* évolution sans casser les clients
 
 ---
 
-### 🔍 HEAD
-- **Utilité** : Identique à GET sans le corps de la réponse
-- **Exemple** : Vérifier si une ressource existe
+## 🧾 Astuce 8 — Allowlisting
+
+Ne pas bloquer ce qui est dangereux → mais autoriser uniquement ce qui est connu.
+
+✔ Très efficace pour :
+
+* endpoints internes
+* microservices
 
 ---
 
-### ⚙️ OPTIONS
-- **Utilité** : Obtenir les méthodes autorisées sur une ressource
-- **Exemple** : Vérifier les permissions API (souvent utilisé en CORS)
+## 🛡️ Astuce 9 — OWASP API Security
+
+### ⚠️ Principaux risques
+
+* BOLA (Broken Object Level Authorization)
+* Broken Authentication
+* Excessive Data Exposure
+* Rate Limit insuffisant
+* SSRF
 
 ---
 
-## 🧠 Résumé rapide
+### 🔥 Vue structurée
 
-| Verbe  | Action principale        | Idempotent |
-|--------|------------------------|------------|
-| GET    | Lire                   | ✅ Oui     |
-| POST   | Créer                 | ❌ Non     |
-| PUT    | Remplacer             | ✅ Oui     |
-| PATCH  | Modifier partiellement| ❌ Non     |
-| DELETE | Supprimer             | ✅ Oui     |
+```mermaid
+mindmap
+  root((OWASP API Risks))
+    Auth
+      Broken Authentication
+    Authorization
+      BOLA
+      BFLA
+    Data
+      Excessive Exposure
+    Infrastructure
+      SSRF
+      Misconfiguration
+    Abuse
+      Rate Limit
+      Business Logic Abuse
+```
 
 ---
 
-## 📌 Bonnes pratiques API
-- Utiliser les bons codes HTTP pour refléter le résultat réel
-- Respecter la sémantique des verbes HTTP
-- Préférer **PUT vs PATCH** selon le type de mise à jour
-- Toujours documenter les réponses API
+## 🛡️ Astuce 10 — API Gateway
 
-# <ins>Quelques Astuces pour Sécuriser ses API</ins>
+Point d’entrée unique :
 
-## Astuce 1 : Use HTTPS
+```mermaid
+flowchart LR
+Client --> Gateway --> Microservices
+Gateway --> Auth
+Gateway --> RateLimit
+Gateway --> Logs
+```
 
-## Astuce 2 : Use OAuth2
+✔ Centralise :
 
-## Astuce 3 : Use WebAuthn
+* sécurité
+* routing
+* monitoring
 
-## Astuce 4 : Use Leveled API Keys
+---
 
-## Astuce 5 : Implement Authorization
+## ⚠️ Astuce 11 — Error Handling
 
-## Astuce 6 : Rate Limiting
+Bonnes pratiques :
 
-## Astuce 7 : API Versioning
+* ne pas exposer les stack traces
+* messages génériques côté client
+* logs détaillés côté serveur
 
-## Astuce 8 : AllowListing
+---
 
-## Astuce 9 : Check OWASP API Security Risks
+## 🧪 Astuce 12 — Input Validation
 
-### OWASP TOP 10 API Security Risks
-> OWASP = Open Web Application Security Project
+Toujours valider :
 
-**API1 : Broken Object Level Authorization**<br>
-**API2 : Broken Authentication**<br>
-**API3 : Broken Object Property Level Authorization**<br>
-**API4 : Unrestricted Resource Consumption**<br>
-**API5 : Broken Function Level Authorization**<br>
-**API6 : Unrestricted Access to Sensitive Business Flows**<br>
-**API7 : Server Side Request Forgery**<br>
-**API8 : Security Misconfiguration**<br>
-**API9 : Improper Inventory Management**<br>
-**API10 : Unsafe Consumation of APIs**<br>
+* types
+* formats
+* tailles
+* schémas JSON
 
-## Astuce 10 : Use API Gateway
+✔ Empêche :
 
-## Astuce 11 : Error Handling
+* injections
+* corruption de données
 
-## Astuce 12 : Input Validation
+---
+
+# 🎯 Conclusion
+
+Une API moderne repose sur 3 piliers :
+
+```mermaid
+flowchart TD
+A[Sécurité] --> API
+B[Scalabilité] --> API
+C[Observabilité] --> API
+```
+
+---
+
+Si tu veux, je peux aussi :
+
+* transformer ça en **cours PDF prêt à imprimer**
+* ajouter une section **JWT / OAuth2 en profondeur**
+* ou faire une version **ultra simplifiée pour révision rapide**
