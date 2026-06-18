@@ -1,5 +1,3 @@
-Voici une version enrichie de ton fichier Markdown avec des explications détaillées et quelques diagrammes Mermaid pour illustrer les concepts les plus importants.
-
 # Stop Designing REST APIs the Wrong Way
 
 Designing a REST API is not just about exposing data. A well-designed API should be intuitive, scalable, secure, and consistent. Here are 10 common mistakes developers make and how to avoid them.
