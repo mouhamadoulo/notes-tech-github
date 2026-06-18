@@ -141,7 +141,5 @@ style H fill:#e6d5ff
 
 Les versions 16 → 22 représentent probablement la plus grande transformation depuis Angular 2, avec la transition progressive d'un framework basé sur **Zone.js + RxJS** vers un framework **Signal-first, Zoneless et plus performant**. ([GrapesTech Solutions][2])
 
-Si tu veux un diagramme **encore plus détaillé (type roadmap d'architecte avec les innovations Angular, TypeScript, RxJS, SSR, Standalone, Signals, Hydration, Zoneless, etc.)**, je peux te générer une version Mermaid de niveau conférence/formation.
-
 [1]: https://angular.dev/reference/releases?utm_source=chatgpt.com "Versioning and releases • Angular"
 [2]: https://www.grapestechsolutions.com/blog/angular-version-history/?utm_source=chatgpt.com "Angular Version History: Latest Angular Version 2026"
