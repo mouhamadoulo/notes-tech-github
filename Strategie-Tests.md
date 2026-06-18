@@ -34,8 +34,7 @@
 
 Une application moderne Angular + Java est généralement composée de :
 
-```mermaid
-graph TD
+```graph TD
 
 A[Angular Frontend]
 B[REST API Spring Boot]
