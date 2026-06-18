@@ -10,21 +10,21 @@ On peut représenter ça comme un système en couches :
 
 ```mermaid
 flowchart TD
-A[Package de rémunération total] --> B[Salaire fixe]
-A --> C[Salaire variable]
-A --> D[Equity / actions]
-A --> E[Avantages sociaux]
-A --> F[Avantages matériels]
-A --> G[Avantages carrière / développement]
+A["Package de rémunération total"] --> B["Salaire fixe"]
+A --> C["Salaire variable"]
+A --> D["Equity / actions"]
+A --> E["Avantages sociaux"]
+A --> F["Avantages matériels"]
+A --> G["Avantages carrière / développement"]
 
-E --> E1[Santé: mutuelle]
-E --> E2[Retraite / épargne]
-E --> E3[Prévoyance]
-E --> E4[Congés / RTT]
+E --> E1["Santé: mutuelle"]
+E --> E2["Retraite / épargne"]
+E --> E3["Prévoyance"]
+E --> E4["Congés / RTT"]
 
-F --> F1[Remote / télétravail]
-F --> F2[Matériel (PC, setup)]
-F --> F3[Perks (repas, transport)]
+F --> F1["Remote / télétravail"]
+F --> F2["Matériel (PC, setup)"]
+F --> F3["Perks (repas, transport)"]
 ```
 
 ---
@@ -47,7 +47,7 @@ C’est la partie la plus simple :
 
 ---
 
-## B. 📈 Salaire variable (bonus)
+## B. 📈 Salaire variable (bonus + 13ème mois)
 
 Partie dépendante de la performance :
 
@@ -64,6 +64,27 @@ A[Objectifs entreprise] --> B[Performance équipe]
 B --> C[Performance individuelle]
 C --> D[Bonus final]
 ```
+
+### 💥 13ème mois (important en France)
+
+Le 13ème mois est un **salaire additionnel équivalent à 1 mois de salaire**.
+
+### 2 formes :
+
+* versé en une fois (décembre souvent)
+* ou réparti sur l’année
+
+```mermaid
+flowchart LR
+A[Salaire annuel] --> B[12 mois classiques]
+A --> C[13ème mois]
+```
+
+### Attention :
+
+* ce n’est pas un bonus “gratuit”
+* il est souvent **intégré au package global**
+  👉 13 mois inclus = salaire mensuel “moins élevé”
 
 ---
 
@@ -184,7 +205,125 @@ D --> E[Augmentation salaire]
 
 ---
 
+## I. 🧾 Intéressement & participation (très important en France)
+
+Ces deux dispositifs sont souvent confondus mais différents.
+
+---
+
+### A. Participation (obligatoire sous conditions)
+
+* obligatoire si l’entreprise dépasse un certain seuil (≈ 50 salariés)
+* redistribution d’une partie des bénéfices
+
+👉 logique :
+
+> “tu touches une part des profits de l’entreprise”
+
+---
+
+### B. Intéressement (facultatif)
+
+* basé sur la performance collective
+* objectifs définis à l’avance (CA, marge, qualité, etc.)
+
+👉 plus flexible que la participation
+
+---
+
+### 💡 Différence simple :
+
+| Dispositif    | Obligatoire               | Base         | Logique                |
+| ------------- | ------------------------- | ------------ | ---------------------- |
+| Participation | Oui (grandes entreprises) | bénéfice net | redistribution légale  |
+| Intéressement | Non                       | objectifs    | performance collective |
+
+---
+
+### 💰 Fiscalité avantageuse
+
+Ces montants peuvent être :
+
+* versés directement
+* ou placés dans un plan d’épargne (souvent plus intéressant)
+
+---
+
+## J. 🏦 Épargne salariale (très important)
+
+C’est là que se trouvent les dispositifs comme **PERECO**, PEE, etc.
+
+---
+
+### A. PEE (Plan d’Épargne Entreprise)
+
+* placement bloqué 5 ans
+* abondement possible de l’employeur
+
+👉 ex :
+
+* tu mets 1000€
+* l’entreprise ajoute 1000€ → 2000€
+
+---
+
+### B. 🧓 PERECO (Plan d’Épargne Retraite Collectif)
+
+👉 anciennement PERCO
+
+### Objectif :
+
+préparer la retraite
+
+### Fonctionnement :
+
+* versements volontaires
+* abondement employeur possible
+* blocage jusqu’à la retraite (sauf cas de sortie anticipée)
+
+```mermaid
+flowchart TD
+A[Salaire brut] --> B[Versement volontaire]
+B --> C[PERECO]
+C --> D[Gestion long terme]
+D --> E[Retraite]
+C --> F[Abondement entreprise]
+```
+
+---
+
+### 💡 Pourquoi c’est puissant
+
+* fiscalité avantageuse
+* effet “argent gratuit” via abondement
+* optimisation énorme du revenu réel
+
+---
+
+
 # 3. Lecture “Fullstack mindset” (comment évaluer une offre)
+
+## 📊 Vue d’ensemble (modèle final)
+
+```mermaid
+flowchart TD
+A[Revenu total] --> B[Salaire fixe]
+A --> C[Variable]
+A --> D[Epargne salariale]
+A --> E[Equity]
+A --> F[Avantages sociaux]
+A --> G[Temps & conditions]
+A --> H[Développement carrière]
+
+C --> C1[Bonus]
+C --> C2[13ème mois]
+
+D --> D1[Participation]
+D --> D2[Intéressement]
+D --> D3[PEE]
+D --> D4[PERECO]
+```
+
 
 Tu peux penser en 3 blocs :
 
