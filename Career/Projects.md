@@ -1,7 +1,3 @@
-Voici une version **structurée, enrichie et mise en Markdown**, avec des **diagrammes Mermaid** pour clarifier les enchaînements projets et l’organisation globale.
-
----
-
 # 🧭 Projets & Expériences
 
 ## 1. Contexte général
