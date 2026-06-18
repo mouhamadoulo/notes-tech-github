@@ -1,6 +1,6 @@
 # <ins>MongoDB</ins>
 <div align="center">
-	<img src="images/mongodb.png" height="350" width="350" />
+	<img src="../images/mongodb.png" height="350" width="350" />
 </div>
 MongoDB est une base de données NoSQL orientée documents, idéale pour les données semi-structurées et les modèles flexibles.
   
@@ -26,7 +26,7 @@ MongoDB est une base de données NoSQL orientée documents, idéale pour les don
 
 # <ins>Redis</ins>
 <div align="center">
-	<img src="images/redis.png" height="350" width="350" />
+	<img src="../images/redis.png" height="350" width="350" />
 </div>
 Redis est une base en mémoire, ultra rapide, souvent utilisée pour la performance, le caching et la gestion d’état. 
  
@@ -57,7 +57,7 @@ Redis est une base en mémoire, ultra rapide, souvent utilisée pour la performa
 
 # <ins>Exemples de projets concrets avec utilisation de MongoDB et Redis ensemble</ins>
 <div align="center">
-	<img src="images/mongodb_redis.png" height="350" width="350" />
+	<img src="../images/mongodb_redis.png" height="350" width="350" />
 </div>
 
 ##  E-commerce (Panier en temps réel + Catalogue produits)
