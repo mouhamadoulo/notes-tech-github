@@ -1,13 +1,3 @@
-Voici une version améliorée, structurée et enrichie de ton Markdown. J’ai :
-
-* Clarifié la mise en forme
-* Ajouté des diagrammes **Mermaid**
-* Harmonisé le style
-* Complété toute la section **“Sécuriser ses API”** avec des explications concrètes
-* Ajouté une vue plus “ingénierie moderne”
-
----
-
 # 🚀 API (Application Programming Interface)
 
 ## 🧩 Kesako ?
