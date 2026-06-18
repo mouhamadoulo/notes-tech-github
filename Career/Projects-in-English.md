@@ -67,10 +67,3 @@ Development of a batch processing system using Spring Boot for a data warehouse 
   * File comparison module
   * Rejected ticket reprocessing module from RabbitMQ queues
 
----
-
-If you want, I can also:
-
-* adapt it for a **CV (ATS-friendly version)**
-* or turn it into a **LinkedIn experience section**
-* or make it more **technical / more business-oriented**
