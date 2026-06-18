@@ -1,4 +1,5 @@
-# Cours Magistral : NoSQL avec MongoDB et Redis
+# NoSQL avec MongoDB et Redis
+
 ## Architectures modernes, modélisation, performances et implémentation Java Spring Boot
 
 ---
