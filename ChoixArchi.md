@@ -1,4 +1,4 @@
-# Réaliser les Bons Choix Architecturaux dans le Développement d’Applications
+# Réaliser les Bons Choix Architecturaux
 
 ---
 
