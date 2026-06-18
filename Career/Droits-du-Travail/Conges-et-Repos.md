@@ -143,7 +143,7 @@ timeline
 flowchart LR
 A["Fin de semaine travail"] --> B["24h repos hebdo"]
 B --> C["+11h repos quotidien"]
-C --> D=["35h minimum"]
+C --> D["35h minimum"]
 ```
 
 ### 📅 Principe
