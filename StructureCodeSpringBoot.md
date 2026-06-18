@@ -1,4 +1,4 @@
-# Cours Magistral : Structurer un Backend Java Spring Boot Professionnel
+# Structurer un Backend Java Spring Boot Professionnel
 
 > Objectif : comprendre comment organiser un projet Spring Boot maintenable, scalable et adapté aux projets professionnels.
 
