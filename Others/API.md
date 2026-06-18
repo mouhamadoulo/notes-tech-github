@@ -414,10 +414,4 @@ B[Scalabilité] --> API
 C[Observabilité] --> API
 ```
 
----
 
-Si tu veux, je peux aussi :
-
-* transformer ça en **cours PDF prêt à imprimer**
-* ajouter une section **JWT / OAuth2 en profondeur**
-* ou faire une version **ultra simplifiée pour révision rapide**
