@@ -141,8 +141,8 @@ timeline
 
 ```mermaid
 flowchart LR
-A[Fin de semaine travail] --> B[24h repos hebdo]
-B --> C[+11h repos quotidien]
+A["Fin de semaine travail"] --> B["24h repos hebdo"]
+B --> C["+11h repos quotidien"]
 C --> D= 35h minimum]
 ```
 
