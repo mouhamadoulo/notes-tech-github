@@ -1,5 +1,6 @@
-1️⃣ Vocabulaire clé à utiliser (indispensable)
-🔹 Général / Contexte
+# 1️⃣ Vocabulaire clé à utiliser (indispensable)
+
+## 🔹 Général / Contexte
 - Business tools / Internal business applications
 - Legacy applications
 - Originally developed by business teams
@@ -9,14 +10,14 @@
 - Change requests (au lieu de EB → Evolutionary Requests / Change Requests)
 - Stakeholders (business, operations, cloud team, DBA…)
 
-🔹 Front / Back
+## 🔹 Front / Back
 - Frontend UI / Web interfaces
 - Backend processing
 - Batch processing
 - Business logic
 - Data processing pipelines
 
-🔹 Infrastructure & Sécurité
+## 🔹 Infrastructure & Sécurité
 - On-premise servers
 - Dedicated servers
 - Low Storage / insufficient RAM
@@ -26,21 +27,21 @@
 - File transfer flows
 - Secure file transfer (SFTP / STF)
 
-🔹 Tests
+## 🔹 Tests
 - Connectivity testing
 - Functional testing
 - Non-regression testing
 - User Acceptance Testing (UAT)
 - Test environments
 
-🔹 Agile / Organisation
+## 🔹 Agile / Organisation
 - Agile methodology
 - Daily stand-ups
 - Estimation and planning
 - Challenging estimates
 - Cross-team collaboration
 
-🔹 Cloud & DevOps
+## 🔹 Cloud & DevOps
 - Cloud migration
 - Cloud-native architecture
 - AWS services (EC2, RDS, S3, Lambda)
@@ -49,7 +50,7 @@
 - Automation
 - Deployment pipelines
 
-🔹 Data / Batch
+## 🔹 Data / Batch
 - Data warehouse
 - Batch jobs
 - Data ingestion
@@ -59,7 +60,7 @@
 - Message queue (RabbitMQ)
 - Rejected messages recycling
 
-2️⃣ Phrases types pour l’oral (très utiles) : 
+# 2️⃣ Phrases types pour l’oral (très utiles) : 
 - “I was responsible for…”
 - “I worked closely with business stakeholders.”
 - “One of the main challenges was security compliance.”
