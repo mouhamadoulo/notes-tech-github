@@ -1,5 +1,4 @@
-# Cours Magistral Spring Boot
-## Toutes les formes d'applications que l'on peut développer avec Spring Boot
+# Toutes les formes d'applications que l'on peut développer avec Spring Boot
 
 ---
 
