@@ -1,8 +1,8 @@
 # SKILLS TO IMROVE (Compétences à acquerir ou à améliorer)
 <div align="left">
-	<img src="images/skillstech.jpg" height="300" width="250" />
-	<img src="images/skills2.png" height="300" width="300" />
-	<img src="images/skills3.png" height="300" width="300" />
+	<img src="../images/skillstech.jpg" height="300" width="250" />
+	<img src="../images/skills2.png" height="300" width="300" />
+	<img src="../images/skills3.png" height="300" width="300" />
 </div>
 
 
