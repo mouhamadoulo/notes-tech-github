@@ -1,4 +1,4 @@
-# 🚀 Template de Préparation d’Entretien – Mission Freelance / CDI / Consulting
+# 🚀 Template de Préparation d’Entretien
 
 ---
 
