@@ -170,11 +170,6 @@ Accept: application/vnd.company.v2+json
 
 ```mermaid
 graph TD
-A[Client v1] --> B[/api/v1/users]
-C[Client v2] --> D[/api/v2/users]
-```
-```mermaid
-graph TD
 A["Client v1"] --> B["/api/v1/users"]
 C["Client v2"] --> D["/api/v2/users"]
 ```
