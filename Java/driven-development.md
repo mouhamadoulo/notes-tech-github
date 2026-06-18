@@ -1,5 +1,5 @@
 
-# Tutoriel complet : Spec Driven Development, TDD et DDD en Java
+# SDD, TDD et DDD
 
 Ce tutoriel couvre trois approches complémentaires de l'ingénierie logicielle. Elles ne s'opposent pas : on peut écrire une **spécification** (SDD), la faire piloter l'écriture des **tests** (TDD), et structurer le code métier produit selon le **Domain Driven Design** (DDD). Un fil rouge unique est utilisé dans tous les exemples : un domaine de **commande e-commerce** (`Order`).
 
