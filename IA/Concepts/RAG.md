@@ -1,4 +1,4 @@
-# RAG
+# RAG (Retrieval-Augmented Generation)
 Le RAG (Retrieval-Augmented Generation) est une technique très importante pour améliorer les LLM. <br>
 Elle permet à un modèle de langage de chercher des informations dans une base de données ou des documents externes 
 avant de répondre.
