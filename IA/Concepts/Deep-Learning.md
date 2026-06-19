@@ -1,5 +1,5 @@
 
-# Tutoriel Complet sur le Deep Learning
+# Le Deep Learning
 
 ## Table des matières
 
