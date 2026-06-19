@@ -1,4 +1,4 @@
-# Cours magistral : Les notions essentielles du développement agentique
+# Les notions essentielles du développement agentique
 
 > Niveau : Intermédiaire à avancé  
 > Public : Architectes IA, développeurs LLM, ingénieurs logiciels, CTOs techniques  
