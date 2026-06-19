@@ -1,5 +1,5 @@
 
-# Tutoriel Complet : Embeddings et Recherche Vectorielle
+# Embeddings et Recherche Vectorielle
 
 ## Table des matières
 
