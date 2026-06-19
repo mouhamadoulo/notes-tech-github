@@ -1,4 +1,4 @@
-# Tutoriel Complet : La Documentation dans un Projet de Développement Informatique
+# La Documentation dans un Projet de Développement Informatique
 
 ## Introduction
 
