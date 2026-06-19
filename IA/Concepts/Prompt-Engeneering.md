@@ -1,4 +1,5 @@
-# Cours Magistral : Prompt Engineering
+# Le Prompt Engineering
+
 ## Maîtriser l'art de communiquer avec les modèles de langage (LLM)
 
 **Niveau :** Débutant à Avancé  
