@@ -38,9 +38,18 @@
 
 ---
 
-# 📊 Big Data / IA
+# 📊 IA
 
 * aCAP – Associate Certified Analytics Professional (INFORMS)
+* Certificat Professionnel IBM Generative AI Engineering - la certification pour maîtriser l’IA générative de A à Z
+* Microsoft Certified : Principes de base de l’IA Azure - la certification IA idéale pour commencer en douceur
+* AWS Certified Machine Learning Specialty - la certification cloud pour les experts du machine learning
+* Google Cloud Professional ML Engineer Certification - validez votre expertise avancée en Machine Learning
+* Certification en intelligence artificielle de Certif’IAG : utiliser l’IA générative de manière responsable
+* Certificats en IA générative et en LLM de NVIDIA - une option intéressante pour valider une expertise complète
+* Certification AI Associate de Trailhead - une certification en IA gratuite
+* Google Career Essentials : Intelligence Artificielle - la certification en IA pour les débutants
+* Certificat de spécialisation Intelligence artificielle du CNAM – la certification académique pour maîtriser l’IA en profondeur
 
 ---
 
