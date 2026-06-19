@@ -1,5 +1,5 @@
 
-# Tutoriel Complet sur le Machine Learning
+# Le Machine Learning
 
 ## Table des matières
 
