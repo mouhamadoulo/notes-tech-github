@@ -1,5 +1,5 @@
 
-# Tutoriel complet sur les réseaux de neurones
+# Les Réseaux de neurones
 
 ## 1. Introduction
 
