@@ -262,8 +262,8 @@ Exemple :
 ```mermaid
 flowchart LR
 
-Test --> "Docker PostgreSQL"
-Test --> "Spring Boot"
+Test --> Docker-PostgreSQL
+Test --> SpringBoot
 ```
 
 Les tests tournent avec une vraie base PostgreSQL.
