@@ -262,7 +262,7 @@ Exemple :
 ```mermaid
 flowchart LR
 
-Test --> Docker-PostgreSQL
+Test --> DockerPostgreSQL
 Test --> SpringBoot
 ```
 
