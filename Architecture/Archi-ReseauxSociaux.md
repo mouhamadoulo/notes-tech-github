@@ -1,17 +1,11 @@
-Voici une vue réaliste (mais simplifiée) des architectures utilisées par les grandes apps sociales modernes. Elles reposent presque toutes sur les mêmes **patterns** : microservices, event streaming, stockage distribué, CDN, et séparation lecture/écriture.
-
-Je vais te détailler 4 cas représentatifs :
-
-* Meta (Instagram / Facebook)
-* X (ex Twitter)
-* TikTok
-* Snap Inc. (Snapchat)
+Voici une vue réaliste (mais simplifiée) des architectures utilisées par les grandes apps sociales modernes. <br>
+Elles reposent presque toutes sur les mêmes **patterns** : microservices, event streaming, stockage distribué, CDN, et séparation lecture/écriture.
 
 Et pour chacun : schéma + briques + technos typiques.
 
 ---
 
-# 1. Architecture type Instagram / Facebook (Meta)
+# 1. <ins>Architecture type Instagram / Facebook (Meta)</ins>
 
 ### 🔧 Principe général
 
@@ -66,7 +60,7 @@ Notifications --> APNS[Apple Push / FCM Android]
 
 ---
 
-# 2. Architecture X (Twitter)
+# 2. <ins>Architecture X (Twitter)</ins>
 
 ### 🔧 Principe général
 
@@ -175,7 +169,7 @@ Social --> DB[(Cassandra)]
 
 ---
 
-# 4. Architecture Snapchat (Snap Inc.)
+# 4. <ins>Architecture Snapchat (Snap Inc.)</ins>
 
 ### 🔧 Particularité
 
@@ -258,7 +252,7 @@ Toutes ces apps partagent :
 
 ---
 
-# 5. Architecture Telegram
+# 5. <ins>Architecture Telegram</ins>
 
 Telegram est conçu pour être :
 
@@ -308,7 +302,7 @@ Push --> FCM[Firebase Cloud Messaging]
 
 ---
 
-# 6. Architecture WhatsApp
+# 6. <ins>Architecture WhatsApp</ins>
 
 WhatsApp (Meta) est basé sur :
 
@@ -402,5 +396,591 @@ Si on résume toutes les apps (Meta, X, TikTok, Snapchat, Telegram, WhatsApp), o
 * ML layer (ranking/reco/anti-spam)
 
 ---
+
+# 7. <ins>Architecture LinkedIn</ins>
+
+LinkedIn ne publie **pas l’intégralité de son architecture interne actuelle**. Ce qui est connu provient d'articles d'ingénierie de LinkedIn, de conférences techniques et d'analyses publiques. On peut néanmoins reconstituer une architecture très proche de celle utilisée à grande échelle.
+
+Les technologies citées ci-dessous sont celles qui ont été publiquement mentionnées par LinkedIn au fil des années. Certaines ont évolué et peuvent avoir été remplacées ou complétées depuis.
+
+---
+
+## 1. Architecture globale LinkedIn
+
+```mermaid
+flowchart TB
+
+    User[Web / Mobile User]
+
+    User --> CDN[CDN & Edge Layer]
+    CDN --> Gateway[API Gateway]
+
+    Gateway --> Feed[Feed Service]
+    Gateway --> Profile[Profile Service]
+    Gateway --> Search[Search Service]
+    Gateway --> Messaging[Messaging Service]
+    Gateway --> Jobs[Jobs Service]
+    Gateway --> Ads[Ads Service]
+    Gateway --> Graph[Social Graph Service]
+
+    Feed --> Kafka[(Kafka)]
+    Messaging --> Kafka
+    Jobs --> Kafka
+    Ads --> Kafka
+
+    Feed --> Cache[(Memcached)]
+    Search --> Cache
+    Profile --> Cache
+
+    Feed --> Espresso[(Espresso)]
+    Profile --> Espresso
+    Messaging --> Espresso
+
+    Search --> Galene[(Galene Search Engine)]
+
+    Kafka --> Samza[Apache Samza]
+    Samza --> Hadoop[(Hadoop Data Lake)]
+
+    Hadoop --> ML[Machine Learning Platform]
+    ML --> Feed
+    ML --> Ads
+    ML --> Jobs
+
+    Hadoop --> Analytics[Analytics Platform]
+```
+
+---
+
+## 2. Frontend
+
+## Web
+
+Technologies utilisées :
+
+| Fonction                 | Technologie   |
+| ------------------------ | ------------- |
+| Interface Web            | React         |
+| State Management         | Redux         |
+| TypeScript               | Partiellement |
+| Build                    | Webpack       |
+| GraphQL (certaines APIs) | GraphQL       |
+| REST APIs                | REST          |
+
+### Architecture Front
+
+```mermaid
+flowchart LR
+
+Browser --> React
+React --> Redux
+Redux --> API
+API --> Gateway
+```
+
+---
+
+## 3. Applications Mobile
+
+LinkedIn utilise principalement :
+
+* Kotlin (Android)
+* Swift (iOS)
+* Rest.li APIs
+* Espresso Framework (backend datastore)
+
+```mermaid
+flowchart LR
+
+MobileApp --> RestLi[Rest.li APIs]
+RestLi --> Gateway
+Gateway --> Services
+```
+
+---
+
+## 4. API Layer
+
+Une des particularités de LinkedIn est l'utilisation de **Rest.li**, framework développé en interne.
+
+### Technologies
+
+| Brique            | Technologie     |
+| ----------------- | --------------- |
+| API Framework     | Rest.li         |
+| Service Discovery | D2              |
+| Load Balancing    | D2              |
+| Gateway           | Rest.li Gateway |
+
+```mermaid
+flowchart TB
+
+Client --> RestLiGateway
+
+RestLiGateway --> FeedAPI
+RestLiGateway --> SearchAPI
+RestLiGateway --> ProfileAPI
+RestLiGateway --> MessagingAPI
+```
+
+---
+
+## 5. Architecture Microservices
+
+LinkedIn est largement orienté microservices.
+
+### Services principaux
+
+```mermaid
+flowchart TB
+
+Gateway
+
+Gateway --> IdentityService
+Gateway --> FeedService
+Gateway --> MessagingService
+Gateway --> SearchService
+Gateway --> JobService
+Gateway --> AdsService
+Gateway --> RecommendationService
+Gateway --> NotificationService
+Gateway --> AnalyticsService
+```
+
+---
+
+## 6. Social Graph
+
+Le cœur de LinkedIn est son graphe professionnel.
+
+### Fonction
+
+Stockage :
+
+* membres
+* relations
+* entreprises
+* écoles
+* compétences
+
+```mermaid
+flowchart LR
+
+Member1 --> Connection
+Connection --> Member2
+
+Member1 --> Company
+Member1 --> School
+Member1 --> Skill
+```
+
+Technologies utilisées :
+
+| Fonction      | Technologie         |
+| ------------- | ------------------- |
+| Graphe social | Datastores internes |
+| Distribution  | Espresso            |
+| Cache         | Memcached           |
+
+---
+
+## 7. Base de données distribuée Espresso
+
+Espresso est l'un des composants majeurs développés par LinkedIn.
+
+### Rôle
+
+* stockage distribué
+* réplication
+* partitionnement
+* haute disponibilité
+
+```mermaid
+flowchart TB
+
+Application
+
+Application --> Router
+
+Router --> Shard1
+Router --> Shard2
+Router --> Shard3
+
+Shard1 --> Replica11
+Shard1 --> Replica12
+
+Shard2 --> Replica21
+Shard2 --> Replica22
+
+Shard3 --> Replica31
+Shard3 --> Replica32
+```
+
+---
+
+## 8. Cache Layer
+
+Technologie :
+
+* Memcached
+
+Objectif :
+
+* profils
+* feed
+* résultats de recherche
+
+```mermaid
+flowchart LR
+
+Application --> Cache
+
+Cache --> Hit[Cache Hit]
+Cache --> Miss[Cache Miss]
+
+Miss --> Database
+```
+
+---
+
+## 9. Messaging Architecture
+
+LinkedIn Messaging fonctionne en mode événementiel.
+
+Technologies :
+
+| Fonction        | Technologie |
+| --------------- | ----------- |
+| Event Streaming | Kafka       |
+| Stockage        | Espresso    |
+| Notifications   | Kafka       |
+| Temps réel      | WebSockets  |
+
+```mermaid
+flowchart TB
+
+Sender --> MessagingService
+
+MessagingService --> Kafka
+
+Kafka --> MessageStore
+Kafka --> NotificationService
+
+MessageStore --> Receiver
+```
+
+---
+
+## 10. Feed (le fil LinkedIn)
+
+Le feed est probablement le système le plus complexe.
+
+Sources :
+
+* posts
+* likes
+* commentaires
+* partages
+* publicités
+* recommandations
+
+```mermaid
+flowchart TB
+
+Events --> Kafka
+
+Kafka --> FeedProcessor
+
+FeedProcessor --> RankingEngine
+
+RankingEngine --> FeedStore
+
+FeedStore --> UserFeed
+```
+
+Technologies :
+
+| Fonction   | Technologie                       |
+| ---------- | --------------------------------- |
+| Streaming  | Kafka                             |
+| Processing | Samza                             |
+| ML Ranking | TensorFlow / plateformes internes |
+| Stockage   | Espresso                          |
+
+---
+
+## 11. Kafka : le cœur événementiel
+
+LinkedIn est le créateur d'Apache Kafka.
+
+Kafka transporte :
+
+* messages
+* likes
+* commentaires
+* connexions
+* clics
+* logs
+* événements publicitaires
+
+```mermaid
+flowchart LR
+
+Producer --> Kafka
+
+Kafka --> Feed
+Kafka --> Messaging
+Kafka --> Ads
+Kafka --> Analytics
+Kafka --> Search
+```
+
+---
+
+## 12. Traitement temps réel : Apache Samza
+
+Apache Samza a été développé par LinkedIn.
+
+Objectif :
+
+* traitement temps réel
+* enrichissement des événements
+* calcul de recommandations
+
+```mermaid
+flowchart LR
+
+Kafka --> Samza
+
+Samza --> FeedRanking
+Samza --> Recommendations
+Samza --> FraudDetection
+Samza --> Analytics
+```
+
+---
+
+## 13. Moteur de recherche Galene
+
+Galene est le moteur de recherche développé par LinkedIn.
+
+Fonctions :
+
+* recherche de profils
+* recherche d'entreprises
+* recherche d'emplois
+
+```mermaid
+flowchart TB
+
+UserQuery
+
+UserQuery --> Galene
+
+Galene --> Index1
+Galene --> Index2
+Galene --> Index3
+```
+
+Technologies :
+
+| Fonction      | Technologie     |
+| ------------- | --------------- |
+| Search Engine | Galene          |
+| Indexation    | Lucene Concepts |
+| Distribution  | Sharding        |
+
+---
+
+## 14. Système de recommandations
+
+LinkedIn utilise plusieurs modèles ML.
+
+Cas d'usage :
+
+* personnes que vous connaissez
+* emplois recommandés
+* contenu recommandé
+* publicité
+
+```mermaid
+flowchart TB
+
+UserData
+
+UserData --> FeatureStore
+
+FeatureStore --> MLModels
+
+MLModels --> Ranking
+
+Ranking --> Feed
+Ranking --> Jobs
+Ranking --> Ads
+```
+
+Technologies observées :
+
+* TensorFlow
+* Spark
+* Hadoop
+* Kafka
+* Samza
+
+---
+
+## 15. Plateforme Big Data
+
+Architecture analytique.
+
+```mermaid
+flowchart TB
+
+Kafka --> Hadoop
+
+Hadoop --> Spark
+
+Spark --> DataWarehouse
+
+DataWarehouse --> BI
+
+Spark --> ML
+```
+
+Technologies :
+
+| Fonction   | Technologie  |
+| ---------- | ------------ |
+| Data Lake  | Hadoop HDFS  |
+| Processing | Apache Spark |
+| Streaming  | Kafka        |
+| Scheduling | Azkaban      |
+| Warehouse  | Pinot / Hive |
+| ML         | TensorFlow   |
+
+---
+
+## 16. Système publicitaire
+
+```mermaid
+flowchart TB
+
+AdRequest
+
+AdRequest --> Auction
+
+Auction --> Ranking
+
+Ranking --> AdSelection
+
+AdSelection --> User
+```
+
+Technologies :
+
+* Kafka
+* Samza
+* Pinot
+* Hadoop
+* TensorFlow
+
+---
+
+## 17. Observabilité
+
+Technologies connues chez LinkedIn :
+
+| Domaine    | Technologie                |
+| ---------- | -------------------------- |
+| Logs       | Kafka                      |
+| Metrics    | InGraphs                   |
+| Monitoring | Internal Platforms         |
+| Tracing    | OpenTelemetry-like systems |
+| Alerting   | Internal Tools             |
+
+```mermaid
+flowchart LR
+
+Applications --> Metrics
+
+Applications --> Logs
+
+Logs --> Kafka
+
+Kafka --> Monitoring
+
+Metrics --> Dashboards
+```
+
+---
+
+## 18. Architecture complète (vue simplifiée)
+
+```mermaid
+flowchart TB
+
+User
+
+User --> CDN
+
+CDN --> Gateway
+
+Gateway --> FeedService
+Gateway --> SearchService
+Gateway --> MessagingService
+Gateway --> JobService
+Gateway --> AdsService
+Gateway --> ProfileService
+
+FeedService --> Kafka
+MessagingService --> Kafka
+AdsService --> Kafka
+JobService --> Kafka
+
+Kafka --> Samza
+
+Samza --> Espresso
+
+SearchService --> Galene
+
+FeedService --> Memcached
+ProfileService --> Memcached
+
+Kafka --> Hadoop
+
+Hadoop --> Spark
+
+Spark --> MLPlatform
+
+MLPlatform --> FeedService
+MLPlatform --> AdsService
+MLPlatform --> JobService
+
+Hadoop --> Pinot
+
+Pinot --> Analytics
+```
+
+# Résumé des principales technologies historiquement associées à LinkedIn
+
+| Domaine            | Technologie   |
+| ------------------ | ------------- |
+| Frontend           | React         |
+| Mobile             | Swift, Kotlin |
+| APIs               | Rest.li       |
+| Service Discovery  | D2            |
+| Cache              | Memcached     |
+| Stockage distribué | Espresso      |
+| Messaging          | Kafka         |
+| Stream Processing  | Samza         |
+| Recherche          | Galene        |
+| Batch Analytics    | Hadoop        |
+| Calcul distribué   | Spark         |
+| Data Warehouse     | Pinot, Hive   |
+| Scheduling         | Azkaban       |
+| Machine Learning   | TensorFlow    |
+| Architecture       | Microservices |
+
+Cette architecture permet à LinkedIn de servir plusieurs centaines de millions d'utilisateurs, avec un modèle très fortement orienté **event-driven architecture + microservices + machine learning à grande échelle**.
+
 
 
