@@ -1,4 +1,4 @@
-# Tutoriel complet : Les différents types de serveurs utilisés dans le développement d'applications
+# Les différents types de serveurs
 
 Lorsque l'on développe des applications modernes, le mot **serveur** peut désigner plusieurs réalités différentes. Une application d'entreprise classique peut utiliser simultanément :
 
