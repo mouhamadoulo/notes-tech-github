@@ -1,4 +1,4 @@
-# Tutoriel complet CI/CD Java avec Spring Boot, GitLab CI, GitHub Actions et Jenkins
+# CI/CD Java avec Spring Boot, GitLab CI, GitHub Actions et Jenkins
 
 # Objectif
 
