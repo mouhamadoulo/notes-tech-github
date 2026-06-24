@@ -222,7 +222,7 @@ getUser()
 
 ```mermaid
 flowchart TD
-    A[getUser()] --> B[Promise Pending]
+    A[getUser()] --> B["Promise Pending"]
 
     B --> C[resolve()]
     B --> D[reject()]
@@ -420,8 +420,8 @@ mindmap
 
 ### En une phrase
 
-👉 **Callbacks** = « Je te rappelle quand c'est prêt »
-👉 **Promises** = « Je te promets une réponse plus tard »
+👉 **Callbacks** = « Je te rappelle quand c'est prêt »<br>
+👉 **Promises** = « Je te promets une réponse plus tard »<br>
 👉 **Async/Await** = « J'attends le résultat sans bloquer l'application »
 
 ---
