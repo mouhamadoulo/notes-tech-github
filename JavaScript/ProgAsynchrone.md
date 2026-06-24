@@ -4,10 +4,7 @@
 
 JavaScript est **monothread** : il n’exécute qu’une seule instruction à la fois.
 
-```text
-=> Si une opération est lente (lecture de fichier, appel API, requête BDD),
-elle bloquerait tout le programme.
-```
+> Si une opération est lente (lecture de fichier, appel API, requête BDD), elle bloquerait tout le programme.
 
 L’asynchrone sert à :
 
