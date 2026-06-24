@@ -1,15 +1,3 @@
-Oui. Pour un document pédagogique sur l'asynchrone, les diagrammes **Mermaid** apportent énormément de valeur car ils permettent de visualiser :
-
-* le fonctionnement de l'Event Loop ;
-* le cycle de vie d'une Promise ;
-* le problème du Callback Hell ;
-* l'évolution Callbacks → Promises → Async/Await ;
-* l'exécution d'un `await`.
-
-Voici une version enrichie que tu peux intégrer directement dans ton Markdown.
-
----
-
 # La Programmation Asynchrone en JavaScript
 
 ## 🚀 1. Pourquoi la programmation asynchrone existe en JavaScript ?
