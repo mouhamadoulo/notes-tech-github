@@ -11,9 +11,9 @@ elle bloquerait tout le programme.
 
 L’asynchrone sert à :
 
-- ✔️ ne pas bloquer le programme
-- ✔️ exécuter des tâches en arrière-plan
-- ✔️ continuer le code pendant que d’autres opérations se terminent
+- ne pas bloquer le programme
+- exécuter des tâches en arrière-plan
+- continuer le code pendant que d’autres opérations se terminent
 
 ### Sans asynchrone
 
