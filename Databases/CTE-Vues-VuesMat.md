@@ -1,4 +1,4 @@
-# Tutoriel complet : CTE, vues et vues matérialisées en SQL
+# CTE, vues et vues matérialisées en SQL
 
 Ces trois concepts servent à **structurer, simplifier et optimiser les requêtes SQL**, mais ils ont des usages très différents :
 
