@@ -1,4 +1,4 @@
-# Tutoriel complet : Les fonctions de fenêtre (Window Functions) en SQL
+# Les fonctions de fenêtre (Window Functions) en SQL
 
 Les **fonctions de fenêtre** sont parmi les fonctionnalités les plus puissantes du SQL moderne.
 
