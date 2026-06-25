@@ -1,4 +1,4 @@
-# Tutoriel complet : Les transactions SQL
+# Les transactions SQL
 
 Les **transactions SQL** sont un mécanisme fondamental des bases de données relationnelles. Elles permettent de regrouper plusieurs opérations SQL en une seule unité logique de travail.
 
