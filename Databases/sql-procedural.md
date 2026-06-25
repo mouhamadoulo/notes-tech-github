@@ -1,4 +1,4 @@
-# Tutoriel complet — Le SQL procédural (MySQL, PostgreSQL, SQL Server, Oracle)
+# Le SQL procédural (MySQL, PostgreSQL, SQL Server, Oracle)
 
 ## 1. Introduction
 
