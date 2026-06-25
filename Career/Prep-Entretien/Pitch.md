@@ -97,11 +97,3 @@ Tu peux adapter selon le contexte :
 * **discussion RH → Pitch 1**
 * **échange informel → Pitch 3**
 
-***
-
-Si tu veux, je peux aussi te faire :
-✅ une version ultra courte (30 secondes)  
-✅ ou une réponse parfaite à la question “Parlez-moi de votre dernière mission”  
-✅ ou un pitch orienté freelance/TJM élevé
-
-Dis-moi 👍
