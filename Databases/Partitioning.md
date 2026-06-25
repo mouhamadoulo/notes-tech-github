@@ -1,4 +1,4 @@
-# Tutoriel complet : les partitions en SQL
+# Les partitions en SQL
 
 Les **partitions** permettent de découper une grande table en plusieurs sous-ensembles physiques tout en conservant une seule table logique pour les requêtes.
 
