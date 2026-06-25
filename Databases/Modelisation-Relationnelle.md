@@ -1,4 +1,4 @@
-# Tutoriel complet : la modélisation relationnelle en SQL
+# La Modélisation Relationnelle en SQL
 
 La modélisation relationnelle est la base de presque toutes les bases de données SQL modernes : **MySQL**, PostgreSQL, Microsoft SQL Server, Oracle Database, etc.
 
