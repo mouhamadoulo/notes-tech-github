@@ -630,3 +630,197 @@ Orch --> Logs
 ### En résumé
 
 Dans une architecture d'entreprise moderne, **GPT n'est qu'un composant parmi d'autres**. La valeur ajoutée réside surtout dans la couche construite autour du modèle : authentification, gouvernance, récupération des connaissances internes (RAG), connecteurs vers les applications métier, garde-fous et supervision. Cette couche permet d'offrir une IA adaptée au contexte de l'entreprise tout en respectant ses exigences de sécurité, de conformité et de contrôle des accès.
+
+La réponse est **oui, mais sous conditions**. Le fait qu'une IA soit "interne" ne signifie pas automatiquement qu'elle est autorisée à traiter toutes les données sensibles ou confidentielles. Tout dépend de son architecture, des contrats avec le fournisseur du modèle, et de la gouvernance mise en place.
+
+On peut distinguer quatre niveaux.
+
+| Type de données                                                               | Peut être utilisé ? | Conditions                                                                        |
+| ----------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------- |
+| Documents internes (procédures, documentation, wiki)                          | ✅ Généralement oui  | Contrôle des accès et RAG                                                         |
+| Données confidentielles (contrats, stratégie, résultats financiers)           | ✅ Souvent oui       | Chiffrement, contrôle d'accès, journalisation                                     |
+| Données personnelles (RH, clients)                                            | ✅ Avec précautions  | Respect du RGPD, minimisation des données, habilitations                          |
+| Données très sensibles (secret industriel, défense, informations classifiées) | ⚠️ Dépend fortement | Souvent limité à des modèles auto-hébergés ou à des environnements très sécurisés |
+
+## Pourquoi cela peut être autorisé ?
+
+Le point important est que, dans une architecture d'entreprise, les données restent généralement **sous le contrôle de l'entreprise**.
+
+Par exemple :
+
+```mermaid
+flowchart LR
+
+U[Employé]
+
+RAG[Recherche documentaire]
+
+DOC[(Documents internes)]
+
+GPT[LLM]
+
+U --> RAG
+
+RAG --> DOC
+
+DOC --> RAG
+
+RAG --> GPT
+
+GPT --> U
+```
+
+Dans ce scénario :
+
+* les documents restent sur l'infrastructure de l'entreprise ;
+* seuls les extraits utiles sont transmis au modèle ;
+* l'utilisateur ne peut consulter que les documents auxquels il est déjà autorisé à accéder.
+
+---
+
+## Mais les données partent-elles quand même chez le fournisseur du modèle ?
+
+Cela dépend du mode de déploiement.
+
+### Cas 1 : API cloud (le plus courant)
+
+```mermaid
+flowchart LR
+
+Entreprise -->|Prompt + contexte| OpenAI
+OpenAI -->|Réponse| Entreprise
+```
+
+Le prompt (question + extraits de documents) est envoyé au fournisseur du modèle.
+
+Cela peut sembler inquiétant, mais les offres destinées aux entreprises prévoient généralement des garanties contractuelles, par exemple :
+
+* les données ne sont pas utilisées pour entraîner les modèles ;
+* elles restent la propriété du client ;
+* elles sont conservées selon des durées définies ou non conservées selon la configuration ;
+* les échanges sont chiffrés.
+
+C'est ce qui permet à de nombreuses grandes entreprises d'utiliser des modèles hébergés tout en respectant leurs exigences de conformité.
+
+---
+
+### Cas 2 : Modèle hébergé dans le cloud privé de l'entreprise
+
+Certaines organisations déploient le modèle dans leur propre environnement cloud.
+
+```mermaid
+flowchart LR
+
+Employé --> IA
+
+subgraph Cloud privé entreprise
+IA --> LLM
+IA --> Documents
+end
+```
+
+Les données ne quittent pas l'environnement contrôlé par l'entreprise.
+
+---
+
+### Cas 3 : Modèle entièrement sur site (on-premise)
+
+Pour les secteurs les plus sensibles (défense, certains organismes publics, recherche, industrie), le modèle peut être exécuté sur les serveurs de l'organisation.
+
+```mermaid
+flowchart LR
+
+Employé --> Serveurs internes
+
+subgraph Datacenter entreprise
+
+LLM
+Documents
+Applications
+
+end
+```
+
+Aucune donnée ne sort de l'infrastructure.
+
+---
+
+# Le véritable risque n'est souvent pas le modèle
+
+En pratique, les incidents proviennent fréquemment de mauvaises configurations.
+
+Par exemple :
+
+```text
+Paul (Service Finance)
+
+↓
+
+Pose une question
+
+↓
+
+Le système récupère un document RH
+
+↓
+
+Paul voit des informations
+qu'il n'aurait jamais dû voir
+```
+
+Ce problème est généralement lié à une mauvaise gestion des droits d'accès dans le système de recherche documentaire (RAG), pas au modèle lui-même.
+
+---
+
+# Les entreprises mettent donc des garde-fous
+
+Avant d'autoriser des données sensibles, elles mettent souvent en place :
+
+* **Gestion des identités (SSO)** : chaque utilisateur est identifié.
+* **Contrôle d'accès** : seuls les documents autorisés sont consultables.
+* **Chiffrement** : des données en transit et au repos.
+* **Journalisation** : les accès et les actions sont tracés.
+* **Masquage de données** : certaines informations (numéros de carte, identifiants, etc.) peuvent être supprimées ou anonymisées avant d'être envoyées au modèle.
+* **Politiques d'usage** : certains types de données restent interdits, même avec une IA interne.
+
+---
+
+# Un exemple concret
+
+Imaginons une banque.
+
+Un conseiller demande :
+
+> « Fais-moi un résumé du dossier du client Dupont. »
+
+Le système pourrait fonctionner ainsi :
+
+```mermaid
+sequenceDiagram
+
+participant C as Conseiller
+participant IA as IA interne
+participant CRM as CRM Banque
+participant GPT as LLM
+
+C->>IA: Résume le dossier Dupont
+
+IA->>CRM: Vérifie les droits du conseiller
+
+CRM-->>IA: Accès autorisé
+
+IA->>CRM: Récupère les informations utiles
+
+IA->>GPT: Prompt + données client
+
+GPT-->>IA: Résumé
+
+IA-->>C: Résumé
+```
+
+Si le conseiller n'a pas les droits nécessaires, le CRM renvoie un refus et le modèle ne reçoit jamais les données.
+
+## En résumé
+
+Une IA interne peut tout à fait traiter des données confidentielles, voire sensibles, **à condition que l'architecture et la gouvernance soient conçues pour cela**. Le caractère "interne" ne suffit pas à lui seul : il faut des contrôles d'accès robustes, des garanties contractuelles avec le fournisseur du modèle lorsqu'il est hébergé dans le cloud, des mécanismes de sécurité (chiffrement, journalisation, filtrage) et le respect des obligations réglementaires comme le RGPD pour les données personnelles. Les organisations les plus sensibles choisissent parfois des modèles déployés dans un cloud privé ou entièrement sur leur propre infrastructure afin de réduire encore davantage les risques liés à la circulation des données.
+
