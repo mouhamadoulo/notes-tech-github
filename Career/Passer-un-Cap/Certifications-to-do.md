@@ -42,6 +42,7 @@
 
 * aCAP – Associate Certified Analytics Professional (INFORMS)
 * Certificat Professionnel IBM Generative AI Engineering - la certification pour maîtriser l’IA générative de A à Z
+  * Link : https://www.coursera.org/professional-certificates/ibm-generative-ai-engineering?msockid=04fca09f467b6c753dfeb7f347566dbb
 * Microsoft Certified : Principes de base de l’IA Azure - la certification IA idéale pour commencer en douceur
 * AWS Certified Machine Learning Specialty - la certification cloud pour les experts du machine learning
 * Google Cloud Professional ML Engineer Certification - validez votre expertise avancée en Machine Learning
