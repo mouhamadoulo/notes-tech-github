@@ -557,3 +557,592 @@ Si tu veux que le public retienne une seule image, construis toute la présentat
 ```
 
 Grâce à une animation **Morph**, ce même schéma peut se transformer d'une diapositive à l'autre. Le public perçoit alors très clairement le passage d'un développeur qui écrit tout lui-même à un développeur qui orchestre le travail d'un agent IA. C'est un fil conducteur visuel simple et très mémorable.
+
+---
+
+Vu le public, je pense que la présentation ne doit pas être une présentation **sur les outils**, mais une présentation **sur l'impact de l'IA sur le métier de développeur**. Les commerciaux veulent comprendre **ce que cela change pour les clients**, tandis que les développeurs veulent comprendre **comment on travaille avec ces outils**.
+
+Je structurerais donc la présentation autour de 5 grands thèmes.
+
+---
+
+# 1. Pourquoi toutes les ESN parlent aujourd'hui d'IA ?
+
+Commencer par répondre à la question que tout le monde se pose.
+
+Expliquer qu'il y a plusieurs niveaux d'IA dans le développement.
+
+Animation :
+
+Une pyramide qui se construit.
+
+```
+                 Agents IA
+            (développement autonome)
+
+           Copilotes de développement
+
+         IA générative (ChatGPT, Lucia...)
+
+      Automatisation classique (scripts, CI...)
+```
+
+Message :
+
+> Toutes les entreprises ne sont pas au même niveau de maturité.
+
+---
+
+# 2. Où intervient réellement l'IA dans un projet logiciel ?
+
+Très intéressant pour des commerciaux.
+
+Faire apparaître tout le cycle de vie d'un projet.
+
+```
+Besoin métier
+
+↓
+
+Conception
+
+↓
+
+Développement
+
+↓
+
+Tests
+
+↓
+
+Documentation
+
+↓
+
+Déploiement
+
+↓
+
+Maintenance
+```
+
+Puis faire apparaître des icônes IA à chaque étape.
+
+Par exemple :
+
+```
+Besoin métier      🤖
+
+Conception         🤖
+
+Développement      🤖
+
+Tests              🤖
+
+Documentation      🤖
+
+Déploiement        🤖
+
+Maintenance        🤖
+```
+
+Le public réalise que l'IA ne sert pas uniquement à générer du code.
+
+---
+
+# 3. Les gains observés
+
+Faire un radar.
+
+```
+                Qualité
+
+       Temps              Documentation
+
+      Productivité      Onboarding
+
+              Satisfaction développeur
+```
+
+Puis colorier progressivement les axes.
+
+C'est plus parlant qu'un tableau.
+
+---
+
+# 4. Les limites de l'IA
+
+Sujet très apprécié des décideurs.
+
+Faire un iceberg.
+
+```
+               IA écrit du code
+
+──────────────────────────────
+
+Validation
+
+Architecture
+
+Sécurité
+
+Métier
+
+Tests
+
+Performance
+
+Responsabilité
+```
+
+Message :
+
+Le code généré est seulement la partie visible.
+
+Le vrai travail du développeur reste sous l'eau.
+
+---
+
+# 5. Les hallucinations
+
+Faire une animation amusante.
+
+À gauche :
+
+```
+Question
+
+↓
+
+IA
+
+↓
+
+Réponse
+```
+
+Puis une croix rouge.
+
+Exemple :
+
+L'IA invente une API Java.
+
+Ensuite :
+
+```
+Question
+
+↓
+
+Développeur
+
+↓
+
+Validation
+
+↓
+
+Bonne réponse
+```
+
+Message :
+
+L'IA est très rapide mais pas infaillible.
+
+---
+
+# 6. Prompt vs contexte
+
+Sujet que peu de gens connaissent.
+
+Animation.
+
+```
+Prompt court
+
+↓
+
+Résultat moyen
+```
+
+Puis
+
+```
+Contexte
+
+Architecture
+
+Stack technique
+
+Contraintes
+
+Prompt
+
+↓
+
+Excellent résultat
+```
+
+Montrer que la qualité dépend surtout du contexte fourni.
+
+---
+
+# 7. L'évolution du rôle du développeur
+
+Faire évoluer une silhouette.
+
+```
+2015
+
+👨‍💻
+Code
+```
+
+↓
+
+```
+2020
+
+👨‍💻
+
+Code
+
+Tests
+```
+
+↓
+
+```
+2024
+
+👨‍💻🤖
+
+Architecture
+
+Validation
+
+Prompt
+
+Relecture
+```
+
+↓
+
+```
+2026
+
+👨‍💻
+
+Chef d'orchestre
+
+🤖 🤖 🤖
+```
+
+C'est souvent la diapo qui marque le plus.
+
+---
+
+# 8. Développement classique vs développement agentique
+
+Faire deux colonnes.
+
+Classique
+
+```
+Créer Controller
+
+Créer Service
+
+Créer Repository
+
+Créer DTO
+
+Créer Tests
+```
+
+Animation.
+
+À droite.
+
+```
+Créer la fonctionnalité "Gestion des clients"
+
+↓
+
+Agent
+
+↓
+
+8 fichiers modifiés
+```
+
+Les commerciaux comprennent immédiatement.
+
+---
+
+# 9. ROI
+
+Sujet qu'ils adorent.
+
+Faire un avant/après.
+
+```
+Avant
+
+Recherche : 30 min
+
+Code : 2 h
+
+Tests : 1 h
+
+Documentation : 45 min
+```
+
+↓
+
+```
+Après
+
+Recherche : 5 min
+
+Code : 45 min
+
+Tests : 20 min
+
+Documentation : 5 min
+```
+
+Même sans chiffres précis, montrer une tendance.
+
+---
+
+# 10. Les risques
+
+Faire une balance.
+
+À gauche
+
+```
+Productivité
+```
+
+À droite
+
+```
+Sécurité
+
+Confidentialité
+
+Dépendance
+
+Qualité
+```
+
+Puis faire apparaître un équilibre.
+
+Message :
+
+Il faut gouverner l'utilisation de l'IA.
+
+---
+
+# 11. Les différents types d'IA
+
+Très pédagogique.
+
+Créer une échelle.
+
+```
+Assistant
+
+↓
+
+Copilot
+
+↓
+
+Agent
+
+↓
+
+Équipe d'agents
+```
+
+Puis faire apparaître des exemples.
+
+Assistant
+
+➡ répond
+
+Copilot
+
+➡ propose
+
+Agent
+
+➡ agit
+
+Équipe d'agents
+
+➡ collabore
+
+---
+
+# 12. Multi-agents
+
+Sujet très actuel.
+
+Faire un organigramme.
+
+```
+                 Développeur
+
+                     │
+
+          ───────────┼───────────
+
+          │          │           │
+
+    Agent Backend
+
+    Agent Front
+
+    Agent Tests
+
+          │          │           │
+
+          └──────────┼───────────
+
+               Pull Request
+```
+
+Les commerciaux adorent cette image.
+
+---
+
+# 13. L'avenir
+
+Une roadmap.
+
+```
+2023
+
+ChatGPT
+
+↓
+
+2024
+
+Copilot
+
+↓
+
+2025
+
+Agents
+
+↓
+
+2026
+
+Équipes d'agents
+
+↓
+
+Demain
+
+Développement autonome supervisé
+```
+
+---
+
+# 14. Une diapo interactive
+
+Très sympa.
+
+Titre :
+
+**"Qui fait quoi ?"**
+
+Faire apparaître une fonctionnalité.
+
+```
+Créer une API de gestion des commandes
+```
+
+Puis demander au public.
+
+Qui fait quoi ?
+
+Ensuite faire apparaître.
+
+```
+IA
+
+✔ CRUD
+
+✔ DTO
+
+✔ Mapping
+
+✔ Tests
+
+✔ Documentation
+```
+
+Puis
+
+```
+Développeur
+
+✔ Architecture
+
+✔ Validation
+
+✔ Sécurité
+
+✔ Métier
+
+✔ Performance
+```
+
+Cela crée de l'interaction et renforce le message que l'IA est un **outil d'augmentation**, pas un remplacement.
+
+---
+
+## Ce qui fera vraiment la différence
+
+Avec un public composé majoritairement de commerciaux, je terminerais par une diapositive qui répond à une question simple : **"Pourquoi un client devrait-il s'intéresser à l'IA dans ses projets de développement ?"**
+
+Un schéma très parlant est celui-ci :
+
+```text
+                 CLIENT
+
+                    │
+
+      Besoin métier exprimé
+
+                    ▼
+
+        👨‍💻 + 🤖 IA (équipe augmentée)
+
+                    ▼
+
+      ✔ Livraison plus rapide
+
+      ✔ Plus de temps pour le métier
+
+      ✔ Documentation améliorée
+
+      ✔ Qualité plus homogène
+
+      ✔ Montée en compétence facilitée
+
+      ✔ Innovation accélérée
+```
+
+Cette conclusion parle à tout le monde : les développeurs y voient l'évolution de leur manière de travailler, et les commerciaux repartent avec des bénéfices concrets qu'ils pourront expliquer à leurs clients. Le fil rouge devient alors **"l'IA ne remplace pas le développeur, elle augmente les capacités de toute l'équipe et permet de concentrer l'expertise humaine sur les décisions à forte valeur ajoutée."**
+
