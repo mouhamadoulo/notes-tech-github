@@ -22,7 +22,7 @@
 
 ---
 
-# 1. Pourquoi l'IA révolutionne le développement ?
+# 1. <ins>Pourquoi l'IA révolutionne le développement ?</ins>
 
 Pendant des décennies, le développement logiciel consistait essentiellement à :
 
@@ -69,7 +69,7 @@ L'IA devient un **coéquipier** du développeur.
 
 ---
 
-# 2. Les IA génératives
+# 2. <ins>Les IA génératives</ins>
 
 ## Définition
 
@@ -216,7 +216,7 @@ Explique-moi cette méthode de 500 lignes.
 
 ---
 
-# 3. GitHub Copilot
+# 3. <ins>GitHub Copilot</ins>
 
 GitHub Copilot est un assistant intégré directement dans l'IDE.
 
@@ -342,7 +342,7 @@ Il faut toujours relire.
 
 ---
 
-# 4. Les agents IA
+# 4. <ins>Les agents IA</ins>
 
 C'est la grande évolution actuelle.
 
@@ -506,7 +506,7 @@ Toujours besoin de validation humaine
 
 ---
 
-# Comparaison
+# <ins>Comparaison</ins>
 
 | Critère                    | IA générative | Copilot | Agent IA |
 | -------------------------- | ------------- | ------- | -------- |
@@ -521,7 +521,7 @@ Toujours besoin de validation humaine
 
 ---
 
-# Évolution de l'IA dans le développement
+# <ins>Évolution de l'IA dans le développement</ins>
 
 ```mermaid
 timeline
@@ -543,7 +543,7 @@ title Evolution
 
 ---
 
-# Où intervient l'IA ?
+# <ins>Où intervient l'IA ?</ins>
 
 ```mermaid
 flowchart LR
@@ -579,7 +579,7 @@ Maintenance
 
 ---
 
-# Les bonnes pratiques
+# <ins>Les bonnes pratiques</ins>
 
 ## Toujours vérifier
 
@@ -635,7 +635,7 @@ Le développeur garde la cohérence.
 
 ---
 
-# Les risques
+# <ins>Les risques</ins>
 
 ## Hallucinations
 
@@ -666,7 +666,7 @@ Le développeur doit continuer :
 
 ---
 
-# Le développeur du futur
+# <ins>Le développeur du futur</ins>
 
 Aujourd'hui :
 
