@@ -370,38 +370,34 @@ Un agent IA peut :
 
 ```mermaid
 flowchart TD
+    Utilisateur[Utilisateur]
+    AgentIA[Agent IA]
+    Planification[Planification]
+    ChoixActions[Choix des actions]
+    Outils[Outils]
+    Git[Git]
+    IDE[IDE]
+    Terminal[Terminal]
+    Tests[Tests]
+    Docker[Docker]
+    Resultat[Résultat]
 
-Utilisateur
+    Utilisateur --> AgentIA
+    AgentIA --> Planification
+    Planification --> ChoixActions
+    ChoixActions --> Outils
 
-↓
+    Outils --> Git
+    Outils --> IDE
+    Outils --> Terminal
+    Outils --> Tests
+    Outils --> Docker
 
-Agent IA
-
-↓
-
-Planification
-
-↓
-
-Choix des actions
-
-↓
-
-Outils
-
-Outils --> Git
-
-Outils --> IDE
-
-Outils --> Terminal
-
-Outils --> Tests
-
-Outils --> Docker
-
-↓
-
-Résultat
+    Git --> Resultat
+    IDE --> Resultat
+    Terminal --> Resultat
+    Tests --> Resultat
+    Docker --> Resultat
 ```
 
 ---
