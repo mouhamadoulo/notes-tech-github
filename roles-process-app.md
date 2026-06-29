@@ -22,6 +22,7 @@ Je vais te donner :
 * Priorise les fonctionnalités (backlog)
 
 **Entrants :** besoins business, utilisateurs, marché
+
 **Sortants :** backlog priorisé, user stories
 
 ---
@@ -41,6 +42,7 @@ Je vais te donner :
 * Définit ergonomie + parcours utilisateur
 
 **Entrants :** user stories, besoins PO
+
 **Sortants :** maquettes, prototypes, design system
 
 ---
@@ -54,6 +56,7 @@ Je vais te donner :
 * Décide comment les systèmes communiquent
 
 **Entrants :** besoins fonctionnels + contraintes
+
 **Sortants :** architecture, schémas techniques
 
 ---
@@ -71,6 +74,7 @@ Je vais te donner :
 * Ex: Node.js, Java, Python
 
 **Entrants :** maquettes + API spec
+
 **Sortants :** application fonctionnelle
 
 ---
@@ -90,6 +94,7 @@ Je vais te donner :
 * Automatisation des tests
 
 **Entrants :** application déployée en test
+
 **Sortants :** rapports de bugs, validation qualité
 
 ---
@@ -101,6 +106,7 @@ Je vais te donner :
 * Monitoring
 
 **Entrants :** code validé
+
 **Sortants :** application en production
 
 ---
