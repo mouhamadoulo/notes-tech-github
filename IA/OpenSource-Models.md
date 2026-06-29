@@ -140,3 +140,289 @@ Pour un développeur en 2026, une pile très performante est : **VS Code + Conti
 [3]: https://pioneer.ai/blog/how-to-choose-the-best-coding-models-in-2026?utm_source=chatgpt.com "How to Choose the Best Coding Models (2026 Edition)"
 [4]: https://www.techradar.com/pro/how-to-automate-workflows-using-open-source-ai-agents?utm_source=chatgpt.com "How to automate workflows using open-source AI agents"
 [5]: https://www.taskade.com/blog/open-source-llms?utm_source=chatgpt.com "9 Best Open-Source AI LLMs in 2026, Ranked for Real Work"
+
+# Utilisation en Local
+Oui. Je vais te montrer **comment utiliser des modèles open source en local pour le développement**, avec une vue claire de l’architecture + les outils concrets.
+
+---
+
+# 🧠 1. Vue d’ensemble (comment ça marche en local)
+
+Quand tu fais tourner un LLM en local, tu as toujours cette architecture :
+
+```mermaid
+flowchart LR
+A[IDE / App<br>VS Code, Cursor, etc.] --> B[Client LLM<br>Continue / Open WebUI / Aider]
+B --> C[Runtime local<br>Ollama / vLLM / LM Studio]
+C --> D[Modèle IA<br>Qwen / DeepSeek / GLM / etc.]
+C --> E[GPU / CPU RAM]
+```
+
+👉 En résumé :
+
+* ton IDE envoie une requête
+* un outil intermediaire (client)
+* un moteur d’inférence exécute le modèle
+* ton GPU calcule les tokens
+
+---
+
+# ⚙️ 2. Les 3 façons principales de faire tourner un modèle en local
+
+## 🥇 Option A — Ultra simple : **Ollama**
+
+👉 Le plus utilisé en 2026 pour dev local.
+
+### ✔️ Avantages
+
+* installation facile
+* API locale automatique
+* compatible VS Code, Cursor, Open WebUI
+* très stable
+
+### 🔧 Installation
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+### ▶️ Lancer un modèle
+
+```bash
+ollama run qwen3-coder
+```
+
+ou
+
+```bash
+ollama run deepseek-coder
+```
+
+### 🌐 API locale
+
+Ollama expose automatiquement :
+
+```
+http://localhost:11434
+```
+
+---
+
+## 🥈 Option B — Interface dev + IA : **LM Studio**
+
+👉 parfait si tu veux une interface type “ChatGPT local”
+
+### ✔️ Avantages
+
+* GUI simple
+* téléchargement modèles intégré
+* serveur API local
+
+### Utilisation
+
+1. installer LM Studio
+2. télécharger modèle (GGUF)
+3. activer “Local Server”
+4. utiliser API OpenAI-compatible
+
+---
+
+## 🥉 Option C — Pro / scalable : **vLLM**
+
+👉 utilisé pour les gros modèles type DeepSeek V4 / GLM-5
+
+### ✔️ Avantages
+
+* très rapide (batching)
+* GPU optimisé
+* production ready
+
+### Exemple lancement
+
+```bash
+python -m vllm.entrypoints.openai.api_server \
+  --model deepseek-ai/deepseek-coder
+```
+
+---
+
+# 🧩 3. Les outils côté développement (important)
+
+## 💻 IDE + plugins
+
+### VS Code + Continue (très populaire)
+
+* complet
+* multi-modèles
+* connecte Ollama / API locale
+
+```mermaid
+flowchart LR
+VSCode --> Continue
+Continue --> Ollama
+Ollama --> Model
+```
+
+---
+
+### Cursor (plus “agent dev”)
+
+* IA intégrée
+* fonctionne avec endpoint local ou cloud
+
+---
+
+### Aider (CLI dev assistant)
+
+Très puissant pour coder directement dans un repo :
+
+```bash
+aider --model ollama/qwen3-coder
+```
+
+---
+
+### Open WebUI (type ChatGPT local)
+
+```mermaid
+flowchart LR
+Browser --> OpenWebUI --> Ollama --> Model
+```
+
+---
+
+# 🧱 4. Stack recommandé (simple et efficace)
+
+## 🔥 Setup idéal DEV local en 2026
+
+```mermaid
+flowchart TD
+A[VS Code] --> B[Continue extension]
+B --> C[Ollama runtime]
+C --> D[Qwen3 Coder / DeepSeek Coder]
+C --> E[Embeddings local (bge / nomic)]
+```
+
+---
+
+# 🧠 5. Choix des modèles selon matériel
+
+## 💻 Laptop / 16–24 GB RAM
+
+* Qwen3 Coder (7B / 14B quantized)
+* DeepSeek coder small
+* Gemma coder light
+
+👉 runtime : Ollama / LM Studio
+
+---
+
+## 🖥️ GPU 24–48 GB
+
+* Qwen3 32B
+* DeepSeek Coder large
+* GLM-5 small variants
+
+👉 runtime : Ollama + CUDA / vLLM léger
+
+---
+
+## 🏢 Serveur 80GB+
+
+* DeepSeek V4 Pro
+* GLM-5 full
+* Kimi K2.6
+
+👉 runtime : vLLM / SGLang
+
+---
+
+# 🔄 6. Pipeline complet dev (très concret)
+
+```mermaid
+flowchart LR
+A[Tu écris code] --> B[IDE]
+B --> C[Agent IA]
+C --> D[Prompt enrichi]
+D --> E[LLM local]
+E --> F[Patch code]
+F --> G[Git apply / diff]
+G --> A
+```
+
+👉 C’est exactement comme un “pair programmer automatisé”.
+
+---
+
+# 🚀 7. Exemple concret (setup en 10 minutes)
+
+## Étapes :
+
+### 1. Installer Ollama
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+### 2. Lancer modèle dev
+
+```bash
+ollama run qwen3-coder
+```
+
+### 3. Installer VS Code extension
+
+* Continue.dev
+
+### 4. Configurer :
+
+```json
+{
+  "model": "ollama/qwen3-coder"
+}
+```
+
+### 5. Coder directement :
+
+* refactor
+* debug
+* génération de fonctions
+* tests
+
+---
+
+# 🧩 8. Bonus : mode agent autonome
+
+Avec Aider ou OpenHands :
+
+```mermaid
+flowchart TD
+Goal[objectif: build app] --> Agent
+Agent --> Plan
+Plan --> Code
+Code --> Tests
+Tests --> Fix
+Fix --> Loop
+```
+
+👉 le modèle modifie directement ton repo Git
+
+---
+
+# 🧠 Conclusion simple
+
+Si tu veux aller droit au but :
+
+* **Débutant local dev IA** → Ollama + Qwen3 Coder + VS Code
+* **Dev avancé** → Continue + Ollama + DeepSeek
+* **Agent autonome** → Aider / OpenHands
+* **Perf max serveur** → vLLM + DeepSeek V4 / GLM-5
+
+---
+
+Si tu veux, je peux te faire :
+
+* un **setup exact selon ton PC (RAM/GPU)**
+* un **docker-compose complet prêt à lancer**
+* ou un **stack “type Cursor open source” 100% local**
+
