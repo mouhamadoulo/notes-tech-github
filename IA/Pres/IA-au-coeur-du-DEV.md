@@ -243,26 +243,11 @@ Il propose immédiatement :
 
 ```mermaid
 flowchart LR
-
-IDE
--->
-Copilot
-
-Copilot
--->
-Contexte du projet
-
-Contexte
--->
-LLM
-
-LLM
--->
-Suggestion
-
-Suggestion
--->
-IDE
+    IDE --> Copilot
+    Copilot --> Contexte["Contexte du projet"]
+    Contexte --> LLM
+    LLM --> Suggestion
+    Suggestion --> IDE
 ```
 
 ---
