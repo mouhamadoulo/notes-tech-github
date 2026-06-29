@@ -297,10 +297,10 @@ Browser --> OpenWebUI --> Ollama --> Model
 
 ```mermaid
 flowchart TD
-A[VS Code] --> B[Continue extension]
-B --> C[Ollama runtime]
-C --> D[Qwen3 Coder / DeepSeek Coder]
-C --> E[Embeddings local (bge / nomic)]
+A["VS Code"] --> B["Continue extension"]
+B --> C["Ollama runtime"]
+C --> D["Qwen3 Coder / DeepSeek Coder"]
+C --> E["Embeddings local (bge / nomic)"]
 ```
 
 ---
