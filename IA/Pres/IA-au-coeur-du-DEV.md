@@ -1,7 +1,5 @@
 # L'IA au cœur du développement applicatif
 
-## Tutoriel complet pour une présentation
-
 > **Objectif :** comprendre comment l'IA transforme le développement logiciel, quels outils utiliser, leurs avantages, leurs limites et comment le métier de développeur évolue.
 
 ---
