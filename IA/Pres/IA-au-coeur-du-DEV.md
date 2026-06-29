@@ -694,28 +694,18 @@ Demain :
 
 ```mermaid
 flowchart TD
+    Developpeur[Développeur]
+    Besoin[Définition du besoin]
+    AgentIA[Agent IA]
+    Production[Production]
+    Validation[Validation humaine]
+    Deploiement[Déploiement]
 
-Développeur
-
-↓
-
-Définition du besoin
-
-↓
-
-Agent IA
-
-↓
-
-Production
-
-↓
-
-Validation humaine
-
-↓
-
-Déploiement
+    Developpeur --> Besoin
+    Besoin --> AgentIA
+    AgentIA --> Production
+    Production --> Validation
+    Validation --> Deploiement
 ```
 
 ---
