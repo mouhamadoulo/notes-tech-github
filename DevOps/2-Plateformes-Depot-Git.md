@@ -372,29 +372,25 @@ L'un des grands avantages de ces plateformes est l'automatisation.
 À chaque `git push` :
 
 ```mermaid
-flowchart LR
+flowchart TD
+    A[Développeur]
+    B[Git Push]
+    C[CI/CD]
+    D[Compilation]
+    E[Tests unitaires]
+    F[Analyse qualité]
+    G[Création de l'image Docker]
+    H[Publication dans un registre]
+    I[Déploiement]
 
-Push
-
-↓
-
-Compilation
-
-↓
-
-Tests
-
-↓
-
-Analyse qualité
-
-↓
-
-Création image Docker
-
-↓
-
-Déploiement
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
 ```
 
 Le développeur n'a plus besoin d'exécuter ces étapes manuellement.
