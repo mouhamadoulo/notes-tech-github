@@ -1,5 +1,5 @@
 
-# Cours : Les bases de Maven avec un mini projet Spring Boot
+# Les bases de Maven avec un mini projet Spring Boot
 
 > **Objectif** : À la fin de ce cours, tu comprendras le fonctionnement de Maven, tu sauras lire un fichier `pom.xml`, gérer les dépendances, lancer un build et créer une application Spring Boot exécutable.
 
