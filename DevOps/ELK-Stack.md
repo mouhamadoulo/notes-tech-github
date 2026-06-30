@@ -1,5 +1,5 @@
 
-# Cours : Les bases de la Stack ELK pour une application Java Spring Boot + Angular
+# Les bases de la Stack ELK pour une app Java SpringBoot + Angular
 
 > **Objectif :** Comprendre comment utiliser la stack ELK afin de centraliser les logs d'une application Java Spring Boot et Angular pour faciliter le débogage, la supervision et l'analyse.
 
