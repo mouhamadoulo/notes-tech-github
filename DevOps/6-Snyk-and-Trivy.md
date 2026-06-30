@@ -1,5 +1,5 @@
 
-Excellente idée de sujet. Dans un contexte d'entreprise, **Snyk** et **Trivy** sont aujourd'hui deux des outils les plus utilisés pour sécuriser une chaîne de développement Java/Angular (DevSecOps). Ils sont souvent complémentaires :
+Dans un contexte d'entreprise, **Snyk** et **Trivy** sont aujourd'hui deux des outils les plus utilisés pour sécuriser une chaîne de développement Java/Angular (DevSecOps). Ils sont souvent complémentaires :
 
 * **Snyk** : analyse du code, des dépendances, des conteneurs et de l'Infrastructure as Code avec des conseils de correction.
 * **Trivy** : scanner open-source extrêmement rapide pour les dépendances, les images Docker, Kubernetes, les secrets et les mauvaises configurations.
@@ -8,7 +8,7 @@ Un bon tutoriel pourrait suivre une approche très pratique, proche d'un projet 
 
 ---
 
-# Tutoriel complet : Sécuriser une application Java Spring Boot + Angular avec Snyk et Trivy
+# Sécuriser une application Java Spring Boot + Angular avec Snyk et Trivy
 
 ## Objectifs
 
