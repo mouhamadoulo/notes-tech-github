@@ -122,6 +122,23 @@ S3 --> Files[Images / Videos / Docs]
 * très durable (11 9's)
 * accessible via URL
 
+<div align="center">
+	<img src="../images/s3.jpg" height="350" width="350" />
+</div>
+
+```
+C'est un service de stockage d’objets qui offre une capacité de mise à l’échelle, une disponibilité des données, 
+une sécurité et des performances de pointe. 
+Les clients de toutes les tailles et de tous les secteurs stockent, gèrent, 
+analysent et protègent n’importe quelle quantité de données
+pour la quasi-totalité des cas d’utilisation, tels que les lacs de données 
+ainsi que les applications natives cloud et mobiles. 
+```
+```
+Avantages : Capacité de mise à l'échelle, Durabilité et disponibilité, Sécurité et protection des données, 
+            Prix le plus bas et performances les plus élevées
+Use cases : Créer un lac de données, Sauvegarder et restaurer des données, Archiver les données, IA générative
+```
 ---
 
 ## 3.3 RDS (bases de données)
@@ -149,6 +166,24 @@ RDS --> Data[Tables SQL]
 * mises à jour
 * réplication
 
+
+<div align="center">
+	<img src="../images/rds.png" height="350" width="350" />
+</div>
+
+```
+Bases de données relationnelles faciles à gérer et optimisées pour le coût total de possession
+C'est un service de base de données relationnelle facile à gérer, optimisé pour le coût total de possession. 
+Simple à configurer et à utiliser, le service se met à l’échelle en fonction de la demande. 
+RDS automatise les tâches indifférenciées de gestion des bases de données, telles que le provisionnement, la configuration, 
+la sauvegarde et l’application de correctifs.
+RDS permet aux clients de créer une nouvelle base de données en quelques minutes, et offre la flexibilité nécessaire 
+pour personnaliser les bases de données et répondre à leurs besoins grâce à huit moteurs et deux options de déploiement.
+```
+```
+Avantages : Faciles à gérer, choix des moteurs, haute disponibilité, bénéficie d'une expertise opérationnelle
+Use cases : Créer des apps web et mobiles, passer aux bases de données gérées, se libérer des bases de données héritées
+```
 ---
 
 ## 3.4 Lambda (serverless)
@@ -169,6 +204,21 @@ Resize --> S3
 
 💡 Tu ne gères aucun serveur.
 
+<div align="center">
+	<img src="../images/lambda.jpg" height="350" width="350" />
+</div>
+
+```
+Exécuter du code sans vous soucier des serveurs ou des clusters
+AWS Lambda vous permet de vous concentrer uniquement sur votre code, tout en gérant l’ensemble de l’infrastructure, 
+ce qui permet d’accélérer le développement, d’améliorer les performances, de renforcer la sécurité et de réduire les coûts
+```
+```
+Avantages : augmenter l'agilité des développeurs, améliorer les performances des applications, 
+            contribuer à renforcer la posture de sécurité globale, favoriser la rentabilité
+Use cases : Backends web et mobiles interactifs, Traitement des données par lots, Traitement des données en temps réel, 
+            IA générative
+```
 ---
 
 # 🌐 4. Architecture complète (exemple réel)
