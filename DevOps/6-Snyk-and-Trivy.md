@@ -8,7 +8,7 @@ Un bon tutoriel pourrait suivre une approche très pratique, proche d'un projet 
 
 ---
 
-# Sécuriser une application Java Spring Boot + Angular avec Snyk et Trivy
+# Sécuriser une app Java Spring Boot + Angular avec Snyk et Trivy
 
 ## Objectifs
 
