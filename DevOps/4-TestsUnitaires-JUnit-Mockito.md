@@ -1,5 +1,5 @@
 
-# Tutoriel complet : JUnit & Mockito dans un projet Java / Angular
+# JUnit & Mockito dans un projet Java / Angular
 
 > **Public visé :** développeurs Java débutants à intermédiaires travaillant sur une architecture **Angular + Spring Boot**.
 >
