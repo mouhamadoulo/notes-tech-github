@@ -5,7 +5,7 @@ Dans ce tutoriel, nous allons construire progressivement une véritable stratég
 
 ---
 
-# Tutoriel complet : Les tests End-to-End (E2E) dans une application Java Spring Boot + Angular
+# Les tests End-to-End (E2E) dans une application Java Spring Boot + Angular
 
 ## Sommaire
 
