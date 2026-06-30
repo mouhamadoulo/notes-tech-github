@@ -1,5 +1,5 @@
 
-# Tutoriel : Comprendre le build avec npm grâce à un mini projet Angular 21
+# Comprendre le build avec npm grâce à un mini projet Angular 21
 
 > **Objectif**
 >
