@@ -1,5 +1,5 @@
 
-# Cours : Les bases de Gradle avec un mini projet Spring Boot
+# Les bases de Gradle avec un mini projet Spring Boot
 
 > **Objectif** : À la fin de ce cours, tu seras capable de comprendre le fonctionnement de Gradle, de créer un projet Spring Boot, de gérer les dépendances, de lancer les tests et de générer un exécutable.
 
