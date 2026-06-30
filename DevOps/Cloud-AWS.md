@@ -15,6 +15,17 @@ Amazon Web Services est la plateforme cloud d’Amazon. Elle permet de louer des
 
 👉 Idée clé : tu ne possèdes plus de serveurs → tu les **utilises à la demande** et tu payes uniquement ce que tu consommes.
 
+<div align="center">
+	<img src="../images/aws.png" height="350" width="350" />
+</div>
+
+```
+Amazon Web Services (AWS) est la plateforme cloud la plus complète et la plus largement adoptée au monde. 
+Elle propose plus de 200 services complets issus de centres de données du monde entier. 
+Des millions de clients (dont certaines des startups les plus dynamiques au monde, de très grandes entreprises 
+et des agences fédérales de premier plan) utilisent AWS pour réduire leurs coûts, gagner en agilité et innover plus rapidement.
+```
+
 ---
 
 # 🧱 2. Les grands concepts du cloud AWS
@@ -69,6 +80,20 @@ EC2 --> App[Site Web]
 * augmenter la puissance (scale vertical)
 * ajouter plusieurs serveurs (scale horizontal)
 
+<div align="center">
+	<img src="../images/ec2.jpeg" height="350" width="350" />
+</div>
+
+```
+Capacité de calcul sécurisée et redimensionnable pour pratiquement toutes les charges de travail
+EC2 offre la plateforme de calcul la plus variée et la plus complète, avec plus de 750 instances. 
+Vous y avez accès au processeur, à la solution de stockage, aux réseaux, au système d’exploitation 
+et au modèle d’achat les plus récents pour vous aider à répondre au mieux aux besoins de votre charge de travail
+```
+```
+Avantages : L'engagement SLA (Service Level Agreement), Optimiser les performances et les coûts, Outils de migration AWS
+Use cases : Exécuter des applications métier et natives cloud
+```
 ---
 
 ## 3.2 S3 (stockage)
