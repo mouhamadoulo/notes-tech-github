@@ -1,4 +1,4 @@
-# Tutoriel complet : Comprendre l'Intelligence Artificielle et les IA génératives
+# Comprendre l'Intelligence Artificielle et les IA génératives
 
 > **Objectif :** À la fin de ce tutoriel, vous comprendrez :
 >
