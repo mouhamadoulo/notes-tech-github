@@ -43,6 +43,9 @@ Liens :
 - https://github.com/abinashpanigrahi/ECommerce-SpringBoot-Backend-Project/tree/main
 - https://github.com/ivangfr/springboot-keycloak-openldap/tree/master
 - https://github.com/fuhaiwei/springboot_security_restful_api/tree/develop
+- https://github.com/ivangfr/springboot-graphql-databases/tree/master
+- https://github.com/MET-DEV/E-Commerce-Backend/tree/master
+- https://github.com/engripaye/graphql-springboot-implementation/tree/master
 
 # <ins>Microservices</ins>
 > Très demandé
