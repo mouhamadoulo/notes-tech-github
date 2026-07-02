@@ -1,3 +1,8 @@
+# Overall
+
+Liens : 
+- https://github.com/eazybytes/spring
+
 # <ins>Security</ins> 
 > Indispensable aujourd'hui
 
@@ -16,6 +21,8 @@ Notions à maitriser :
 
 Liens : 
 - https://github.com/murraco/spring-boot-jwt/tree/master
+- https://github.com/Baeldung/spring-security-registration/tree/master
+- https://github.com/Baeldung/spring-security-oauth/tree/master
 
 # <ins>API</ins>
 > Un senior doit connaître les bonnes pratiques
