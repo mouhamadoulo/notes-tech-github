@@ -40,7 +40,9 @@ Notions à maitriser :
 - OpenAPI / Swagger
 
 Liens : 
-- 
+- https://github.com/abinashpanigrahi/ECommerce-SpringBoot-Backend-Project/tree/main
+- https://github.com/ivangfr/springboot-keycloak-openldap/tree/master
+- https://github.com/fuhaiwei/springboot_security_restful_api/tree/develop
 
 # <ins>Microservices</ins>
 > Très demandé
@@ -59,7 +61,11 @@ Notions à maitriser :
 - Event Sourcing (concept)
 
 Liens : 
--
+- https://github.com/sivaprasadreddy/spring-boot-microservices-course
+- https://github.com/RameshMF/springboot-microservices
+- https://github.com/Rapter1990/SpringBootMicroservices
+- https://github.com/PramithaMJ/fully-completed-microservices-Java-Springboot/tree/main
+- https://github.com/arafkarsh/ms-springboot-vanilla/tree/main
 
 # <ins>Messaging</ins>
 > Les Messages Broker sont importants pour la plupart des architectures
