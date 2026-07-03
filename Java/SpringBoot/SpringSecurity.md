@@ -253,21 +253,11 @@ SecurityContext
 Schéma :
 
 ```mermaid
-flowchart LR
-
-Utilisateur
-
-↓
-
-Authentication
-
-↓
-
-SecurityContext
-
-↓
-
-Controller
+flowchart TD
+    A[Utilisateur]
+    A --> B[Authentication]
+    B --> C[SecurityContext]
+    C --> D[Controller]
 ```
 
 Le contrôleur peut ensuite connaître l'utilisateur connecté.
