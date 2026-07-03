@@ -1,9 +1,3 @@
-Excellente idée. Spring AI est relativement récent, et beaucoup de tutoriels se limitent à quelques exemples de `ChatClient`. En réalité, il y a une véritable architecture à comprendre pour produire des applications IA robustes.
-
-Je vais te proposer un **cours complet**, similaire à ce que l'on pourrait trouver dans une formation professionnelle.
-
----
-
 # Tutoriel complet Spring AI
 
 ## Sommaire
