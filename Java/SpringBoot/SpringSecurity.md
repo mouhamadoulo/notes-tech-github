@@ -132,24 +132,10 @@ Elle passe par plusieurs filtres.
 
 ```mermaid
 flowchart LR
-
-Client
-
-↓
-
-Security Filters
-
-↓
-
-Authentication
-
-↓
-
-Authorization
-
-↓
-
-Controller
+    Client --> SecurityFilters
+    SecurityFilters --> Authentication
+    Authentication --> Authorization
+    Authorization --> Controller
 ```
 
 Si une étape échoue :
