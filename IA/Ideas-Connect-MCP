@@ -1,0 +1,220 @@
+Si ton objectif est de **maîtriser OpenCode + les MCP (Model Context Protocol)**, le mieux est de construire des applications qui exploitent plusieurs outils externes de façon cohérente. Tu apprendras à orchestrer les MCP plutôt qu'à simplement générer du code.
+
+Voici 5 projets intéressants.
+
+---
+
+# 1. Assistant personnel intelligent (Second Brain)
+
+## Description
+
+Une application qui centralise toutes tes connaissances, tâches, rendez-vous et documents.
+
+### Stack
+
+* Frontend : Angular 21
+* Backend : Spring Boot
+* PostgreSQL
+* Redis
+* OpenCode
+
+## MCP utilisés
+
+| Outil           | Usage                   |
+| --------------- | ----------------------- |
+| Notion          | Lire/écrire les notes   |
+| Google Calendar | Agenda                  |
+| Gmail           | Lire les emails         |
+| Google Drive    | Documents               |
+| GitHub          | Projets personnels      |
+| Context7        | Documentation technique |
+| Brave Search    | Recherche web           |
+
+## Fonctionnalités
+
+* Résumer les mails du jour
+* Créer automatiquement des tâches Notion
+* Ajouter un rendez-vous
+* Chercher un document
+* Générer un compte-rendu quotidien
+* Chat IA avec toute la connaissance personnelle
+
+---
+
+# 2. Gestionnaire de projets IA (type Jira + Copilot)
+
+## Description
+
+Une plateforme qui pilote des projets logiciels.
+
+L'IA devient un chef de projet.
+
+### MCP
+
+| Outil      | Usage                          |
+| ---------- | ------------------------------ |
+| GitHub     | Issues, PR                     |
+| Notion     | Documentation                  |
+| Slack      | Notifications                  |
+| Context7   | Documentation frameworks       |
+| Playwright | Tester automatiquement le site |
+| Filesystem | Lire le projet                 |
+
+## Fonctionnalités
+
+* Création automatique d'issues
+* Génération de roadmap
+* Analyse du dépôt Git
+* Création de documentation
+* Revue de code IA
+* Détection des TODO
+
+---
+
+# 3. CRM commercial intelligent
+
+## Description
+
+Un CRM qui automatise le suivi client.
+
+### MCP
+
+| Outil           | Usage          |
+| --------------- | -------------- |
+| Gmail           | Emails clients |
+| Google Calendar | Rendez-vous    |
+| HubSpot         | Contacts       |
+| Stripe          | Paiements      |
+| Google Drive    | Contrats       |
+| Notion          | Comptes-rendus |
+
+## Fonctionnalités
+
+* Résumé des échanges
+* Relance automatique
+* Préparation des rendez-vous
+* Création de devis
+* Historique client
+* IA commerciale
+
+---
+
+# 4. Plateforme DevOps / Infrastructure
+
+Très intéressant pour ton profil Java AWS.
+
+## MCP
+
+| Outil      | Usage          |
+| ---------- | -------------- |
+| GitHub     | Dépôts         |
+| Docker     | Images         |
+| Kubernetes | Cluster        |
+| AWS        | EC2, S3, RDS   |
+| Terraform  | Infrastructure |
+| Context7   | Documentation  |
+| Grafana    | Monitoring     |
+| Prometheus | Métriques      |
+
+## Fonctionnalités
+
+* Déployer automatiquement
+* Générer les Dockerfile
+* Lire les logs
+* Résumer les erreurs
+* Générer une architecture
+* Vérifier les coûts AWS
+
+---
+
+# 5. Plateforme de veille IA
+
+Mon préféré.
+
+L'objectif est de suivre tout ce qui sort dans l'IA.
+
+## MCP
+
+| Outil        | Usage                  |
+| ------------ | ---------------------- |
+| GitHub       | Nouveaux projets       |
+| HuggingFace  | Nouveaux modèles       |
+| ArXiv        | Articles scientifiques |
+| Reddit       | Discussions            |
+| YouTube      | Nouvelles vidéos       |
+| Hacker News  | Actualités             |
+| Notion       | Sauvegarde             |
+| Telegram     | Notifications          |
+| Brave Search | Recherche              |
+
+## Fonctionnalités
+
+* Recherche quotidienne
+* Résumé des nouveautés
+* Comparaison des modèles
+* Détection des tendances
+* Génération d'une newsletter
+* Alertes personnalisées
+
+---
+
+# Exemple d'architecture MCP
+
+```text
+                OpenCode
+
+                   │
+
+        ┌──────────┼──────────┐
+
+        │          │          │
+
+    Context7    GitHub     Notion
+
+        │          │          │
+
+ Google Drive  Playwright   Gmail
+
+        │          │          │
+
+      Slack     Brave Search Telegram
+```
+
+L'agent choisit automatiquement quel serveur MCP appeler selon la demande.
+
+---
+
+# MCP particulièrement utiles à installer
+
+| MCP             | Utilité                                       |
+| --------------- | --------------------------------------------- |
+| Context7        | Documentation des bibliothèques et frameworks |
+| GitHub          | Dépôts, issues, pull requests                 |
+| Notion          | Base de connaissances                         |
+| Filesystem      | Lecture et modification de fichiers locaux    |
+| Playwright      | Automatisation et tests de sites web          |
+| PostgreSQL      | Interroger directement la base de données     |
+| SQLite          | Stockage léger ou tests                       |
+| Google Calendar | Gestion d'agenda                              |
+| Gmail           | Lecture et envoi d'emails                     |
+| Google Drive    | Gestion de documents                          |
+| Slack           | Notifications d'équipe                        |
+| Telegram        | Alertes personnelles                          |
+| Brave Search    | Recherche web en temps réel                   |
+| ArXiv           | Veille scientifique                           |
+| Hugging Face    | Modèles IA et datasets                        |
+| Docker          | Gestion des conteneurs                        |
+| Kubernetes      | Pilotage de clusters                          |
+| AWS             | Déploiement et infrastructure cloud           |
+
+## Pourquoi ces projets sont intéressants
+
+Ils couvrent des cas d'usage très différents et te feront pratiquer les principaux scénarios d'intégration MCP :
+
+1. **Productivité personnelle** : orchestration d'outils bureautiques (Notion, Gmail, Agenda).
+2. **Développement logiciel** : interaction avec GitHub, documentation, tests automatisés.
+3. **Relation client** : synchronisation entre CRM, emails, calendrier et facturation.
+4. **DevOps & Cloud** : pilotage d'infrastructures, déploiements et observabilité.
+5. **Veille technologique** : agrégation de sources, analyse par IA et diffusion automatisée.
+
+En réalisant ces cinq applications, tu apprendras à concevoir des agents capables de sélectionner les bons outils MCP selon le contexte, d'enchaîner plusieurs actions (lecture, analyse, écriture) et de construire de véritables workflows intelligents plutôt que de simples appels isolés à une API.
