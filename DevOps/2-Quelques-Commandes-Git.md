@@ -102,6 +102,11 @@ git cherry-pick <commit>
 
 💡 Utile si tu veux récupérer une feature sans tout merger
 
+## commande en une ligne pour supprimer toutes vos branches locales devenues obsolètes (dont la branche distante associée a été supprimée sur GitHub)
+```Bash
+git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d
+```
+
 ## 🧠 Résumé rapide
 | Commande                    | Utilité principale             |
 | --------------------------- | ------------------------------ |
