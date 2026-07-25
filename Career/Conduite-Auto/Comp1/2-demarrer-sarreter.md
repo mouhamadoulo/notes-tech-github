@@ -1,13 +1,18 @@
 ```
-graph TD
-    A[ANTICIPATION] --> B{1. Freinage initial};
-    B -- Léger --> B1(Pied droit freine doucement);
-    B -- Dégressif --> B2(Lâche un peu le frein à mesure que la vitesse chute);
-    
-    B1 --> C{2. Embrayage};
-    B2 --> C;
-    C -- Basse vitesse <15km/h --> C1[Pied gauche appuie à FOND sur l'embrayage];
-    C1 --> D(Continuer de doser le frein);
-    D --> E[ARRÊT COMPLET];
-    E --> F[Maintenir Frein & Embrayage];
+sequenceDiagram
+    participant Conducteur
+    participant Pédale_Embrayage
+    participant Moteur
+    participant Roues
+
+    Note over Conducteur: Préparation: Frein appuyé, Vitesse 1 engagée.
+    Conducteur->>Pédale_Embrayage: Relève LENTEMENT la pédale
+    Pédale_Embrayage-->>Moteur: Les disques d'embrayage s'approchent
+    Moteur-->>Conducteur: VIBRATIONS LÉGÈRES (Point de Patinage !)
+    Note right of Conducteur: C'est ICI qu'il faut bloquer le pied !
+    Conducteur->>Roues: Relâche le FREIN
+    Conducteur->>Pédale_Embrayage: Maintient la position 2-3 secondes
+    Moteur->>Roues: La voiture commence à avancer doucement
+    Conducteur->>Pédale_Embrayage: Relève COMPLÈTEMENT la pédale
+    Note over Moteur, Roues: La voiture roule en 1ère.
 ```
