@@ -1,5 +1,5 @@
-
-```graph TD
+```
+graph TD
     A[ANTICIPATION] --> B{1. Freinage initial};
     B -- Léger --> B1(Pied droit freine doucement);
     B -- Dégressif --> B2(Lâche un peu le frein à mesure que la vitesse chute);
