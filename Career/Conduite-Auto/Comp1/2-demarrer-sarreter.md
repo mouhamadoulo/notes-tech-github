@@ -1,4 +1,4 @@
-```
+```mermaid
 sequenceDiagram
     participant Conducteur
     participant Pédale_Embrayage
