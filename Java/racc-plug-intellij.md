@@ -1,4 +1,4 @@
-# Tutoriel complet : les raccourcis et plugins indispensables d'IntelliJ IDEA pour un développeur Java Spring Boot
+# Les raccourcis et plugins IntelliJ IDEA
 
 Si tu développes en Java/Spring Boot, maîtriser IntelliJ IDEA peut facilement te faire gagner plusieurs heures par semaine. L'objectif n'est pas seulement d'écrire du code plus vite, mais surtout de naviguer, refactorer, déboguer et comprendre une base de code efficacement.
 
