@@ -1,4 +1,4 @@
-# Tutoriel magistral : les extensions VS Code indispensables pour un développeur JavaScript / Angular / Node.js
+# Les extensions VS Code indispensables pour dév JavaScript / Angular / Node.js
 
 Si tu développes principalement en **JavaScript**, **Angular** et **Node.js**, l'objectif n'est pas d'installer 100 extensions mais de construire un environnement :
 
