@@ -8,7 +8,6 @@ These applications were originally developed by business teams and operated on l
 
 The IT department later took ownership of these systems in order to bring them into compliance with Bouygues security standards.
 
----
 
 ## 🔹 Project 1 – Migration to a Secured Zone
 
@@ -129,9 +128,6 @@ Development of a batch processing system using Spring Boot for a data warehouse 
 - Stored procedures
 - Message queue (RabbitMQ)
 - Rejected messages recycling
-
-# <ins>Phrases types pour l’oral (très utiles)</ins> 
-Voici une version beaucoup plus riche de la section **"Phrases types pour l'oral"**, avec des formulations naturelles utilisées en entretien technique (Java Full Stack / Cloud / DevOps).
 
 ---
 
