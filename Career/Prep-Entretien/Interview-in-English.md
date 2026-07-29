@@ -14,7 +14,7 @@ The IT department later took ownership of these systems in order to bring them i
 This project involved migrating legacy business applications to a secure on-premise environment.
 
 <div align="center">
-	<img src="../../images/Migration-1-OnPremise.png" height="500" width="500" />
+	<img src="../../images/Migration-1-OnPremise.png" />
 </div>
 
 ### Responsibilities
