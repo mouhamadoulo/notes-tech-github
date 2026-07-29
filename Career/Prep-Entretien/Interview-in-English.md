@@ -38,7 +38,7 @@ This project involved migrating legacy business applications to a secure on-prem
 This project focused on migrating existing applications to the AWS cloud platform.
 
 <div align="center">
-	<img src="../../images/Migration-2-AWS.png" />
+	<img src="../../images/Migration-2-AWS.jpg" />
 </div>
 
 ### Responsibilities
