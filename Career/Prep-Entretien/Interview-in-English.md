@@ -1,6 +1,6 @@
 # <ins>Projects done</ins>
 
-## 🔷 Global Context (Introduction)
+## Global Context
 
 I worked for seven years as a Full Stack Java developer on several internal business applications related to billing, roaming, special numbers, and international routing.
 
@@ -37,6 +37,10 @@ This project involved migrating legacy business applications to a secure on-prem
 
 This project focused on migrating existing applications to the AWS cloud platform.
 
+<div align="center">
+	<img src="../../images/Migration-2-AWS.png" />
+</div>
+
 ### Responsibilities
 
 * Cloud migration of applications, databases, and file storage systems
@@ -57,6 +61,10 @@ This project focused on migrating existing applications to the AWS cloud platfor
 ## 🔹 Project 3 – Spring Boot Batch Processing for Data Warehouse (SHELTER)
 
 Development of a batch processing system using Spring Boot for a data warehouse based on four Oracle schemas.
+
+<div align="center">
+	<img src="../../images/Batch-Processes.png" />
+</div>
 
 ### Responsibilities
 
