@@ -1,3 +1,22 @@
+Objet : Remerciements suite à notre entretien
+ 
+Bonjour ,
+Je tiens à vous remercier pour le temps que vous m’avez accordé lors de notre entretien d’hier concernant le poste de Concepteur développeur open.
+ 
+J’ai beaucoup apprécié nos échanges ainsi que la présentation de votre Squad et de son fonctionnement central sur la chaîne de delivery logicielle. La dimension transverse de la mission, couvrant l’ensemble du cycle de développement tout en apportant un support aux autres squads, correspond pleinement à ma vision future du métier (surtout à l'ère de l'IA) et à mon expérience acquise jusque ici.
+ 
+Au cours de mes sept années de mission, j’ai eu l’opportunité d’intervenir sur l’ensemble des phases du développement logiciel : du recueil de besoins jusqu'à la phase de monitoring en passant par la conception et développement industrialisé avec du CI/CD et les pratiques du DevOps en environnement On-Premise puis sur du Cloud AWS.
+ 
+La  description de la mission et les enjeux autour de la chaîne de delivery logicielle ont renforcé mon intérêt pour ce poste.
+Je suis convaincu de pouvoir apporter de la valeur et que cette mission me permettrait de continuer à progresser, d’acquérir de nouvelles expertises et de renforcer mes compétences grâce à la collaboration interne-équipe et les échanges avec les autres squads.
+ 
+Dans l’attente de votre retour, je vous souhaite une excellente journée.
+ 
+Cordialement,
+Mouhamadou Moustapha LO.
+
+---
+
 Bonjour Christine,
 
 Suite à la présentation de la mission BRED, voici mon retour.
