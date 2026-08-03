@@ -192,3 +192,332 @@ Tu es le Technical Lead de ce projet.
 ```
 
 Pour ton **SaaS d'onboarding**, ce workflow est particulièrement efficace : Notion devient la **source de vérité fonctionnelle**, Linear le **plan d'exécution**, et Codex maintient les trois (code, documentation et gestion de projet) synchronisés autant que les intégrations disponibles le permettent.
+
+---
+
+Pour un projet développé avec **Codex**, je te conseille de voir **Notion** et **Linear** comme deux outils très différents mais complémentaires :
+
+* **Notion = la mémoire du projet** (documentation, décisions, architecture, specs).
+* **Linear = le plan d'exécution** (tickets, bugs, roadmap, sprint).
+
+L'erreur la plus fréquente est de tout mettre dans Notion ou tout mettre dans Linear. En pratique, ils ont chacun un rôle précis.
+
+# Workflow que je recommande
+
+```text
+                 Idée
+                   │
+                   ▼
+              Notion (PRD)
+                   │
+                   ▼
+      Architecture / décisions
+                   │
+                   ▼
+Codex crée les tâches dans Linear
+                   │
+                   ▼
+             Développement
+                   │
+                   ▼
+Codex met à jour
+   Linear + Notion
+```
+
+---
+
+# Au début du projet
+
+Tu donnes un gros prompt à Codex.
+
+Exemple :
+
+```text
+Nous allons développer un SaaS.
+
+Je veux que tu utilises :
+
+- Notion comme documentation officielle
+- Linear comme gestionnaire de projet
+
+Au démarrage :
+
+1. Crée ou complète la documentation Notion :
+   - Vision
+   - PRD
+   - Architecture
+   - Stack technique
+   - Modèle de données
+   - API
+   - Roadmap
+   - Décisions techniques
+
+2. Découpe ensuite le projet en Epics.
+
+3. Crée dans Linear :
+   - les Epics
+   - les Stories
+   - les sous-tâches
+
+Chaque tâche doit contenir :
+
+- description
+- critères d'acceptation
+- dépendances
+- estimation
+- priorité
+
+Ne code rien tant que la documentation et les tickets ne sont pas prêts.
+```
+
+Tu obtiens immédiatement :
+
+Notion
+
+```
+Vision
+
+Architecture
+
+Database
+
+API
+
+Décisions
+
+Roadmap
+
+FAQ
+```
+
+Linear
+
+```
+Epic Authentication
+
+Epic Billing
+
+Epic Dashboard
+
+Epic Notifications
+```
+
+avec plusieurs dizaines de tickets.
+
+---
+
+# Avant chaque développement
+
+Tu peux lancer :
+
+```text
+Choisis le prochain ticket Linear non terminé.
+
+Lis sa description.
+
+Vérifie dans Notion que la documentation est suffisante.
+
+Si elle est incomplète,
+mets d'abord Notion à jour.
+
+Ensuite implémente le ticket.
+```
+
+---
+
+# Après chaque fonctionnalité
+
+C'est là que beaucoup oublient de maintenir la documentation.
+
+Prompt :
+
+```text
+La fonctionnalité vient d'être terminée.
+
+Je veux que tu :
+
+- marques le ticket Linear comme Done
+- ajoutes un résumé de l'implémentation
+- ajoutes les captures ou diagrammes utiles
+- mettes à jour Notion :
+    - API
+    - Architecture
+    - Base de données
+    - Décisions techniques
+    - Changelog
+```
+
+---
+
+# Si Codex modifie une API
+
+Prompt :
+
+```text
+Tu viens de modifier une API.
+
+Mets automatiquement à jour :
+
+- la documentation API dans Notion
+- les exemples de requêtes
+- les exemples de réponses
+- les schémas si nécessaire
+
+Puis ajoute un commentaire dans le ticket Linear correspondant.
+```
+
+---
+
+# Si Codex modifie la base
+
+Prompt :
+
+```text
+Une migration SQL vient d'être créée.
+
+Mets à jour dans Notion :
+
+- le schéma de données
+- les relations
+- les index
+- les contraintes
+
+Ajoute également une note dans le ticket Linear.
+```
+
+---
+
+# Si l'architecture évolue
+
+Prompt :
+
+```text
+Après cette implémentation,
+mets à jour automatiquement :
+
+- les diagrammes d'architecture
+- les diagrammes Mermaid
+- les flux de données
+- les composants
+- les dépendances
+
+dans Notion.
+```
+
+---
+
+# Pour les bugs
+
+Prompt :
+
+```text
+Analyse le bug.
+
+Si nécessaire :
+
+- crée un ticket Bug dans Linear
+- ajoute les logs
+- ajoute la reproduction
+- ajoute les pistes de résolution
+
+Puis corrige le bug.
+```
+
+---
+
+# En fin de journée
+
+Excellent prompt :
+
+```text
+Fais le bilan du travail réalisé aujourd'hui.
+
+1. Mets à jour tous les tickets Linear.
+
+2. Mets à jour la roadmap.
+
+3. Mets à jour le changelog Notion.
+
+4. Mets à jour les décisions techniques.
+
+5. Ajoute les nouvelles API.
+
+6. Ajoute les migrations.
+
+7. Mets à jour les diagrammes si nécessaire.
+```
+
+---
+
+# En fin de sprint
+
+```text
+Prépare le Sprint Review.
+
+Dans Notion :
+
+- Résumé
+- Fonctionnalités livrées
+- Architecture modifiée
+- KPIs
+- Dette technique
+
+Dans Linear :
+
+- ferme les tickets terminés
+- reporte ceux non finis
+- propose le sprint suivant
+```
+
+---
+
+# Prompt d'auto-maintenance
+
+C'est probablement le plus rentable.
+
+```text
+À chaque fois que tu modifies le projet :
+
+1. vérifie si la documentation est impactée
+
+2. si oui,
+mets immédiatement Notion à jour
+
+3. vérifie si un ticket Linear est concerné
+
+4. mets à jour son statut
+
+5. ajoute un résumé technique
+
+Ne laisse jamais la documentation ou les tickets en retard par rapport au code.
+```
+
+---
+
+# Ce que je ferais pour ton projet
+
+Pour ton SaaS d'onboarding collaborateurs (React/NestJS/PostgreSQL), j'organiserais les outils ainsi :
+
+### Notion
+
+* Vision produit
+* PRD
+* Architecture (Mermaid)
+* ADR (Architecture Decision Records)
+* Modèle de données
+* Documentation API
+* Guide de déploiement
+* Journal des versions (Changelog)
+* Documentation utilisateur
+* Dette technique
+
+### Linear
+
+* **Epics** : Authentification, Onboarding, Documents, Checklists, Notifications, Administration
+* **Stories** : chaque fonctionnalité métier
+* **Tasks** : implémentation backend, frontend, tests, documentation
+* **Bugs** : anomalies
+* **Cycles** : sprints de 1 à 2 semaines
+
+Ainsi, Codex peut utiliser **Notion comme source de vérité** pour comprendre le projet et **Linear comme liste de travail** à exécuter et à tenir à jour. C'est une organisation qui reste efficace même lorsque le projet grossit ou que plusieurs développeurs rejoignent l'équipe.
+
