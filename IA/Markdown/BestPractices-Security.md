@@ -1,4 +1,4 @@
-# ✅ Checklist sécurité — Développement d'applications Web (Angular / Spring Boot / Full Stack)
+# ✅ Checklist sécurité — Développement d'applications Web
 
 ## 🔐 1. Architecture et conception sécurisée
 
