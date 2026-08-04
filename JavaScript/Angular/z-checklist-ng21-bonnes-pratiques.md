@@ -1,6 +1,10 @@
-# ✅ Checklist des bonnes pratiques Angular 21
 
-> Cette checklist est orientée Angular 21 et privilégie les approches modernes : Standalone Components, Signals, contrôle de flux natif, rendu différé et APIs réactives récentes.
+````markdown
+# ✅ Checklist des bonnes pratiques Angular 22
+
+> Cette checklist est orientée Angular 22 et privilégie les approches modernes :
+> Standalone Components, Signals, zoneless change detection, contrôle de flux natif,
+> rendu différé, APIs réactives Angular récentes et architecture orientée domaine.
 
 ---
 
@@ -16,107 +20,205 @@
   - [ ] `features`
 - [ ] Limiter les dépendances entre features.
 - [ ] Favoriser une architecture modulaire et découplée.
-- [ ] Respecter les conventions de nommage Angular.
-
-## Standalone First
-
-- [ ] Utiliser exclusivement des composants standalone.
-- [ ] Éviter la création de nouveaux `NgModule`.
-- [ ] Importer explicitement les dépendances dans chaque composant.
-- [ ] Utiliser les routes standalone.
+- [ ] Respecter les conventions Angular modernes.
+- [ ] Préparer l'application pour un fonctionnement zoneless.
 
 ---
 
-# 🧩 Composants
+# 🧩 Standalone First
 
-## Conception
+## Composants et directives
 
-- [ ] Respecter le principe de responsabilité unique.
-- [ ] Limiter la logique métier dans les composants.
-- [ ] Déléguer la logique métier aux services ou stores.
-- [ ] Garder les composants petits et réutilisables.
-- [ ] Privilégier la composition plutôt que l'héritage.
+- [ ] Utiliser exclusivement des composants standalone.
+- [ ] Éviter la création de nouveaux `NgModule`.
+- [ ] Migrer progressivement les anciens modules Angular.
+- [ ] Importer explicitement les dépendances nécessaires.
+- [ ] Utiliser les APIs standalone :
+  - [ ] composants
+  - [ ] directives
+  - [ ] pipes
+  - [ ] routes
 
-## Change Detection
+## Bootstrap moderne
 
-- [ ] Utiliser systématiquement `ChangeDetectionStrategy.OnPush`.
-- [ ] Éviter les mutations d'objets.
-- [ ] Utiliser des structures de données immuables.
-- [ ] Favoriser les Signals pour la gestion d'état local.
+- [ ] Utiliser `bootstrapApplication()`.
+- [ ] Éviter `platformBrowserDynamic()`.
+- [ ] Préférer les providers fonctionnels.
 
-## Cycle de vie
+Exemple :
 
-- [ ] Utiliser `DestroyRef`.
-- [ ] Utiliser `takeUntilDestroyed()`.
-- [ ] Éviter les nettoyages manuels dans `ngOnDestroy()` lorsque possible.
-- [ ] Supprimer les hooks inutiles.
+```typescript
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes)
+  ]
+});
+````
+
+---
+
+# ⚡ Change Detection moderne
+
+## Zoneless Angular
+
+* [ ] Évaluer l'utilisation du mode zoneless.
+* [ ] Utiliser :
+
+```typescript
+provideZonelessChangeDetection()
+```
+
+* [ ] Éviter les dépendances à `NgZone`.
+* [ ] Ne pas déclencher manuellement des cycles de détection.
+
+## Bonnes pratiques
+
+* [ ] Préférer les Signals aux mécanismes impératifs.
+* [ ] Éviter les mutations d'état.
+* [ ] Utiliser des structures immuables.
+* [ ] Garder les composants déclaratifs.
+
+---
+
+# 🧩 Composants Angular 22
+
+## API moderne des composants
+
+* [ ] Utiliser `input()` au lieu de `@Input()` dans les nouveaux composants.
+
+Exemple :
+
+```typescript
+user = input.required<User>();
+```
+
+* [ ] Utiliser `output()` au lieu de `@Output()`.
+
+Exemple :
+
+```typescript
+selected = output<User>();
+```
+
+* [ ] Utiliser `model()` pour les composants avec liaison bidirectionnelle.
+
+Exemple :
+
+```typescript
+value = model<string>();
+```
+
+## Responsabilités
+
+* [ ] Garder les composants simples.
+* [ ] Éviter la logique métier complexe dans les templates.
+* [ ] Déléguer aux services ou stores.
+* [ ] Favoriser la composition.
+
+---
+
+# 🔎 Signal Queries
+
+## Requêtes modernes
+
+* [ ] Préférer les signal queries aux décorateurs classiques.
+
+Utiliser :
+
+* [ ] `viewChild()`
+* [ ] `viewChildren()`
+* [ ] `contentChild()`
+* [ ] `contentChildren()`
+
+Exemple :
+
+```typescript
+button = viewChild<ElementRef>('button');
+```
 
 ---
 
 # ⚡ Signals
 
-## Gestion d'état locale
+## Etat local
 
-- [ ] Utiliser `signal()` pour les états locaux.
-- [ ] Utiliser `computed()` pour les valeurs dérivées.
-- [ ] Utiliser `effect()` uniquement pour les effets de bord.
-- [ ] Garder les `effect()` simples et prédictibles.
+* [ ] Utiliser `signal()` pour les états locaux.
+* [ ] Utiliser `computed()` pour les valeurs dérivées.
+* [ ] Utiliser `effect()` uniquement pour les effets de bord.
+* [ ] Garder les effets simples.
 
 ## Bonnes pratiques
 
-- [ ] Éviter les chaînes complexes d'effets.
-- [ ] Préférer `computed()` à un `effect()` lorsque possible.
-- [ ] Éviter les mises à jour circulaires entre signals.
-- [ ] Centraliser les états partagés dans des stores dédiés.
+* [ ] Préférer `computed()` plutôt qu'un `effect()`.
+* [ ] Eviter les chaînes complexes d'effets.
+* [ ] Eviter les dépendances circulaires.
+* [ ] Centraliser les états partagés.
 
 ---
 
 # 🔄 RxJS
 
-## Utilisation
+## Utilisation recommandée
 
-- [ ] Utiliser RxJS principalement pour :
-  - [ ] HTTP
-  - [ ] WebSocket
-  - [ ] événements asynchrones
-  - [ ] flux complexes
+Utiliser RxJS principalement pour :
+
+* [ ] HTTP
+* [ ] WebSocket
+* [ ] streams complexes
+* [ ] événements externes
 
 ## Bonnes pratiques
 
-- [ ] Éviter les subscriptions imbriquées.
-- [ ] Utiliser :
-  - [ ] `switchMap`
-  - [ ] `concatMap`
-  - [ ] `mergeMap`
-  - [ ] `exhaustMap`
-  selon le besoin métier.
-- [ ] Utiliser `catchError`.
-- [ ] Utiliser `shareReplay()` lorsque pertinent.
-- [ ] Éviter les abonnements manuels si un signal ou un pipe async suffit.
+* [ ] Eviter les subscriptions imbriquées.
 
-## Interop Signals/RxJS
+* [ ] Utiliser les opérateurs adaptés :
 
-- [ ] Utiliser `toSignal()` pour exposer un Observable au template.
-- [ ] Utiliser `toObservable()` lorsque nécessaire.
-- [ ] Éviter les conversions inutiles entre Signals et Observables.
+  * [ ] `switchMap`
+  * [ ] `concatMap`
+  * [ ] `mergeMap`
+  * [ ] `exhaustMap`
+
+* [ ] Utiliser `catchError`.
+
+* [ ] Utiliser `shareReplay()` lorsque nécessaire.
+
+* [ ] Eviter les subscriptions manuelles inutiles.
 
 ---
 
-# 🎨 Templates
+# 🔁 Interop Signals / RxJS
 
-## Contrôle de flux moderne
+* [ ] Utiliser `toSignal()` pour exposer un Observable au template.
+* [ ] Utiliser `toObservable()` uniquement lorsque nécessaire.
+* [ ] Eviter les conversions inutiles.
 
-- [ ] Utiliser `@if`.
-- [ ] Utiliser `@for`.
-- [ ] Utiliser `@switch`.
-- [ ] Éviter les anciennes syntaxes `*ngIf` et `*ngFor` dans les nouveaux développements.
+---
+
+# 🎨 Templates Angular 22
+
+## Contrôle de flux natif
+
+Utiliser :
+
+* [ ] `@if`
+* [ ] `@else`
+* [ ] `@for`
+* [ ] `@switch`
+
+Eviter :
+
+* [ ] `*ngIf`
+* [ ] `*ngFor`
+* [ ] `*ngSwitch`
+
+---
 
 ## Boucles
 
-- [ ] Toujours utiliser `track`.
-- [ ] Utiliser un identifiant métier stable.
+* [ ] Toujours utiliser `track`.
+* [ ] Utiliser une clé stable métier.
 
-### Exemple
+Exemple :
 
 ```html
 @for (user of users(); track user.id) {
@@ -124,45 +226,44 @@
 }
 ```
 
-## Lisibilité
-
-* [ ] Éviter les expressions complexes.
-* [ ] Éviter les appels de méthodes coûteux.
-* [ ] Préférer les `computed()` pour préparer les données.
-* [ ] Limiter la profondeur d'imbrication.
-
 ---
 
 # 🚀 Performance
 
-## Rendu
+## Rendu différé
 
 * [ ] Utiliser `@defer` pour les composants lourds.
-* [ ] Charger les écrans secondaires à la demande.
-* [ ] Différer les bibliothèques coûteuses.
+* [ ] Charger les fonctionnalités secondaires à la demande.
 
-### Exemple
+Exemple :
 
 ```html
 @defer {
-  <app-dashboard-chart />
+  <app-heavy-chart />
 }
 @placeholder {
   <app-loader />
 }
 ```
 
-## Lazy Loading
+---
 
-* [ ] Utiliser le lazy loading sur toutes les features importantes.
-* [ ] Fractionner les bundles volumineux.
-* [ ] Vérifier régulièrement la taille du bundle.
+## Lazy loading
 
-## Détection de changements
+* [ ] Utiliser `loadComponent`.
+* [ ] Utiliser `loadChildren` pour les features complexes.
+* [ ] Contrôler régulièrement la taille des bundles.
 
-* [ ] Utiliser OnPush partout.
-* [ ] Utiliser des données immuables.
-* [ ] Éviter les rerenders inutiles.
+---
+
+# 🌍 SSR / Hydration
+
+## Applications universelles
+
+* [ ] Activer SSR lorsque pertinent.
+* [ ] Utiliser l'hydratation Angular.
+* [ ] Vérifier la compatibilité des bibliothèques tierces.
+* [ ] Eviter les accès directs au DOM côté serveur.
 
 ---
 
@@ -170,23 +271,20 @@
 
 ## Organisation
 
-* [ ] Centraliser les appels API dans des services.
+* [ ] Centraliser les appels API.
 * [ ] Utiliser un service par domaine métier.
-* [ ] Typage complet des DTO.
+* [ ] Typer complètement les DTO.
 
-## Interceptors
+## Interceptors fonctionnels
 
-* [ ] Authentification.
-* [ ] Refresh Token.
-* [ ] Logging.
-* [ ] Gestion des erreurs.
-* [ ] Headers communs.
+* [ ] Utiliser `HttpInterceptorFn`.
+* [ ] Centraliser :
 
-## Gestion des erreurs
-
-* [ ] Centraliser les erreurs globales.
-* [ ] Fournir des messages utilisateur clairs.
-* [ ] Journaliser les erreurs techniques.
+  * [ ] authentification
+  * [ ] refresh token
+  * [ ] logs
+  * [ ] erreurs
+  * [ ] headers
 
 ---
 
@@ -195,22 +293,23 @@
 ## Configuration
 
 * [ ] Utiliser les routes standalone.
-* [ ] Utiliser `loadComponent`.
-* [ ] Utiliser `loadChildren` pour les features complexes.
+* [ ] Utiliser :
+
+  * [ ] `loadComponent`
+  * [ ] `loadChildren`
 
 ## Sécurité
 
 * [ ] Utiliser des guards fonctionnels.
-* [ ] Utiliser des resolvers lorsque nécessaire.
-* [ ] Vérifier les autorisations avant chargement.
 
-### Exemple
+Exemple :
 
 ```typescript
-export const authGuard: CanActivateFn = () => {
-  return inject(AuthService).isAuthenticated();
-};
+export const authGuard: CanActivateFn = () =>
+  inject(AuthService).isAuthenticated();
 ```
+
+* [ ] Utiliser les resolvers uniquement lorsque nécessaire.
 
 ---
 
@@ -218,58 +317,52 @@ export const authGuard: CanActivateFn = () => {
 
 ## Reactive Forms
 
-* [ ] Utiliser Reactive Forms.
-* [ ] Utiliser les formulaires typés.
-* [ ] Éviter les formulaires non typés.
+* [ ] Utiliser Reactive Forms typés.
+* [ ] Eviter les formulaires non typés.
+* [ ] Centraliser les validateurs.
 
-### Exemple
+Exemple :
 
 ```typescript
 const form = new FormGroup({
-  email: new FormControl<string>('', { nonNullable: true }),
+  email: new FormControl('', {
+    nonNullable: true
+  })
 });
 ```
 
-## Validation
+## Signal Forms
 
-* [ ] Créer des validateurs réutilisables.
-* [ ] Centraliser les messages d'erreur.
-* [ ] Éviter la duplication de logique.
+* [ ] Evaluer l'utilisation des Signal Forms selon la maturité du projet.
+* [ ] Ne pas migrer uniquement par effet de nouveauté.
 
 ---
 
 # 🛡️ Sécurité
 
-## Frontend
-
-* [ ] Ne jamais stocker de secrets.
-* [ ] Ne jamais faire confiance aux données utilisateur.
-* [ ] Utiliser les protections XSS natives d'Angular.
-* [ ] Éviter l'utilisation de `innerHTML`.
-
-## Authentification
-
-* [ ] Utiliser des tokens courts.
-* [ ] Implémenter un mécanisme de refresh.
-* [ ] Gérer l'expiration de session.
+* [ ] Ne jamais stocker de secrets côté frontend.
+* [ ] Ne jamais faire confiance aux entrées utilisateur.
+* [ ] Utiliser l'encapsulation Angular contre XSS.
+* [ ] Eviter `innerHTML`.
+* [ ] Auditer les dépendances.
 
 ---
 
 # 📦 Gestion d'état
 
-## État local
+## Etat local
 
-* [ ] Utiliser les Signals.
+* [ ] Utiliser Signals.
 
-## État partagé
+## Etat partagé
 
-* [ ] Utiliser un Store basé sur Signals lorsque nécessaire.
-* [ ] Éviter l'introduction d'une librairie de state management sans besoin réel.
+* [ ] Préférer un store basé Signals.
+* [ ] Ajouter une librairie externe uniquement si nécessaire.
 
-## Avant d'ajouter un Store global
+Avant un store global :
 
-* [ ] Le besoin est-il réellement partagé ?
-* [ ] Plusieurs écrans utilisent-ils cet état ?
+* [ ] Plusieurs fonctionnalités utilisent-elles cet état ?
+* [ ] L'état doit-il survivre entre plusieurs routes ?
 * [ ] Les Signals locaux sont-ils insuffisants ?
 
 ---
@@ -281,17 +374,17 @@ const form = new FormGroup({
 * [ ] Tester les services métier.
 * [ ] Tester les guards.
 * [ ] Tester les composants critiques.
-* [ ] Tester les computed signals importants.
+* [ ] Tester les computed signals.
 
 ## Intégration
 
-* [ ] Tester les flux utilisateurs principaux.
-* [ ] Tester les interactions entre composants.
+* [ ] Tester les scénarios utilisateurs.
+* [ ] Tester les interactions composants.
 
 ## End-to-End
 
 * [ ] Couvrir les parcours critiques.
-* [ ] Intégrer les tests dans la CI/CD.
+* [ ] Exécuter dans la CI/CD.
 
 ---
 
@@ -300,71 +393,68 @@ const form = new FormGroup({
 ## TypeScript
 
 * [ ] Activer `strict`.
-* [ ] Interdire `any`.
-* [ ] Définir explicitement les types publics.
-* [ ] Utiliser les utilitaires TypeScript (`Pick`, `Omit`, `Partial`, etc.).
+* [ ] Eviter totalement `any`.
+* [ ] Définir les types publics.
+* [ ] Utiliser :
 
-## Linting
-
-* [ ] Utiliser ESLint.
-* [ ] Utiliser Prettier.
-* [ ] Automatiser les vérifications dans la CI.
-
-## Revues de code
-
-* [ ] Vérifier les performances.
-* [ ] Vérifier l'accessibilité.
-* [ ] Vérifier la maintenabilité.
-* [ ] Vérifier la couverture de tests.
+  * [ ] `Pick`
+  * [ ] `Omit`
+  * [ ] `Partial`
+  * [ ] `Readonly`
 
 ---
 
 # ♿ Accessibilité
 
-* [ ] Utiliser les éléments HTML sémantiques.
-* [ ] Vérifier la navigation clavier.
-* [ ] Ajouter les attributs ARIA lorsque nécessaire.
-* [ ] Tester le contraste des couleurs.
-* [ ] Vérifier les lecteurs d'écran.
+* [ ] Utiliser HTML sémantique.
+* [ ] Vérifier navigation clavier.
+* [ ] Ajouter ARIA si nécessaire.
+* [ ] Tester avec lecteurs d'écran.
+* [ ] Vérifier contraste et focus.
 
 ---
 
 # 🚀 CI/CD
 
-* [ ] Exécuter les tests automatiquement.
-* [ ] Exécuter ESLint automatiquement.
-* [ ] Refuser les merges en cas d'échec.
-* [ ] Générer les builds de production automatiquement.
-* [ ] Déployer automatiquement les environnements non productifs.
+* [ ] Lancer les tests automatiquement.
+* [ ] Vérifier ESLint.
+* [ ] Vérifier Prettier.
+* [ ] Construire les applications production.
+* [ ] Contrôler les tailles de bundles.
+* [ ] Déployer automatiquement les environnements.
 
 ---
 
 # 🔍 Revue finale avant Merge
 
-* [ ] Le composant est standalone.
-* [ ] OnPush est activé.
-* [ ] Les données sont immuables.
-* [ ] Les subscriptions sont nettoyées.
-* [ ] Les templates utilisent `@if` / `@for`.
-* [ ] Les boucles utilisent `track`.
-* [ ] Le code est strictement typé.
-* [ ] Les tests sont présents.
-* [ ] Aucun `any` non justifié.
-* [ ] Aucun code mort.
+* [ ] Composants standalone.
+* [ ] APIs modernes utilisées (`input`, `output`, `model`).
+* [ ] Templates avec `@if` / `@for`.
+* [ ] Boucles avec `track`.
+* [ ] Signals utilisés correctement.
+* [ ] Aucun effet inutile.
+* [ ] Subscriptions maîtrisées.
+* [ ] Code strictement typé.
 * [ ] Aucun secret exposé.
-* [ ] La performance a été vérifiée.
+* [ ] Performance vérifiée.
+* [ ] Accessibilité vérifiée.
 
 ---
 
-# ⭐ Règle d'or Angular 21
+# ⭐ Règle d'or Angular 22
 
-* [ ] Signals pour l'état local.
-* [ ] RxJS pour l'asynchrone.
 * [ ] Standalone partout.
-* [ ] OnPush partout.
+* [ ] Signals pour l'état réactif.
+* [ ] RxJS pour les flux asynchrones complexes.
+* [ ] Zoneless lorsque possible.
+* [ ] `input()` / `output()` / `model()` pour les nouveaux composants.
 * [ ] `@if`, `@for`, `@switch` partout.
-* [ ] `@defer` dès qu'un composant est lourd.
+* [ ] `@defer` pour les charges lourdes.
+* [ ] SSR + hydration lorsque pertinent.
 * [ ] TypeScript strict sans compromis.
 * [ ] Architecture métier avant architecture technique.
 
+```
 
+Cette version est alignée avec une base de projet Angular 22 moderne et peut servir de **guide d’équipe / checklist de revue de PR**.
+```
