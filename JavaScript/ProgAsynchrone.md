@@ -222,15 +222,14 @@ getUser()
 
 ```mermaid
 flowchart TD
-    A[getUser()] --> B["Promise Pending"]
+    A[getUser()] --> B["Promise en attente"]
 
-    B --> C[resolve()]
-    B --> D[reject()]
+    B -->|succès| C[resolve()]
+    B -->|erreur| D[reject()]
 
     C --> E[then()]
     D --> F[catch()]
 ```
-
 ---
 
 ## Chaining
