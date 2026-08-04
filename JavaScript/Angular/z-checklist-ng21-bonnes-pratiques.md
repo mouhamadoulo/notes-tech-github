@@ -1,5 +1,3 @@
-
-````markdown
 # ✅ Checklist des bonnes pratiques Angular 22
 
 > Cette checklist est orientée Angular 22 et privilégie les approches modernes :
@@ -53,7 +51,7 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes)
   ]
 });
-````
+```
 
 ---
 
