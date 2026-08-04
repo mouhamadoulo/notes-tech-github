@@ -1,222 +1,236 @@
-Pour bien maîtriser **Angular**, il est utile de progresser des bases vers les concepts avancés. Voici les notions les plus importantes.
+If you're asking for an **Angular 22 learning roadmap (2026)**, here's a practical progression from beginner to advanced, aligned with the current Angular ecosystem. Angular 22 fully embraces Signals, zoneless applications, and modern rendering patterns. ([Angular][1])
 
-## 1. Les fondamentaux
+## Phase 1: TypeScript Fundamentals
 
-* Architecture d'une application Angular
-* Structure d'un projet Angular
-* CLI Angular (`ng new`, `ng serve`, `ng generate`, `ng build`)
-* TypeScript (classes, interfaces, decorators, generics)
+Before Angular:
 
-## 2. Les composants (Components)
+* TypeScript (types, interfaces, generics)
+* ES2023+ JavaScript
+* Async/await & Promises
+* Modules
+* Classes & decorators
 
-* Création de composants
-* Cycle de vie (`ngOnInit`, `ngOnDestroy`, `ngOnChanges`, etc.)
-* Communication entre composants
+**Project:** Build a simple Todo app in TypeScript.
 
-  * `@Input()`
-  * `@Output()`
-  * `EventEmitter`
-* Projection de contenu (`<ng-content>`)
+---
 
-## 3. Les templates
+## Phase 2: Angular Basics
 
-* Interpolation (`{{ }}`)
-* Property Binding (`[property]`)
-* Event Binding (`(click)`)
-* Two-way Binding (`[(ngModel)]`)
-* Directives structurelles
+Learn:
 
-  * `*ngIf`
-  * `*ngFor`
-  * `*ngSwitch`
-* Directives d'attribut
+* CLI
+* Standalone Components
+* Templates
+* Data binding
+* Directives
+* Pipes
+* Component lifecycle
+* Dependency Injection
 
-## 4. Les directives
+**Project:** Notes application.
 
-* Directives intégrées
-* Création de directives personnalisées
-* `HostListener`
-* `HostBinding`
+---
 
-## 5. Les pipes
+## Phase 3: Routing
 
-* Pipes intégrés
-* Paramètres des pipes
-* Pipes personnalisés
-* Pipes purs et impurs
+* Router configuration
+* Lazy loading
+* Route guards
+* Route resolvers
+* Nested routes
+* Route parameters
 
-## 6. Les services et l'injection de dépendances
+**Project:** Multi-page e-commerce UI.
 
-* Création de services
-* Dependency Injection (DI)
-* Fournisseurs (`providers`)
-* Hiérarchie des injecteurs
-* Singleton
+---
 
-## 7. Le routage
+## Phase 4: Signals (Essential in Angular 22)
 
-* Configuration des routes
-* Paramètres d'URL
-* Query Parameters
-* Navigation
-* Routes enfants
-* Lazy Loading
-* Guards
-
-  * `CanActivate`
-  * `CanDeactivate`
-  * `Resolve`
-  * `CanMatch`
-
-## 8. Les formulaires
-
-### Template-driven Forms
-
-* `FormsModule`
-* Validation
-
-### Reactive Forms
-
-* `FormControl`
-* `FormGroup`
-* `FormArray`
-* Validators
-* Validators personnalisés
-
-## 9. HTTP
-
-* `HttpClient`
-* Requêtes GET/POST/PUT/DELETE
-* Gestion des erreurs
-* Interceptors
-* Authentification avec JWT
-
-## 10. RxJS (très important)
-
-* Observables
-* Subscription
-* Subjects
-* BehaviorSubject
-* Operators
-
-  * `map`
-  * `filter`
-  * `switchMap`
-  * `mergeMap`
-  * `concatMap`
-  * `debounceTime`
-  * `distinctUntilChanged`
-  * `catchError`
-  * `tap`
-  * `forkJoin`
-  * `combineLatest`
-  * `zip`
-
-## 11. Gestion de l'état
-
-* Services + BehaviorSubject
-* Signals (Angular moderne)
-* NgRx (Store)
-* Component Store
-
-## 12. Les Signals (Angular 16+)
+Master:
 
 * `signal()`
 * `computed()`
 * `effect()`
-* Signal Inputs
-* Signal Queries
-* Comparaison avec RxJS
+* Linked Signals
+* `resource()`
+* `httpResource()`
 
-## 13. Détection des changements
-
-* Change Detection
-* `OnPush`
-* `ChangeDetectorRef`
-* Optimisation des performances
-
-## 14. Modules et composants standalone
-
-* NgModules (applications historiques)
-* Standalone Components
-* Standalone Pipes
-* Standalone Directives
-* `bootstrapApplication()`
-
-## 15. Communication entre composants
-
-* Parent → Enfant
-* Enfant → Parent
-* Frères via Service
-* Signals
-* RxJS
-
-## 16. Performance
-
-* Lazy Loading
-* Preloading
-* TrackBy
-* Virtual Scrolling
-* Optimisation des listes
-* Code Splitting
-
-## 17. Sécurité
-
-* Sanitization
-* XSS
-* CSRF
-* Authentification
-* Autorisation
-
-## 18. Tests
-
-* Unit Tests
-* Tests de composants
-* Tests de services
-* Jasmine
-* Karma
-* Jest
-
-## 19. Déploiement
-
-* Build de production
-* Variables d'environnement
-* Optimisation
-* Docker
-* CI/CD
-
-## 20. Bonnes pratiques
-
-* Architecture par fonctionnalités (feature-based)
-* Séparation des responsabilités
-* Smart vs Presentational Components
-* Typage fort avec TypeScript
-* Organisation des dossiers
-* Convention de nommage
+These APIs are now production-ready and form Angular's recommended reactive model. ([Angular][1])
 
 ---
 
-### Ordre d'apprentissage recommandé
+## Phase 5: Forms
 
-1. ✅ TypeScript
-2. ✅ Composants
-3. ✅ Templates et Data Binding
-4. ✅ Directives
-5. ✅ Pipes
-6. ✅ Services et Dependency Injection
-7. ✅ Routing
-8. ✅ Formulaires réactifs
-9. ✅ HttpClient
-10. ✅ RxJS
-11. ✅ Signals
-12. ✅ Standalone Components
-13. ✅ Change Detection
-14. ✅ Interceptors
-15. ✅ Guards
-16. ✅ Lazy Loading
-17. ✅ Gestion de l'état (BehaviorSubject → Signals → NgRx)
-18. ✅ Tests
-19. ✅ Optimisation des performances
-20. ✅ Déploiement
+Learn both:
 
-Pour un développeur Angular en 2026, les compétences les plus recherchées sont généralement : **TypeScript**, **RxJS**, **Signals**, **Standalone Components**, **Reactive Forms**, **HttpClient**, **Routing**, **Dependency Injection**, **Interceptors**, **Guards**, **Change Detection (OnPush)** et les notions d'optimisation des performances. Maîtriser ces sujets permet de couvrir l'essentiel des besoins en entreprise.
+* Reactive Forms
+* **Signal Forms** (recommended for new applications)
+
+Topics:
+
+* Validation
+* Async validation
+* Dynamic forms
+* Custom controls
+
+Signal Forms are stable in Angular 22. ([angular.fr][2])
+
+---
+
+## Phase 6: HTTP & APIs
+
+* HttpClient
+* Interceptors
+* Authentication (JWT/OAuth)
+* Error handling
+* Retry
+* File upload/download
+
+**Project:** Consume a REST API.
+
+---
+
+## Phase 7: State Management
+
+Start with:
+
+* Services + Signals
+
+Then learn:
+
+* NgRx (if working on enterprise applications)
+* Signal Store
+* Entity management
+
+---
+
+## Phase 8: Performance
+
+Angular 22 emphasizes performance:
+
+* `OnPush` (now the default strategy for new components)
+* Zoneless applications
+* Deferred loading
+* Lazy components
+* Incremental hydration
+* SSR
+
+These improvements reduce unnecessary change detection and improve startup performance. ([angular.fr][2])
+
+---
+
+## Phase 9: Testing
+
+* Vitest
+* Jasmine (legacy projects)
+* Component testing
+* Service testing
+* E2E testing (Playwright/Cypress)
+
+Vitest is now the primary testing direction. ([Angular][1])
+
+---
+
+## Phase 10: Angular Material
+
+Learn:
+
+* Material Design
+* Theming
+* CDK
+* Dialogs
+* Tables
+* Virtual Scroll
+* Drag & Drop
+
+---
+
+## Phase 11: Advanced Angular
+
+* Custom directives
+* Custom pipes
+* Dynamic components
+* Dependency Injection patterns
+* Content projection
+* ViewContainerRef
+* Host Directives
+
+---
+
+## Phase 12: Enterprise Architecture
+
+* Feature-based architecture
+* Monorepos (Nx)
+* Micro-frontends
+* Module federation
+* Clean Architecture
+* Domain-driven folder structure
+
+---
+
+## Phase 13: Build & Deploy
+
+* Environment configuration
+* Production builds
+* Docker
+* CI/CD (GitHub Actions)
+* Firebase
+* Azure
+* AWS
+* Vercel
+
+---
+
+# Recommended Projects
+
+1. Todo App
+2. Weather Dashboard
+3. Blog CMS
+4. Authentication System
+5. E-commerce Store
+6. Admin Dashboard
+7. Chat Application (WebSockets)
+8. Kanban Board (Trello clone)
+9. Netflix Clone
+10. Full ERP/CRM Dashboard
+
+---
+
+# Suggested Learning Order
+
+1. HTML/CSS
+2. JavaScript
+3. TypeScript
+4. Angular Basics
+5. Routing
+6. Signals
+7. Forms
+8. HTTP
+9. Authentication
+10. State Management
+11. Angular Material
+12. Testing
+13. SSR & Hydration
+14. Performance
+15. Enterprise Architecture
+16. Deployment
+
+---
+
+## Bonus Skills
+
+To become a well-rounded Angular developer, also learn:
+
+* RxJS (still important for streams and interoperability)
+* REST APIs
+* GraphQL
+* Node.js + NestJS
+* SQL or PostgreSQL
+* Docker
+* Git & GitHub
+* AI-assisted development workflows (e.g., MCP, code generation)
+
+This combination is widely used in enterprise TypeScript stacks and aligns well with Angular's current direction. ([Angular][1])
+
+[1]: https://angular.dev/roadmap?utm_source=chatgpt.com "Roadmap • Angular"
+[2]: https://angular.fr/news/angular22?utm_source=chatgpt.com "Nouveautés d'Angular 22 (3 juin 2026) | Angular"
