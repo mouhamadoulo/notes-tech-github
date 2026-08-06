@@ -1,429 +1,553 @@
 # 🔷 <ins>Qu’est-ce qu’Angular ?</ins>
-Angular est un framework front-end open source développé par Google, basé sur TypeScript.
-Il permet de créer des applications web dynamiques, robustes et maintenables, notamment des Single Page Applications (SPA).
 
-## Installation
-Pour installer Angular sur sa machine de manière globale , on aura besoin : 
-- d'installer Node (version LTS)
-- Node inclut NPM le gestionnaire de packages, et avec on tape la commande : 
-```
+Angular est un framework front-end open source développé par Google, basé sur **TypeScript**.
+
+Il permet de créer des applications web dynamiques, robustes et maintenables, notamment des **Single Page Applications (SPA)**.
+
+Depuis Angular 17, le framework a fortement évolué et **Angular 22 utilise par défaut les Standalone Components**, les **Signals** et les **nouveaux templates** (`@if`, `@for`, `@switch`).
+
+---
+
+# 📦 Installation
+
+## Prérequis
+
+* Installer **Node.js** (version LTS compatible avec Angular 22)
+* Node installe automatiquement **npm**
+
+Installation du CLI Angular :
+
+```bash
 npm install -g @angular/cli
 ```
 
+Vérifier l'installation :
+
+```bash
+ng version
+```
+
+---
 
 # 🧱 Concepts fondamentaux
 
 ## 1. Architecture par composants
-Une application Angular est composée de composants.
-Chaque composant contient :
-- un template HTML
-- une logique TypeScript
-- un style CSS/SCSS
 
-```
+Une application Angular est composée de composants.
+
+Chaque composant possède :
+
+* un template HTML
+* une logique TypeScript
+* un style CSS/SCSS
+
+Exemple Standalone :
+
+```ts
+import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-example',
+  standalone: true,
   templateUrl: './example.component.html',
-  styleUrls: ['./example.component.scss']
+  styleUrl: './example.component.scss'
 })
 export class ExampleComponent {}
-
 ```
 
-## 2. Modules (NgModules)
-Les modules organisent l’application en blocs fonctionnels.
-- AppModule est le module racine
-- Permettent de regrouper composants, services, pipes, etc.
+> Depuis Angular 17+, les composants standalone sont la méthode recommandée.
 
-```
-@NgModule({
-  declarations: [],
-  imports: [],
-  providers: [],
-  bootstrap: [AppComponent]
+---
+
+## 2. Standalone Components (à la place des NgModules)
+
+Les **NgModules ne sont plus nécessaires** dans la majorité des projets.
+
+Les dépendances sont directement importées dans le composant.
+
+```ts
+@Component({
+  standalone: true,
+  imports: [CommonModule],
+  template: `...`
 })
-export class AppModule {}
-
+export class HomeComponent {}
 ```
+
+Le point d'entrée de l'application utilise :
+
+```ts
+bootstrapApplication(AppComponent);
+```
+
+au lieu de :
+
+```ts
+platformBrowserDynamic().bootstrapModule(AppModule);
+```
+
+Les NgModules restent disponibles pour les anciens projets.
+
+---
 
 ## 3. Data Binding
-Angular propose plusieurs types de liaison de données :
-|Type	|Syntaxe	|Description|
-|-------|-----------|-----------|
-|Interpolation	|{{ value }}	|Affichage de données|
-|Property Binding	|[property]	|Données vers le DOM|
-|Event Binding	|(event)	|Événements utilisateur|
-|Two-way Binding	|[(ngModel)]	|Liaison bidirectionnelle|
 
-## 4. Directives
-Elles modifient le comportement ou l’affichage du DOM.
-- **Structurelles :** *ngIf, *ngFor, *ngSwitch
-- **Attributs :** ngClass, ngStyle
+Angular conserve les quatre types de liaison.
 
-```
-<div *ngIf="isVisible">Visible</div>
-```
+| Type             | Syntaxe       | Description              |
+| ---------------- | ------------- | ------------------------ |
+| Interpolation    | `{{ value }}` | Afficher une valeur      |
+| Property Binding | `[property]`  | Du TS vers le HTML       |
+| Event Binding    | `(click)`     | Événement utilisateur    |
+| Two-way Binding  | `[(ngModel)]` | Liaison bidirectionnelle |
 
-## 5. Services et Injection de dépendances
-Les services contiennent la logique métier et sont injectés dans les composants.
-```
-@Injectable({ providedIn: 'root' })
-export class ExampleService {}
+Exemple :
+
+```html
+<input [(ngModel)]="name">
+
+<h2>{{ name }}</h2>
 ```
 
-Angular utilise un système d’injection de dépendances puissant et centralisé.
+---
 
-## 6. Routing
-Angular permet de créer des applications multi-pages sans rechargement.
+## 4. Control Flow (nouvelle syntaxe)
+
+Les directives structurelles classiques existent toujours mais sont remplacées par une nouvelle syntaxe.
+
+### Condition
+
+```html
+@if (isLogged()) {
+    <p>Bienvenue</p>
+}
 ```
-const routes: Routes = [
-  { path: 'home', component: HomeComponent }
+
+### Boucle
+
+```html
+@for (user of users(); track user.id) {
+
+    <p>{{ user.name }}</p>
+
+}
+```
+
+### Switch
+
+```html
+@switch (status()) {
+
+    @case ('loading') {
+        Chargement...
+    }
+
+    @case ('success') {
+        Succès
+    }
+
+    @default {
+        Erreur
+    }
+
+}
+```
+
+Cette syntaxe est désormais recommandée.
+
+---
+
+## 5. Signals
+
+Les **Signals** remplacent progressivement une partie de l'utilisation de RxJS pour l'état local.
+
+Créer un signal :
+
+```ts
+import { signal } from '@angular/core';
+
+count = signal(0);
+```
+
+Lire sa valeur :
+
+```ts
+count()
+```
+
+Modifier :
+
+```ts
+count.set(10);
+
+count.update(v => v + 1);
+```
+
+Valeur calculée :
+
+```ts
+import { computed } from '@angular/core';
+
+double = computed(() => count() * 2);
+```
+
+---
+
+## 6. Injection de dépendances
+
+On peut toujours utiliser le constructeur :
+
+```ts
+constructor(private service: UserService){}
+```
+
+Mais la méthode moderne est :
+
+```ts
+import { inject } from '@angular/core';
+
+userService = inject(UserService);
+```
+
+---
+
+## 7. Routing
+
+Le routing fonctionne avec des composants standalone.
+
+```ts
+export const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  }
 ];
 ```
 
-- Navigation dynamique
-- Lazy loading possible
+ou avec le Lazy Loading :
 
-## 7. Formulaires
-Deux approches principales :
-- Template-driven forms
-- Reactive forms (recommandées)
+```ts
+{
+    path: 'admin',
+    loadComponent: () =>
+        import('./admin.component')
+            .then(c => c.AdminComponent)
+}
 ```
-this.form = new FormGroup({
-  name: new FormControl('')
+
+---
+
+## 8. Formulaires
+
+Deux approches existent toujours :
+
+* Template Forms
+* Reactive Forms (recommandées)
+
+```ts
+form = new FormGroup({
+    name: new FormControl('')
 });
 ```
 
-## 8. Observables & RxJS
-Angular repose fortement sur RxJS pour la gestion asynchrone.
-- Requêtes HTTP
-- Événements
-- Streams de données
-```
-this.http.get(url).subscribe(data => {});
+---
+
+## 9. HTTP
+
+Les requêtes HTTP utilisent toujours `HttpClient`.
+
+```ts
+http = inject(HttpClient);
+
+this.http.get('/api/users')
+    .subscribe(users => console.log(users));
 ```
 
-# 🛠️ Angular CLI
-Outil en ligne de commande pour :
-- Créer des projets
-- Générer des composants/services
-- Lancer un serveur local
-- Builder l’application
-```
-ng new my-app
-ng serve
-ng generate component my-component
-```
-## 🔧 Installation & configuration
-```
-npm install -g @angular/cli
-```
-Installe Angular CLI globalement.
-```
-ng version
-```
-Affiche la version d’Angular et des dépendances.
+---
 
-## 🆕 Création de projet
-```
-ng new nom-du-projet
-```
-Crée un nouveau projet Angular (avec routing et styles au choix).
+## 10. RxJS
 
-```
-npx @angular/cli@12 new mon-projet-angular12
-```
-Créer un projet Angular dans une version spécifique (ici Angular 12).
-A noter que il faudra aussi installer une version de node compatible à la version Angular utilisée
+RxJS reste utilisé pour :
 
-```
-cd nom-du-projet
-ng serve
-```
-Lance le serveur de développement
-➡️ qui est accessible sur http://localhost:4200
+* HTTP
+* WebSocket
+* événements
+* streams de données
 
-## Options commandes ng
+Mais les **Signals** remplacent souvent RxJS pour la gestion de l'état local.
 
-### 🔹 ng new — créer un projet Angular
-```
-ng new mon-projet [options]
-```
-**Options courantes**
-|Option	|Utilité|
-|-------|-------|
-|--routing	|Ajoute automatiquement le module de routing|
-|--style=scss	|Définit le préprocesseur CSS (css, scss, sass, less)|
-|--standalone	|Crée un projet basé sur les composants standalone|
-|--skip-tests	|Ne génère pas les fichiers .spec.ts|
-|--strict	|Active le mode strict TypeScript (recommandé)|
-|--prefix=app	|Préfixe des sélecteurs de composants|
-|--skip-install	|N’installe pas les dépendances npm|
+---
 
-📌Exemple :
-```
-ng new blog --routing --style=scss --strict
+# 🛠 Angular CLI
+
+## Création d'un projet
+
+```bash
+ng new mon-projet
 ```
 
-### 🔹 ng generate (ng g) — générer du code
-```
-ng g component header [options]
-```
-**Options générales**
-|Option	|Utilité|
-|-------|-------|
-|--skip-tests	|Ne crée pas de fichiers de test|
-|--inline-style	|Met le CSS dans le .ts|
-|--inline-template	|Met le HTML dans le .ts|
-|--standalone	|Génère un composant standalone|
-|--flat	|Ne crée pas de dossier|
+Angular crée maintenant automatiquement un projet Standalone.
 
-📌Exemple :
-```
-ng g component navbar --standalone
-ng g service post --skip-tests
-ng g module admin --routing
-```
-
-### 🔹 ng serve — lancer le serveur de dev
-```
-ng serve [options]
-```
-|Option	|Utilité|
-|-------|-------|
-|--open	|Ouvre le navigateur automatiquement|
-|--port=4300	|Change le port|
-|--host=0.0.0.0	|Accessible sur le réseau|
-|--ssl	|Active HTTPS|
-|--configuration=production	|Sert en mode production|
-
-📌Exemple :
-```
-ng serve --open --port=4300
-```
-
-### 🔹 ng build — compiler l’application
-```
-ng build [options]
-```
-|Option	|Utilité|
-|-------|-------|
-|--configuration=production	|Build optimisé|
-|--watch	|Rebuild automatique|
-|--source-map	|Génère les source maps|
-|--output-path=dist/app	|Dossier de sortie personnalisé|
-
-📌Exemple :
-```
-ng build --configuration=production
-```
-
-### 🔹 ng test — lancer les tests
-```
-ng test [options]
-```
-|Option	|Utilité|
-|-------|-------|
-|--watch=false	|Lance une fois|
-|--code-coverage	|Génère un rapport de couverture|
-
-### 🔹 ng lint — analyser le code
-```
-ng lint
-```
-
-- Vérifie les règles ESLint
-- Détecte les erreurs de style ou de bonnes pratiques
-
-🔹 Options globales (ng)
-|Option	|Utilité|
-|-------|-------|
-|--help	|Liste les options disponibles|
-|--version	|Version Angular CLI|
-|--verbose	|Affiche plus de détails|
-
-```
-ng serve --help
-```
-
-## ⚙️ Génération de fichiers (très utilisé)
-```
-ng generate component nom
-```
-ou raccourci :
-```
-ng g c nom
-```
-Commandes courantes :
-```
-ng g module nom
-ng g service nom
-ng g directive nom
-ng g pipe nom
-ng g guard nom
-ng g interface nom
-```
 Exemple :
-```
-ng g c users/user-list
+
+```bash
+ng new blog --routing --style=scss
 ```
 
-## 🧱 Build & déploiement
+---
+
+## Lancer le projet
+
+```bash
+cd mon-projet
+
+ng serve
 ```
+
+ou
+
+```bash
+ng serve --open
+```
+
+Application disponible sur
+
+```
+http://localhost:4200
+```
+
+---
+
+# ⚙ Options de `ng new`
+
+| Option         | Description            |
+| -------------- | ---------------------- |
+| --routing      | Ajoute le routing      |
+| --style=scss   | Utilise SCSS           |
+| --skip-tests   | Ne crée pas les tests  |
+| --strict       | Mode strict TypeScript |
+| --prefix=app   | Préfixe des composants |
+| --skip-install | N'installe pas npm     |
+
+---
+
+# ⚙ Génération
+
+Créer un composant
+
+```bash
+ng g component home
+```
+
+Créer un composant standalone
+
+```bash
+ng g component home --standalone
+```
+
+Créer un service
+
+```bash
+ng g service services/user
+```
+
+Créer une directive
+
+```bash
+ng g directive directives/highlight
+```
+
+Créer un pipe
+
+```bash
+ng g pipe pipes/date
+```
+
+Créer une garde
+
+```bash
+ng g guard guards/auth
+```
+
+Créer une interface
+
+```bash
+ng g interface models/user
+```
+
+---
+
+# 🚀 Développement
+
+Lancer le serveur
+
+```bash
+ng serve
+```
+
+Ouvrir automatiquement
+
+```bash
+ng serve --open
+```
+
+Changer le port
+
+```bash
+ng serve --port 4300
+```
+
+HTTPS
+
+```bash
+ng serve --ssl
+```
+
+---
+
+# 🏗 Build
+
+Développement
+
+```bash
 ng build
-````
-Compile le projet (dossier dist/).
 ```
+
+Production
+
+```bash
 ng build --configuration production
 ```
-Build optimisé pour la production.
 
-## 🧪 Tests
+Rebuild automatique
+
+```bash
+ng build --watch
 ```
+
+---
+
+# 🧪 Tests
+
+Tests unitaires
+
+```bash
 ng test
 ```
-Lance les tests unitaires (Karma/Jasmine).
-```
-ng e2e
-```
-Lance les tests end-to-end.
 
-## 🔍 Analyse & aide
-```
-ng help
-```
-Affiche l’aide générale.
-```
-ng generate --help
-```
-Liste toutes les options de génération.
+Angular ne génère plus automatiquement de configuration **end-to-end (E2E)**. Si vous souhaitez des tests E2E, il est recommandé d'utiliser des outils comme **Playwright** ou **Cypress**.
 
-## 🧼 Autres commandes utiles
-```
-ng lint
-```
-Analyse le code (si ESLint configuré).
-```
+---
+
+# 🔄 Mise à jour
+
+Mettre Angular à jour
+
+```bash
 ng update
 ```
-Met à jour Angular et ses dépendances.
 
-## ✅ Raccourcis à retenir absolument
+Mettre également le CLI
 
-|Action	|Commande|
-|-------|--------|
-|Créer un projet|	ng new|
-|Lancer le serveur|	ng serve|
-|Générer un composant|	ng g c|
-|Générer un service|	ng g s|
-|Build production|	ng build --configuration production|
+```bash
+ng update @angular/core @angular/cli
+```
+
+---
+
+# 🔍 Analyse
+
+Aide
+
+```bash
+ng help
+```
+
+Aide d'une commande
+
+```bash
+ng generate --help
+```
+
+Version
+
+```bash
+ng version
+```
+
+---
+
+# 📁 Arborescence d'un projet Angular 22
+
+```
+src/
+
+ ├── app/
+ │    ├── app.component.ts
+ │    ├── app.component.html
+ │    ├── app.config.ts
+ │    ├── app.routes.ts
+ │
+ ├── assets/
+ ├── styles.scss
+ ├── main.ts
+```
+
+Les fichiers **app.config.ts** et **app.routes.ts** remplacent en grande partie l'ancien `AppModule`.
+
+---
+
+# ⭐ Nouveautés majeures d'Angular 22
+
+* ✅ Standalone Components par défaut
+* ✅ Plus besoin de NgModules dans la majorité des projets
+* ✅ Signals pour la gestion de l'état
+* ✅ `@if`, `@for`, `@switch` à la place de `*ngIf`, `*ngFor`
+* ✅ `inject()` à la place du constructeur lorsque pertinent
+* ✅ Lazy Loading simplifié avec `loadComponent`
+* ✅ Optimisations de performances et d'hydratation (SSR)
+
+---
+
+# ✅ Commandes essentielles
+
+| Action                | Commande                              |
+| --------------------- | ------------------------------------- |
+| Créer un projet       | `ng new mon-projet`                   |
+| Lancer le serveur     | `ng serve`                            |
+| Créer un composant    | `ng g c home`                         |
+| Créer un service      | `ng g s user`                         |
+| Build production      | `ng build --configuration production` |
+| Mettre Angular à jour | `ng update`                           |
+
+---
 
 # ✅ Avantages
 
-- Structure claire et scalable
-- TypeScript (typage fort)
-- Framework complet (tout intégré)
-- Maintenu par Google
-- Excellent pour les projets complexes
+* Architecture robuste et scalable
+* TypeScript fortement typé
+* Standalone Components plus simples
+* Signals pour une meilleure réactivité
+* Excellent support du SSR et de l'hydratation
+* Maintenu activement par Google
+* Écosystème complet (CLI, Router, Forms, HttpClient...)
 
-# ⚠️ Inconvénients
+---
 
-- Courbe d’apprentissage élevée
-- Verbosité importante
-- Moins flexible que certains frameworks légers
+# ⚠ Inconvénients
 
-# 📌 Cas d’usage
+* Courbe d'apprentissage plus importante que des bibliothèques comme React ou Vue
+* Taille du framework plus conséquente
+* Les nombreuses nouveautés (Signals, Control Flow, Standalone) nécessitent une mise à jour des pratiques pour les développeurs venant d'anciennes versions
 
-- Applications d’entreprise
-- Dashboards complexes
-- Applications à long terme
-- Projets nécessitant une architecture solide
+---
 
+# 📌 Cas d'usage
 
-
-
-# ✅ <ins>Best Practices Angular (2026)</ins>
-
-## 🧱 Architecture
-- Architecture **feature-based** (par domaine métier, pas technique)
-- `core/` → services globaux, interceptors, guards
-- `shared/` → composants/pipes/directives réutilisables
-- `features/` → modules métier
-- Respecter le **Single Responsibility Principle**
-- Éviter les dépendances circulaires
-
-## 📦 Organisation du code
-- 1 composant = 1 dossier
-- Nommage clair :
-  - `*.component.ts`
-  - `*.service.ts`
-  - `*.model.ts`
-  - `*.enum.ts`
-
-## ⚙️ Composants
-- Utiliser `ChangeDetectionStrategy.OnPush`
-- Favoriser les composants **présentationnels (dumb)**
-- Passer les données via `@Input()` / `@Output()`
-- Éviter la logique métier dans les composants
-- Limiter la taille (<300 lignes)
-
-## 🔁 RxJS & gestion des flux
-- Utiliser les **Observables partout**
-- Préférer `async pipe` au `subscribe()`
-- Gérer les unsubscribe (`takeUntil`, `destroyRef`)
-- Éviter les nested subscriptions
-
-## 🧠 State Management
-- Simple → services + RxJS
-- Complexe → NgRx / Signals
-- Ne jamais stocker l’état dans les composants
-
-## 🌐 HTTP & API
-- Centraliser les appels API dans des services
-- Utiliser des **HttpInterceptors** (auth, erreurs)
-- Typage strict des réponses (interfaces)
-
-## 🛡️ Sécurité
-- Utiliser des **Guards** (`CanActivate`)
-- Gérer les tokens via interceptor
-- Éviter `localStorage` pour données sensibles
-
-## 🚀 Performance
-- Lazy loading des modules
-- `trackBy` dans `*ngFor`
-- Éviter les calculs lourds dans templates
-- Utiliser `OnPush`
-
-## 🎯 Forms
-- Préférer **Reactive Forms**
-- Validation côté client + serveur
-- Validators custom centralisés
-
-## 🧪 Tests
-- Tester services et logique métier
-- Mock des dépendances
-- Utiliser Jest ou Jasmine
-
-## 🎨 UI / UX
-- Pas de logique complexe dans HTML
-- Utiliser un design system (Angular Material…)
-- Séparer UI et logique
-
-## 🧰 Qualité de code
-- ESLint + Prettier
-- Typage strict (`strict: true`)
-- Alias imports (`@app`, `@shared`)
-
-## 🔄 CI/CD
-- Build prod optimisé (`ng build --prod`)
-- Lint + tests dans pipeline
-- Versioning propre (Git flow ou trunk-based)
-
-## 📚 Bonnes habitudes
-- Documenter le code complexe
-- Refactor régulier
-- Supprimer le code mort
-- Faire des code reviews
-
-## 🧠 Règle d’or
-> Composants simples + logique dans services + RxJS propre = app scalable
+* Applications d'entreprise
+* Dashboards complexes
+* Applications SaaS
+* ERP / CRM
+* Progressive Web Apps (PWA)
+* Applications avec SSR
+* Projets nécessitant une architecture solide et évolutive
