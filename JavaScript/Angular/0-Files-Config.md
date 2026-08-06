@@ -510,11 +510,17 @@ mon-projet/
 Minimum conseillé :
 
 ✅ `.editorconfig` → règles communes
+
 ✅ `.prettierrc` → formatage automatique
+
 ✅ `strict: true` dans TypeScript
+
 ✅ `package-lock.json` versionné
+
 ✅ `node_modules` ignoré
+
 ✅ `README.md` maintenu
+
 ✅ scripts npm propres dans `package.json`
 
 Ces fichiers ne contiennent généralement pas de logique métier : ils définissent surtout **comment le projet est construit, testé et maintenu par l'équipe**.
