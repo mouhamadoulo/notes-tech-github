@@ -173,9 +173,6 @@ ng serve
 ```bash
 ng build --configuration production
 ```
-
-````
-
 ---
 
 # `angular.json`
@@ -217,7 +214,7 @@ Exemple simplifié :
     }
   }
 }
-````
+```
 
 ---
 
