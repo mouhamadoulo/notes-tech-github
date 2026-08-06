@@ -415,31 +415,6 @@ like e-commerce and service providers. In this real-time chat application projec
 through which the users can create accounts, interact with other users, and exchange messages. 
 ```
 
-### 📦 E-Learning Platform
-Link : https://github.com/cs-MohamedAyman/eLearning-Platforms
-```
-An e-learning platform is meant to provide access to online education and various professional courses. 
-This Angular project involves creating a user-friendly interface to search for courses, check reviews and ratings, 
-view the course content, and enroll in a course. 
-```
-
-### 📦 Game Analyser
-Link : https://github.com/pnprog/goreviewpartner
-```
-Before launching a game in the public domain, it has to undergo testing to check all its functionalities, 
-entertainment value, and clarity level of the user interface. 
-This game analyzer project built on Angular has the potential to revolutionize modern-day gaming approaches. 
-Designers and programmers will find it remarkably effortless to build games, collaborate with potential users for feedback, 
-and implement necessary modifications.
-```
-
-### 📦 Social Media Platform
-Link : https://github.com/maurobonfietti/social
-```
-Social media is everywhere. Constructing a social media platform can enhance your Angular project portfolio. 
-A social media platform must have a smooth user interface that lets users produce, modify, upgrade, 
-and delete posts and include features that enable users to like and comment on others’ posts. 
-```
 
 # <ins>Exemple d'applications à créer avec Angular (pour monter en compétences)</ins> 
 
