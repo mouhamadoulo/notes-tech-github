@@ -22,6 +22,76 @@
 - [ ] Préparer l'application pour un fonctionnement zoneless.
 
 ---
+# 🏛️ Pattern Facade
+
+## Isolation de la logique métier
+
+- [ ] Utiliser une Facade par domaine métier lorsque celui-ci expose plusieurs cas d'usage.
+- [ ] Les composants ne communiquent qu'avec leur Facade.
+- [ ] Les composants ne connaissent pas directement les services HTTP, stores ou repositories.
+- [ ] Une Facade orchestre les appels aux services, stores et autres dépendances.
+- [ ] Les Facades exposent une API simple et orientée métier.
+
+Exemple :
+
+```typescript
+@Component({...})
+export class UsersPage {
+
+  readonly users = this.usersFacade.users;
+  readonly loading = this.usersFacade.loading;
+
+  constructor(private readonly usersFacade: UsersFacade) {}
+
+  ngOnInit() {
+    this.usersFacade.loadUsers();
+  }
+}
+```
+
+## Responsabilités
+
+Une Facade peut :
+
+- [ ] Exposer des Signals ou Observables destinés à l'UI.
+- [ ] Orchestrer plusieurs appels API.
+- [ ] Coordonner plusieurs services métier.
+- [ ] Gérer les interactions avec un store.
+- [ ] Centraliser les cas d'usage d'une feature.
+
+Une Facade ne doit pas :
+
+- [ ] Contenir de logique de présentation.
+- [ ] Contenir de logique HTTP bas niveau.
+- [ ] Remplacer les services métier.
+- [ ] Devenir un "God Service".
+
+## Organisation
+
+Structure recommandée :
+
+```
+
+features/
+users/
+users.page.ts
+users.facade.ts
+users.service.ts
+users.repository.ts
+users.models.ts
+
+```
+
+## Bonnes pratiques
+
+- [ ] Préférer une Facade par feature.
+- [ ] Retourner des Signals lorsque l'état est consommé par les composants.
+- [ ] Conserver les appels HTTP dans des services dédiés.
+- [ ] Limiter les dépendances injectées dans les composants.
+- [ ] Les composants restent déclaratifs et testables.
+- [ ] Tester les Facades indépendamment des composants.
+
+---
 
 # 🧩 Standalone First
 
@@ -108,10 +178,12 @@ value = model<string>();
 
 ## Responsabilités
 
-* [ ] Garder les composants simples.
-* [ ] Éviter la logique métier complexe dans les templates.
-* [ ] Déléguer aux services ou stores.
-* [ ] Favoriser la composition.
+- [ ] Garder les composants simples.
+- [ ] Éviter la logique métier complexe dans les templates.
+- [ ] Les composants orchestrent uniquement l'affichage et les interactions utilisateur.
+- [ ] Déléguer les cas d'usage métier aux Facades.
+- [ ] Les Facades délèguent la logique métier aux services spécialisés.
+- [ ] Favoriser la composition.
 
 ---
 
@@ -269,9 +341,11 @@ Exemple :
 
 ## Organisation
 
-* [ ] Centraliser les appels API.
-* [ ] Utiliser un service par domaine métier.
-* [ ] Typer complètement les DTO.
+- [ ] Centraliser les appels API dans des services ou repositories dédiés.
+- [ ] Les composants ne consomment jamais directement les services HTTP.
+- [ ] Les appels HTTP transitent par une Facade lorsque celle-ci existe.
+- [ ] Utiliser un service ou repository par domaine métier.
+- [ ] Typer complètement les DTO.
 
 ## Interceptors fonctionnels
 
@@ -363,6 +437,13 @@ Avant un store global :
 * [ ] L'état doit-il survivre entre plusieurs routes ?
 * [ ] Les Signals locaux sont-ils insuffisants ?
 
+## Accès à l'état
+
+- [ ] Les composants accèdent à l'état via une Facade.
+- [ ] Une Facade expose les Signals, computed et actions nécessaires à l'UI.
+- [ ] Le store reste une implémentation interne à la Facade.
+- [ ] Éviter d'injecter directement un store dans les composants de présentation.
+      
 ---
 
 # 🧪 Tests
@@ -436,6 +517,9 @@ Avant un store global :
 * [ ] Aucun secret exposé.
 * [ ] Performance vérifiée.
 * [ ] Accessibilité vérifiée.
+* [ ] Les composants dépendent uniquement de leur Facade.
+* [ ] Aucun appel HTTP direct depuis un composant.
+* [ ] Les Facades restent focalisées sur un seul domaine métier.
 
 ---
 
