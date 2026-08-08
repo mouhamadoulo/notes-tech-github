@@ -1,4 +1,4 @@
-Oui. Dans une application **Angular 22 + Spring Boot**, le schéma classique est : Angular collecte les identifiants, Spring Security authentifie l'utilisateur, le backend émet un **access token JWT**, puis Angular l'envoie sur les appels protégés.
+Dans une application **Angular 22 + Spring Boot**, le schéma classique est : Angular collecte les identifiants, Spring Security authentifie l'utilisateur, le backend émet un **access token JWT**, puis Angular l'envoie sur les appels protégés.
 
 ### Diagramme Mermaid
 
@@ -713,3 +713,448 @@ VRAIE SÉCURITÉ
 ```
 
 Enfin, retiens aussi la différence HTTP essentielle : **401 Unauthorized** signifie en pratique « je ne peux pas t'authentifier » — token absent, invalide ou expiré — tandis que **403 Forbidden** signifie « je sais qui tu es, mais tu n'as pas le droit de faire cette action ». C'est précisément le passage de l'**authentification** à l'**autorisation**.
+
+---
+
+Oui. Et surtout, **JWT, OAuth2, OpenID Connect et SSO ne sont pas des alternatives au même niveau** : ils répondent à des problèmes différents.
+
+Le plus important est de séparer les concepts :
+
+| Concept             | À quoi ça sert ?                               | Exemple                                        |
+| ------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| **Session serveur** | Maintenir l’utilisateur connecté               | Cookie `JSESSIONID`                            |
+| **JWT**             | Format de jeton contenant des claims           | `sub`, `roles`, `exp`                          |
+| **OAuth 2.0**       | Déléguer l’accès à une ressource               | “Autoriser cette app à accéder à Google Drive” |
+| **OpenID Connect**  | Authentifier un utilisateur au-dessus d’OAuth2 | “Se connecter avec Google”                     |
+| **SSO**             | Une connexion pour plusieurs applications      | Microsoft Entra ID, Keycloak                   |
+| **SAML 2.0**        | Fédération d’identité, souvent en entreprise   | SSO avec un IdP corporate                      |
+
+Donc **JWT n’est pas un protocole d’authentification à lui seul**. C’est essentiellement un **format de token**.
+
+## 1. Alternative classique à JWT : la session serveur
+
+C’est l’approche historique et toujours parfaitement valable.
+
+```mermaid
+sequenceDiagram
+    actor U as Utilisateur
+    participant A as Angular
+    participant S as Spring Boot
+    participant DB as DB / Session Store
+
+    U->>A: Login / mot de passe
+    A->>S: POST /login
+    S->>DB: Vérifier utilisateur
+    DB-->>S: Utilisateur valide
+
+    S->>S: Créer session
+    S-->>A: Set-Cookie: JSESSIONID=xyz
+
+    Note over A: Cookie HttpOnly
+
+    A->>S: GET /api/orders
+    Note over A,S: Cookie JSESSIONID envoyé
+    S->>DB: Charger session
+    DB-->>S: User + rôles
+    S-->>A: Données
+```
+
+Spring Boot connaît très bien cette approche avec Spring Security.
+
+Avantage : facile à révoquer, car le serveur contrôle la session. Inconvénient : le serveur doit stocker l’état de session, éventuellement dans Redis en environnement distribué.
+
+Avec JWT, on cherche généralement une architecture plus **stateless** :
+
+```text
+Session :
+client -> sessionId -> serveur -> session utilisateur
+
+JWT :
+client -> token signé contenant les informations -> serveur
+```
+
+## 2. OAuth 2.0
+
+OAuth2 concerne avant tout **l’autorisation déléguée**.
+
+Imagine que ton application Angular souhaite accéder aux données Microsoft de l’utilisateur.
+
+Tu ne veux surtout pas demander :
+
+```text
+Email Microsoft :
+Mot de passe Microsoft :
+```
+
+Tu rediriges plutôt l’utilisateur vers Microsoft :
+
+```mermaid
+sequenceDiagram
+    actor U as Utilisateur
+    participant A as Angular
+    participant IDP as Authorization Server
+    participant API as Spring Boot API
+
+    U->>A: Clique "Se connecter"
+    A->>IDP: Authorization Request
+
+    IDP->>U: Login
+    U->>IDP: Identifiants + MFA
+
+    IDP-->>A: Authorization Code
+
+    A->>IDP: Code + PKCE
+    IDP-->>A: Access Token
+
+    A->>API: Authorization: Bearer Access Token
+    API->>API: Validation du token
+    API-->>A: Ressource protégée
+```
+
+OAuth2 définit notamment des rôles :
+
+```text
+Resource Owner
+     ↓
+Utilisateur
+
+Client
+     ↓
+Application Angular
+
+Authorization Server
+     ↓
+Keycloak / Entra ID / Auth0 / Okta
+
+Resource Server
+     ↓
+API Spring Boot
+```
+
+Et plusieurs flows existent. Pour une SPA Angular moderne, le standard est généralement :
+
+```text
+Authorization Code Flow
++
+PKCE
+```
+
+Le vieux `Implicit Flow` est à éviter.
+
+## 3. OpenID Connect
+
+OpenID Connect, ou **OIDC**, ajoute une couche d’authentification à OAuth2.
+
+En simplifiant :
+
+```text
+OAuth2
+    ↓
+"Cette application peut-elle accéder à cette ressource ?"
+
+OIDC
+    ↓
+"Qui est cet utilisateur ?"
+```
+
+OIDC ajoute notamment un **ID Token**.
+
+Tu peux donc avoir :
+
+```text
+Access Token
+    ↓
+Accéder aux APIs
+
+ID Token
+    ↓
+Identité de l'utilisateur
+```
+
+Un ID Token est très souvent lui-même un JWT :
+
+```json
+{
+  "sub": "123456789",
+  "name": "Moustapha",
+  "email": "user@example.com",
+  "iss": "https://identity.example.com",
+  "aud": "angular-client",
+  "exp": 1786215600
+}
+```
+
+Cela montre pourquoi dire :
+
+> OAuth2 ou JWT ?
+
+n’est pas vraiment correct.
+
+Tu peux très bien avoir :
+
+```text
+OAuth2
++
+OpenID Connect
++
+JWT
+```
+
+ensemble.
+
+## 4. SSO
+
+SSO signifie **Single Sign-On**.
+
+C’est davantage une **architecture / expérience d’authentification** qu’un protocole.
+
+Imaginons une entreprise avec :
+
+```text
+Application RH
+Application Finance
+Application Tickets
+Application Intranet
+```
+
+Sans SSO :
+
+```text
+RH        -> login
+Finance   -> login
+Tickets   -> login
+Intranet  -> login
+```
+
+Avec SSO :
+
+```text
+             ┌─────────────┐
+             │    IdP      │
+             │ Keycloak    │
+             │ Entra ID    │
+             └──────┬──────┘
+                    │
+                 LOGIN
+                    │
+        ┌───────────┼────────────┐
+        ↓           ↓            ↓
+       RH       Finance       Intranet
+```
+
+Une fois authentifié auprès de l’Identity Provider, les différentes applications peuvent reconnaître l’utilisateur sans lui demander de se reconnecter.
+
+## 5. OIDC + OAuth2 + SSO ensemble
+
+C’est justement ce qu’on retrouve souvent dans les architectures modernes.
+
+```mermaid
+flowchart LR
+    U["Utilisateur"]
+
+    A1["Angular App A"]
+    A2["Angular App B"]
+    A3["Angular App C"]
+
+    IDP["Identity Provider<br/>Keycloak / Entra ID / Okta"]
+
+    API1["Spring Boot API A"]
+    API2["Spring Boot API B"]
+
+    U --> A1
+    U --> A2
+    U --> A3
+
+    A1 -->|"OIDC Login"| IDP
+    A2 -->|"OIDC Login"| IDP
+    A3 -->|"OIDC Login"| IDP
+
+    IDP -->|"ID Token"| A1
+    IDP -->|"Access Token"| A1
+
+    A1 -->|"Bearer Access Token"| API1
+    A1 -->|"Bearer Access Token"| API2
+
+    API1 -->|"Validate Token"| IDP
+    API2 -->|"Validate Token"| IDP
+```
+
+Ici :
+
+```text
+OIDC
+→ gère l'identité
+
+OAuth2
+→ gère les autorisations / tokens d'accès
+
+JWT
+→ peut être le format des tokens
+
+SSO
+→ permet d'utiliser le même login sur plusieurs applications
+
+Keycloak / Entra ID
+→ fournit tout cela
+```
+
+## 6. Et SAML ?
+
+Il y a aussi **SAML 2.0**, très présent dans les grandes entreprises et les environnements bancaires historiques.
+
+On peut résumer grossièrement :
+
+```text
+SAML
+→ XML
+→ ancien mais extrêmement répandu en entreprise
+→ très utilisé pour le SSO
+
+OIDC
+→ JSON / HTTP / REST-friendly
+→ plus naturel pour SPA, mobile, APIs
+→ souvent privilégié pour les architectures modernes
+```
+
+Exemple de SSO :
+
+```text
+Angular
+   ↓
+Application
+   ↓
+Identity Provider entreprise
+   ↓
+SAML / OIDC
+   ↓
+Utilisateur authentifié
+```
+
+## 7. Cas Angular + Spring Boot moderne
+
+Une architecture fréquente serait :
+
+```text
+                         ┌─────────────────────┐
+                         │      Keycloak       │
+                         │        ou           │
+                         │ Microsoft Entra ID  │
+                         └─────────┬───────────┘
+                                   │
+                         OAuth2 / OpenID Connect
+                                   │
+                                   ▼
+┌───────────────┐          ┌────────────────┐
+│   Angular 22  │◄────────►│ Identity       │
+│               │          │ Provider       │
+└───────┬───────┘          └────────────────┘
+        │
+        │ Access Token
+        │
+        │ Authorization:
+        │ Bearer eyJ...
+        ▼
+┌────────────────────────────┐
+│ Spring Boot                │
+│                            │
+│ OAuth2 Resource Server     │
+│ Spring Security            │
+│                            │
+│ validation signature       │
+│ issuer                     │
+│ audience                   │
+│ scopes                     │
+│ roles                      │
+└─────────────┬──────────────┘
+              │
+              ▼
+        Controllers
+              │
+       @PreAuthorize(...)
+```
+
+Spring Boot peut alors être configuré en **Resource Server** :
+
+```java
+@Bean
+SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+    http
+        .authorizeHttpRequests(auth -> auth
+            .requestMatchers("/public/**").permitAll()
+            .requestMatchers("/admin/**").hasRole("ADMIN")
+            .anyRequest().authenticated()
+        )
+        .oauth2ResourceServer(oauth2 ->
+            oauth2.jwt(Customizer.withDefaults())
+        );
+
+    return http.build();
+}
+```
+
+Et tu peux avoir dans `application.yml` :
+
+```yaml
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://idp.example.com/realms/my-app
+```
+
+Le gros changement par rapport à ton exemple précédent est que **Spring Boot ne génère plus forcément lui-même les JWT**.
+
+C'est :
+
+```text
+Avant :
+
+Angular
+   ↓ login/password
+Spring Boot
+   ↓
+génère JWT
+
+
+Avec OIDC :
+
+Angular
+   ↓
+Identity Provider
+   ↓
+génère les tokens
+
+Angular
+   ↓ access token
+Spring Boot
+   ↓
+valide le token
+```
+
+## 8. Que choisir ?
+
+Pour apprendre, je te conseille de voir les architectures dans cet ordre :
+
+1. **Session + cookie HttpOnly** : pour comprendre l'authentification stateful.
+2. **JWT maison Spring Boot** : pour comprendre access token, refresh token, signature, expiration, interceptor et filters.
+3. **OAuth2** : pour comprendre authorization server, client et resource server.
+4. **OpenID Connect** : pour externaliser réellement l'authentification.
+5. **Keycloak + Angular + Spring Boot** : excellent projet pédagogique pour voir OIDC, OAuth2, rôles, scopes, refresh, SSO et fédération d'identité.
+6. **SSO multi-applications** : deux Angular + deux Spring Boot partageant le même Keycloak.
+7. **SAML** : intéressant ensuite, surtout si tu travailles avec des SI d'entreprise existants.
+
+Le point clé à garder en tête est donc :
+
+```text
+JWT       = format de token
+OAuth2    = framework d'autorisation
+OIDC      = protocole d'authentification basé sur OAuth2
+SSO       = expérience : un login pour plusieurs applications
+SAML      = autre protocole de fédération / SSO
+Keycloak  = produit capable d'implémenter OAuth2 + OIDC + SAML + SSO
+```
+
+Pour un projet **Angular 22 + Spring Boot** moderne, **OIDC/OAuth2 avec Keycloak ou Microsoft Entra ID** est probablement le scénario le plus intéressant après avoir compris le JWT “fait maison”.
+
