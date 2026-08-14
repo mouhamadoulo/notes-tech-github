@@ -6,7 +6,7 @@ Ce que Claude Code pourrait faire
 
 Tu pourrais lui demander quelque chose comme :
 ```
-Lance mon frontend, et en utiisant Playwright
+Lance le frontend, et en utiisant Playwright
 parcours les principales fonctionnalités de l’application et prends des captures d’écran des écrans importants.
 Enregistre-les dans docs/images/
 et mets à jour la documentation Markdown correspondante avec les captures et une description de chaque écran.
