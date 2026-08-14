@@ -1,13 +1,16 @@
 Oui. Pour ton cas — Claude Code + frontend Angular + documentation Markdown — la solution la plus adaptée est probablement Playwright, soit via son MCP officiel, soit via son CLI conçu pour les agents de code.
 
-Playwright MCP officiel⁠￼
+Playwright MCP officiel⁠
 
 Ce que Claude Code pourrait faire
 
 Tu pourrais lui demander quelque chose comme :
-
-« Lance mon frontend Angular, ouvre http://localhost:4200, parcours les principales fonctionnalités de l’application et prends des captures d’écran des écrans importants. Enregistre-les dans docs/images/ et mets à jour la documentation Markdown correspondante avec les captures et une description de chaque écran. »
-
+```
+Lance mon frontend Angular, ouvre http://localhost:4200,
+parcours les principales fonctionnalités de l’application et prends des captures d’écran des écrans importants.
+Enregistre-les dans docs/images/
+et mets à jour la documentation Markdown correspondante avec les captures et une description de chaque écran.
+```
 Claude Code pourrait alors :
 
 1. lancer ton application Angular ;
@@ -42,7 +45,7 @@ Dans un fichier Markdown :
 # Gestion des messages
 L'écran de gestion des messages permet de consulter les messages de paiement
 reçus depuis IBM MQ et enregistrés en base PostgreSQL.
-![Liste des messages](./images/messages-list.png)
+
 ## Fonctionnalités
 - Consulter la liste des messages
 - Rechercher un message
