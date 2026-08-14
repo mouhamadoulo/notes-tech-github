@@ -8,7 +8,7 @@ Tu pourrais lui demander quelque chose comme :
 ```
 Lance mon frontend Angular, ouvre http://localhost:4200,
 parcours les principales fonctionnalités de l’application et prends des captures d’écran des écrans importants.
-Enregistre-les dans docs/images/
+Enregistre-les dans docs/images/user-guide/
 et mets à jour la documentation Markdown correspondante avec les captures et une description de chaque écran.
 ```
 Claude Code pourrait alors :
