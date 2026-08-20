@@ -496,15 +496,13 @@ Deux requêtes identiques ne doivent pas provoquer **deux paiements**.
 
 # 14. 🕸️ Service Mesh
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/wTUSifq15eRKeNocH8hzLfP80EJxcuNNb4Y3Riwah5AyF2oBGj7PU2c9W_DdWmXcjov_5EoMlGQPMFuXIecyKsAlTkp_lT2igwYqeHKiQLtKOlIWic7EwhkFiJ_h2Sdpaq4DuBZC1lEMlXpGdA3P7vCCOoyJxI26hHrwGShHIPZwIKc5RJqi4oNM_-tlEAkO?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/1MxWmSld7O5mReZjyxHmdgrO493yPp-TuGv3CV0pyY27jaOHWoaA-6kKeypmHK3BCZQkUbCnJW8z95P0_c9EOpojymMunzXdhmErXN4MGVJA7oQszYGmVCDVrV1bu1FeDpE23EsRVe4UjVL4FxWKVGa37JIal8S20doQHOw5c8nfQ0MoGzR0gJnFY9vCm6yk?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/eixVL7g1fFo5R_gNHtTBtTSotrAqD72H7G-31eLMbS_89L8-foo_C0zkp-gDtuBag0Ft8WdHTwxCeE4JKJ_xbwjKNMClHWZMteB8EbleQJ24r4fI4fUo-19bpml7aqUcVWxz1_YzJcL9pPYtJXvkOdJmGkWIKPHs4Q0gYjpAaWpXd9NssVJYQ5U2eW-rW5qV?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/gVYh1tev3tyl8tESDuw1MiSaKU-QPD_7WQozc2tWyqnuUrr-rHe1VQKnfgvir4LbgGT2i2DUY6R1PHYUfOQYc1Az-qwOcNZRBRom6h7_fGV0aUR8s_78yb5AZ2tmULGlF3I6_EfDjB-yLNQUrygxBxQE6Nn5rP218MRKcFxKEfcyKU1uplbjJqJJotRuzFCM?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/YYUDfVsMvYdMu9uX2JucF6fGQyjXIj6TzIdsEzsEhFYf7fSi8Y0W42Apbyn_Xs1aoBWcB1LCmIAe_XVe13Z9aB7_fcYQgfYhJknaqid2b38ufZKHDFJVK5hs5R_pTlGKaTMrlTMe0wq62xqrLY58N7fZxr44dduVB5JOOVmDcCH9vgzdscTNOqlfT1JClamj?purpose=fullsize" width="150" />
+</div>
 
 ### Concepts
 
@@ -536,15 +534,13 @@ Le premier gère principalement le trafic **North-South**, tandis que le second 
 
 # 15. ⚡ Caching
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/Uc3H1AwYn-L1q0UzW4lfLv3CJU460yJXZqJEiI0b-ZXhgMlnFV5hZkMXo5qfUHTDnDyNSNayRk993h5I7sEqEFCjEt-iaDDrwxwvJRC7wqPlf9HpVE34-y7CxOsjQbdvMFRFFrz9Nz0DDEb45rh3otlK9k5m_xENgiqYGaoxhd4kdwiStC3aOh_pVwOEbDio?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/IlP-W3zLbGRs93xoNh_KUWOKRsjGKgWGlVcsjUOVYuROh0HqI3t2oyX-oFxL0Cw4kUUNkbi_qVnJ8KaYYWoBnwc8IfolAlAOVWdNwPJ-5HagYDfC5TlDvTprYs_RZb_3fd8b1lRMkZkzAojJ9ymc6VOP4c074z1bAQs8uVkuAUH0KM7dMIx2ILpF_HRikUxB?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/IVyFoJhnbLCPM1sjX01MTgzS-8iZm0WfeCFV1M7c1ocWVjZWaej-ZtYJsRYqHjlyn4a-phcNGzr0o91v4Whp_XwEDWwcKomTgDQk3X_I6OwydxlcslkZ4M7EeEzbSy-v-OkyZJkgTfTSHXZ4-WCIom8akMOR5YikOzLY_n-YxDAUjEbbcZP8TcNIz1FPjZmy?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/SsEInwOwH2_SZk7XbVsVDRs1gTzRo511Ufc1gVVXEQVTMcjm1uXtfD7i1etF6Xql0fwNPw9VRsFtW_6gS6MENrRktSjXjqCjXh_97koMKZ0DvhTdl6C_xj3SOaH38KbWEghpmkOqXZMSgd5HR1bF4tKoHQyEC7GTEjD7WSw94s1QOVoZJdCdrEuJK3T1of3W?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/-Nc9qyaPI8LeQnNB-YAsj9ql4ZHyX4ofcS7AMgfEnfPuLoHBPX6WJJO5o6xtIDu0eLoloBquUm-Thc58mvZ6N5rlrfmmWNlGrwovPK3mDx-f3aEyFiWYFhI8sHQfMCN9NYt4c8r7JpPNSzH58VtwNJU9mfBIO3UJSkMxfQDmsVs_bSv1aBo0uj85cDA5UY2m?purpose=fullsize" width="150" />
+</div>
 
 ### Patterns
 
@@ -579,15 +575,13 @@ Le premier gère principalement le trafic **North-South**, tandis que le second 
 
 # 16. ⚖️ Load Balancing
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/rFTNpYvPbunfwbZiibAEHq9_pwIIw20alR6viTbufdjx5X0CFZNgJ0anVvcspsEYwX1uItcnHfwC41MJBCzsGU1HYnygrA_fwnMvzZiUX3LPlf7t67aNONRgCH-dJi3O7yEv2C3PvMIIoqtNfyPb1Bh9o6-sQPJnM4oCJIR1ZLqd3meRAvPES-SVLLUeibJh?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/q7DbVWCmo0uDsMR56EpSkqSB-us1N87QllECAlhIWJoYZq1sve4a3qqBE8FsrFK-ZrNax_XYJODfgdss85LOCYWLKkjkDlHM6qTf_tQWzUZAMMsCkMuICkekDY2z0KScQC9xdUj_bLl34Z-4Tcsbz4LFeYKey2iG-bbqhpqR6imj4R2jLzDdJH2RLlCGEnnu?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/0xH550KI4VpA_Z6MprXTw2a8a5Ju8gQILt2h6BpnrYBbOBaPY1uQDxAMVESQSDSWkL_OFiTkvMKnFL4FrPl5ZrYIr6a5ugHozou-I7WefolSGHeVOmy5aCokrdY4SQTBpGNtchxe32FxOPnQKWlSrDnr5jBcNwZFrInvjYQ9PYFXO6nS2cJySrTQ4oyfwOAh?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/yK2yg2o2XsiFAWuuordVOSxcBkh41tTQIh1Z3wN-PnmojSZt5dBOczFGslHWlb20eNbrwnSnedY9G6F9pa4pDE2s-1Ec4ZYgYBx4FjNJoGk5FRBxDN9qq8dSn3303b3YCgXrYECFB7awyfD9KhkpudrKnH6gckQ2fSvF8SXmmFfB3mFGY0bWkvcn5ZO6CSUr?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/9diL65E2qseR4wK0uQLA6O2gkWdFezFgvLTqu8F3U_6HAmUDs8vY8rKuoapJkQc-26NNeeg-2BDq-SQlOsNhlQfKbS3r4Mjq4UsIHZNT6wHyxFRT4b67qs7ujqJhbWjLq2-FMQGtDy59dAsfxrJgshl6MH4aHXu2sR7O7CDwVSEf2o5gbb625KgS1_a_DmT1?purpose=fullsize" width="150" />
+</div>
 
 ### Types
 
@@ -611,17 +605,14 @@ Le premier gère principalement le trafic **North-South**, tandis que le second 
 
 # 17. 🧱 Partitionnement & Sharding
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/X0emGQzgznTn8hpIeKo514S8KrZen4OnUDKWXVw7n8KKxEcO7MzKKbY8r_F9E7bobk4fDjGaDVQB1GSAjteGW2u-2kPVqIsl9L4iz3GsnVbuOxCtIJ04PITi_gDASmvw0mDe7MxBnvr5LDxgdfpkCFBKtBV398furgFlfXyEzkK3nblwG2dwZEVPjH8LyebR?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/N7WstKX4_bmNxsx2Z_c8fblGRH1r5baAnz6NM7D3pVDB4iCdu4p3mlOn75tOmfnV3ySw9Id47ybaKXRbtm272bqsAdD90A_npCpYd_sjn5ZZHPmoP12n-6p7XUQLtZyBGATfnSdxLqSbGc25MDXYJj9oOUesFPBhT0lpfjBWluaeFMniulJuQ26fnQZlYIhq?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/z27In-d35M20H8Xl6zovs-ka5UprlBE-BMjpiAUeyGL0NELnXkQqA5ObWiG9mSiHrt7FHJQvlGq7SKMqAfjbm0YJTEVkkCk-N66DdrdXF7rAvrA1mEjPO64byDy6Sre27Ey6IMMGssanHV8Lc6NLfEUzybQY7NMJ5ctHsKa2hfF8FGuvZozWwWMaBwEwU__r?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/hpdU3Eu5w2Gu8msR8dFZCRrH5upRrYq21Q4qRNFlTPTo82rIPEa0mNvjaT-Ko6qagyS7VYk1tiuZpmWFI4pNUSEdk_yTDIzjgKJ0I6bWOmzv1Rll2st32KKCxLALtIiJ55d4ATXVCJo0qhX3vPVir-xxYX14QwyLwESzaHdpTxBo4H0wAGQ0k23BUhA_W1Zg?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/Th_tKYbh9vtzoI7ORWUi5OwI5raDVQV7fKP98oqJe4Nra9rhSYvsmfGQO9u7H5d1aAjDoclL8fIVwZGPQhomItnycmKp68eFQIx2SMNSinxaABKW-s2FMV-aTPhzRigjHGSNVVGjLYQSsW4kMKf9VSMEPinQCo5Gc0UtWpW7--OLvUHsAN1x4GphDCKI5Xbk?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/ofo7EYHH4VadSY07MbrBMyUlSvDgn5xELd2CLiPYi07THtMuAvJ8l35efSNO-PrN6hmLRQoTLaf2wL9k3TVzRMtUDERjovtVDMYci33N32DQi47yrn0QTDwt6e-0JHFjdtlgZI_ug_C63xPpCqCPWQG6wvLrvgl6fx67FbIdeo0PMTFW_8wpxc2rMaabMnRM?purpose=fullsize" width="150" />
+</div>
 
 ### Concepts
 
@@ -650,19 +641,15 @@ T-Z → Shard 4
 
 # 18. 🟢 Disponibilité & Haute disponibilité
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/HckHRl66KEZHcrdZI_GDgl-sWP8mjck2xQSaNzIAmnOYFPH1kRinV2Q8ro-_lKeei3RvV_EaGu6Aj5h-SOjaBNwedWOlpeXCGyDrhijnG71TR_mMwnq-qs_KG76nDq5ymWIwh7FEMA9pZYLpEBUygxyr6GgDOEbsb2VrAA1RK9vXPvifFdARSfMegAla1ZIS?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/qWs687mitgvDpLehTnmZFJio-_EmcVsWW975L02l_uzOw9BQ9UI6FjBr_IjIUGN1PmKQobkAg6h3EbFm0Oa35xEZ0fy4eCOgTkhPtLhlABy3-ylubKA3zOILwLvDTQp8DvM5eDD4LAZ7FYxdRkBeqJiXY7ZkTyVMnNI7jbJGw7wHPsMMgEdhqsjLbSAqWoLx?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/cPOdaZLvWdw-ZZa68j97MVCgCdn8gS7dfNtf-U96QXxu0rYFOKn877LUvh1MYhDUnzLPOA7i0oUogHf9hzp-VMpIZf41b9Q4LxjaHGKCgbGc5ztNOb57GlsTIb1uPIgm5OLtwkVBS-TqnzUFXEqrtlh7C4jX6vpFHLeWxy_j4t6bwC6mWKnIHAillIuZ2IUl?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/yvNuOIRrKQVyNB3DJMS3OEu-Y7Cp0j7xYm1oBNN0PyWcSCklszjPknuTgHjw2JP0r7nzATNZ4IVbpxadh7EnfJtlmWeX9yEGyd-XTNOh0MOMYNvfhEBi5ShJRQ7GuTLTPaiKlay7Z05Mq7YWBBYxRZB7mLTy70v3sDxuSmgN2nuVNvSO1q709sCv7xVODtI8?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/0eYSuHlWOqXO0M0SKppnl31TyVF0X9e271KUd1pdTUSVAuL53QN3iOR0K3roCR6f22yVvuxDk5ATfucZVUc1oeJoC3Z_jd2DuSdP7f4wDGj0e2yhL4_Mo8fBdvH3jjNYqRTHrSl82QHM091bKLkDwUHP04yLKWGC6veoUk2j2SdwLsKK5XfEef1lVptOpRlv?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/YmSUzsZP_BYJTYlv3YKPJT9uE2_jLIH1Fop8fUJIx7BQAz9rKsp0CmCueUw22sxiELOAJLeWFj9Un7akwQYJyM6TGiLgdScXz2BJC0pe5AcP59j31fyPrJKMoLPqx_7K3h9m-CedIDQM_czSnGgdxUiJ_vODsMB63HA5tMbKHmScMMG2qYZu5xF-hrxPw0d1?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/-uQEK4wqMyqm_ZqEwc2HCXLH6DVQIb929iqO9FdOodTD6FQZ7Lvzev35plpytWvYaLusF5bo6QdFitoneIS6vin-qURk1N6QIj9pZLykkzZbef6sKD1JOiputs4UIYVaSjRTEH43EDvmLi4kAv-O6xlbm2IPUf1ZMG7O0T401wY8yEZLxpD04VLhHG9vy2gO?purpose=fullsize" width="150" />
+</div>
 
 ### Concepts
 
@@ -689,15 +676,13 @@ T-Z → Shard 4
 
 # 19. 🔐 Sécurité
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/csInGhQkK9-2vo_GFUK40wvfWOH-JJ3zn--nfgHDnmBJWv672HVAnPEXHlikHXQrMvqhlGC-1NO775cq43ZJOClHutapPgvbm0ieU5ZOP3AvePX7roj7kSdgdC-C4VfEC9XHjNwiODvV8YDnhY5X8nPbPps4tBg9l3_387uTAGyGDkCAmmtQOiMVUbXaoMmJ?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/gbwuWQJ1meYu9lNijfZBQZN1Bza5Sf0a9HulY2INdceaF_1lBluXOHWwgb7_fiASZ9jK1dKrKUJymRyigp2P0XnledHbvVu7nnPCHe_KB-_Xeuu3Jp_W1DNKszVdczJag792bifGUyaAZNkJK1ZX7DCjv1Ib-RTRyKEgl9qz53GqFm7iTSdxeauGsNID8VqB?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/PpDbMcks90YiwlrmDBANwu6oBpogHGsIy4yWip3ADra6g0fV8gCJZO3I5crKLUArRMZFdMJ3j1riLH9PCFe-z6JMKVw3WoDt5W10Umz_imx1TwRyqVUTw5LBgTOINmOEN9NCHcfLbXCRGYQm7X8oc6V2pyQsQtgST92M_2SReglNrErT_XyJuz57gJ9Iyv2I?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/9RdnT59-zvL9iAQNuKVcEAjWYy7cr39haZm_ksu4KjYecAmjJYNK7G85maweAgr5Gn8f_VYNQEmiK4lSJwCJ3Mf8yoDXlKbFkvbijk7PcmznXxPUG1d4UdVJEwntstrwMe3ONyuXqvN3qs-ahMp2xQ2iRIqYaX4fXy_FHa0DXSsyD-bnTP1oaAE6VNw4pOzv?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/5PmMMsxwcqqOeAboY7fHw_FY386y6zrjCzGXghunKl9P_M-4fhPJegoCu_rQRp5B46bZ4L5qMIuwIzWeFHBUy2l8rNtLjf2UI1lRx3vsnlZASJiAxjprrqi4_RErl22VbR9ctNIMxMrayRKhaFfbaBMCKQEkvBd8uColp9pdCRvEXrPfq0sf-Mhu8YJbvs2N?purpose=fullsize" width="150" />
+</div>
 
 ### Identity
 
@@ -729,17 +714,14 @@ T-Z → Shard 4
 
 # 20. 📊 Observabilité
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/kz8RZypSP03N2UnObbos1q8me9QV1JXoTZLNLUFR9O2hOJ7dFDroVlPbzdJKY8MCOWhmpfH9p2Y1u80ITfO7mFJ54QDM-X_aqWEts-pwThmXx8MHHcBZbpKqWzNBKzlDm5Za4eQh57-vPELAIosNS8GHE2evm7sEhSCRm0JtuJrvH4TCxt8CJwOriahojCY1?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/KHqpR78AZh-pLKDG6Se_MCAt7vIyWNk-5JTn2T2HIDydPQrXOqO7x9D5jpz70l0EgahYQwxmL8f0MQu3qLlJK990hDxZ4Ty_cw6f5IZVqJfi7NKXEeZOOecKPYQCENY9sh7s14bOIYO7Ug6BMFSQL-ON0edES0zfZpADvZolwuKFNRZdYrSI0EGCqCcjNSjs?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/iOLDCcG16p1RLg8PmuD077KeUiuIK4A7geb6yXfRCygYJgdx87D5HF1HvRb0gw3jJa7UecPGQdXTb_ixjiSrI6OtbEBSLeRlB5y8NjXnO63pu-ElBHeapHZSbPBnuXadDHDu0tfp32x6n9uCD2Mcy4VanZRSxTPFYktlNSRKLMkoscmDBd9PEfDYkjdWBR8a?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/wD7FYCOBxEMfVYRmrsO9Ti3buHrbAuc35qJBK7ozdAzqYqECPTN41LGDsXhhhFM55Mntnd7-ZdXuq5lmyTJUIrDeoZ0jbGgSwMg9saVBf5HM6ffADYZecPQ90NS6NlbyCdmwJRunCbJCurcRUYOYGJqtdbzPraka4Z1rl2HM7OPrn39cMb3dbqbXfGuG9WZJ?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/xSsXztYSk-ujoHP25BypEuZkg72A3SIVrPsIVoqkPp_TEqs4Z7O9dxIddfWdVT-iwQlEcWgKjLpoawNvMzjTLCfodAX4ZPcUTam6USXXaRUD9wLeNXPZtppriVFSwU21vXvCCLebrmjTLdI7dG2zcjPIFUXwK9XJokeoYb_9914O4RGKOezHmERI_-w7SODc?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/4UqUVnTgrxq2L0HL9o3PhXpDQN0dB57td59WJAZn6jpIVae_V-r0kQAy7W7lFLR3PFYZFaPqkf7zOqSoqdkXqf37qyGWkE6z-nnYaHTxDsASX6PKwnm37Zs-c-ezjfjl0yrUK07kmTrH9XQObtX9iNFrd721Kwo_xOJqvrQ7jupBkB7A9IZDEcpvXL5sNTGS?purpose=fullsize" width="150" />
+</div>
 
 ### Les trois piliers
 
@@ -770,17 +752,14 @@ T-Z → Shard 4
 
 # 21. ☁️ Architecture Cloud
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/2RDtPKvAvBxouZvIAaiONR7b-b-XxDoZRO0Kgz71cdfDoPfBlaHLZKhdVOd9ERMpHqnCN0llBMyK_ns_lCgs0fUGSJL0Ao1s0Q2EkPAeoAADkqGdjVi-CyWMeiXRmGd5QPv1v9KfVy7kn5FIzPt2VP0p7twb0oicaFmuk-pZlGb1mGEzmAmyANif7p2V7of0?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/Yj7NdO5jkKO1YmKK-fWX0iFF3oc-4COfaOwzUT-us2myvFEwy9n6-2dg_WsrelstK_4HmulFCZ-h8OqQ-7q_Z4O-qjSHHhpJ5ah_xBMSP1s4VVBjnxFhTAlCpmtdffDQWbXhU2E45swkTtqaz9fe4gkpBLstytWmgTg6BlcL7racYfKLW2tx4kjIdLPhaj9r?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/9Cm2OZ6fIDXadYu5pQ9a054QmKsB6vgFET7uE51L_-U9jC3JElrtcqVaVioHVE72-uffNc1SoN-tnXfrrmhjj-WqPdFwDj9zVSES1cOn_3xlUoysg7rij6mf1hVBBGgA7q9CcEtZLqZgcg_Gkhl156WuDSDAjViMi8OY2Mv4e4JUFiPRwTsgHRCuPkaUp87z?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/ML_vsD2xr2VQJFV-DtrJTthcUKlleQzkkvfhznZj2Kyqj5T2nHdSe5ZwIWq2TgFlu0vB7qO-5m1F_m7z3m0aJjjHdq3B9_NwSNdQm9KsugfSDrla3awjnfM_JTsgM53DCPRwo-E_IhG3cmsHkQIg98C4Y5-0fEIGryRdUQNuUyi20aNQj1zyNucW1qUU4Qdc?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/2M_7k3nlO08zN2rolyN0aKJlWqXT5oYVo8RzuGbEbMXelRsFEe74r-R9WX-AuTgORZSC8Xa0-6xdff6-wK2Q3PegQ0hSSrzDM-CQXwvPiNN_Z6taUYGNlg5Av-8rGZmQcuwieur3tdfCMjvZvd-_M44NOm8PA2lXkgj1XZtCQ8EdHo-NhXTNV3vqktzZuGAB?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/0dEdH6Mmn67VKSmXtFspXp8AzZD9mclGG98QKnbZTcV7DJEVwF3qXyMmT4xHXTE-PnR4ayuf6zAVxzlJmreNNceVvB6c_YAhwSX20IXxaNxfBFg9Xk0HNTxtOWs5OVzAPQKyiDKrcjWIgicRG6SCQGJBUmSNyOzLeIlQPbzyB37j6aBtKcAr92dTIPbxndn4?purpose=fullsize" width="150" />
+</div>
 
 ### Concepts
 
@@ -806,15 +785,13 @@ Le System Design moderne est fortement lié au Cloud :
 
 # 22. 🧰 Design Patterns utiles au System Design
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/qzeXiYKx0AlEx6q_nzxkKv0Gl1mnpzh1gtSCLOteWpWrLjiUweWpsXgYeTk10f76bQD81Jq3vGDjERMQLbER08k2lC47UenHGlgkMYSA2ShAWHEzXLzBp105G1Wd7tdjTb-3Jc60NPciOHxg_3zAOI3FlX8uAulhr7Hlcf507GvMNi7eFlMGCuK0iz8EwPPb?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/BV-2iuXq34eOkGUX7GzT3VfN9eAe2U-PNqsX67poIiNd6e4BbNZYgJFFxU2DDlhzLSjgqK8uLrUgEKG1CffO4HWYAf3X_5k10fRKCJBeYd5bl2zYJ-DVQNB6Qb7d44eJGqeECx9c8RIWDecz-BtTL-nuzj_TPk1ZaZEDvHu6MJ7r0U5E9BowAhLDbyNzdmEl?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/cJ7ews9U3EiHPlxarVjuwzDxoRM445CRZCkzqTw_8haY6x2f_s5FBoUHIM9lan9WBK1NVU4KrglrRNNKXFPucHJOPu5GgZir_hct9aDN8hSbwT32AlSOBeomOckx7bL8dLPk6mJpue47QK2BXDhJFuWS74ny9GElUEP3cbyaOatkbqA7Gx_hRYSzXFSqK2JZ?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/AEFleJHlWmRIcmpR2TC2pFrdDzEsmVGEd9zZaCpLQSblCkP4ybK5ktpzcX1zZY6eTiLzmA7QUHOTE_H9VpfU6x1ZhyFZKEFVjXuoGNZa8yB1EP721A74KOLk1SD-hlwWaA1Lu4fVu07oFKrDx53BTB09NqR5QEWPE8Nr2206jmykYLDw_zZZvvp2lnduXd5N?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/1zSIiloGZDD3RB3gJM2dQ-VNfMoU99zW-ySeOXRhs7VmFBYF31hRVWg8wnWD2SWXbpnzNWc8YDm6XKjHkeyRoO3ye79xqQGfVPpIeLMGHG79ktyeoXppOuYk4zfTn42x8QF_9caF1EtMT0axNrvbvLjQQuEcPBaaQ3LHUZX3FC8Nl9Mk9hKptTNFiiYiqWyx?purpose=fullsize" width="150" />
+</div>
 
 ### Patterns applicatifs utiles
 
@@ -845,15 +822,13 @@ Pour le System Design, les patterns distribués sont généralement beaucoup plu
 
 # 23. ⚖️ Théorèmes & compromis d'architecture
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/rpTQzvjr1Agn-MluyfBOKjKNGcLSpkpxUM2JOUYe6Doo1cUxOFlo8igE4fcxWSbNaSf1c8ZqpudZmZK01PUVLiS20UUx2KqVkH1DMZQM6rh2NKYCda0USwKoyaDXI0gOxWglTiOyHEpvJHA2Oxhy2UlzZsd_WdlDe0aJbl5OryIiyJ-ThsjWQ3_nimgyb9qV?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/6qJiypKfMCHiEFP53AofFZIchMW18gXD9GTmy7eOECzYVOIpO-HWoUMpkfdCKUdjLoOp_aa_eIZtmWZe7Qb3wElfmMjGND8c5mKDCO9DvnDWuVsMJd-BignEmF6kF_0DLUaFyCl2fJcLrKa0_x7hQDO8sx6K5FcCfKpgyVg-AQ33hSULbABkecZ0o5NF3rY6?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/dAp1xq2nP-sUgyPEYoNF7IHYj-9PVrdeDTJ4O8KxqFVvZva8ZlLhnr2KxqRa_a-3EuuFbIvDErS9rSM1-PGD8BCsaygbhPUO1ghTKuMl0-k5j1nqK-E7aSI2DXwTdGcK5Y2t2gJ5G74J9ykT846PtLb71-9Crzkhx9KA8Byn0NsEz6Q1zaZbSEyRcobjd39B?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/k1dyxlxhErUvJdOP0TMpyAiARBGD3REAWY7Hl9zZcjsuwlchkHKv_gDklgJwAspnPTxjSUOZmp6DFlBqzodwTPRJlwhiMeY6VEWlOJlUaOrPGMebBdC4yiIkRsgUw_e6eA_p0buZ62AUgzbBAvPlEbYjf7Q6rtejoSGeL3N3DGpIdrYonbcmqmECBsFiuJGn?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/s8kKd4j18RSrpCgXC5IaTJw7UjEVYjNzS1C1buO7kn7GT3KNy7x62diWpEfUvY9t5pzjtOQAgShSDAO-2LZUsyolierbolXTlrbcNH2uMO4tggXl6miWZPgEoSWxzbGMdH4ewjboOB0GlLa_aDe9UEj-4ge2xF-Fs1gD2MSnOa3KlRtxAlh3yq_jfoKPO7tB?purpose=fullsize" width="150" />
+</div>
 
 ### CAP Theorem
 
@@ -887,165 +862,3 @@ Complète CAP en considérant également le fonctionnement normal :
 * Push vs Pull
 * Polling vs Event-Driven
 
----
-
-# 🗺️ Roadmap d'apprentissage
-
-L'objectif n'est surtout pas d'apprendre les 200 notions précédentes simultanément.
-
-## 🟢 Niveau 1 — Fondamentaux
-
-Commence par :
-
-**Architecture**
-→ Monolith, Layered, Clean/Hexagonal, Microservices
-
-**Scalabilité**
-→ Stateless/Stateful, Horizontal/Vertical Scaling, Load Balancing
-
-**API**
-→ REST, Reverse Proxy, API Gateway
-
-**Data**
-→ SQL/NoSQL, Indexing, Replication, Sharding
-
-**Cache**
-→ Cache Aside, Redis, TTL
-
-**Distributed Systems**
-→ CAP, Consistency, Availability
-
-**Communication**
-→ Synchronous/Asynchronous, Message Queue
-
-**Fiabilité**
-→ Idempotency
-
----
-
-# 🟡 Niveau 2 — Software Engineer confirmé
-
-<img src="https://images.openai.com/static-rsc-4/YNWV1_I2BaBEMtW4tXvDuad4PpsN1GZReAB3q0EbjWGwNlRHS6IlCWwHmTSwqoGui4ELyH7ZFzJXKAfQCPG_cViFgw3L5GyjHvHPMSLSTMclmRXH7L2d43DA5-DW_tHB9taeeHkZfh16lZmH8kh-JgI3xS50Rfh0laJqSrnC9eyG72GnSZzRw5QEMlOoa4fx?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/0l5zeNt41mowcBTqRw6lcOEcSQftyw27XLp3NoUC381UcZy3PqkutOjRSYTkwXhW0JNKvmRSQdOh06VjN4KiIxd5lI5fUAVAA18th4zPnFdg7F7BT9vq3tHnkP-rj-nzMTZ1xcWokS3oOFg9tAnkYhjv7ziQsydJsYVkrezL87vvhfO6PEYpV8Z6PbSsXV2h?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/41W6dZikkVsNHhtCybbiyr3JS3S6vAvcnw535DuOgzOhPzNFsVNxyHQnfsi7-PuCh9JKYSVSEpVa4YmTNO577oN-GtnBJsO2NGXS9j_IkA2FzjmZ17t3FEibiR9ky-VPgoeQXwzAPp4tUoAHJ-xw4Xpg9pIXy4AXRxcXErCzKkU55wb0fuvyfstiVdJySlBP?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/J9rkNAi1uQ2e3Dxw-n4uJy2d6zV6Km-wxPGo_8R2IWZ9r6HsJO426r3_ZkP6ifLGB8X-yHzFDFJCT0VDeCcoIDc1aAkg22fO3Qzs1rDora5a5XPvJrpQn3t7fcyDhhyL3kGURKLSHAcGz_fgR8CCv2bR7wipc40w-Lj_F5d5ohYjRmz6031x2tbLV7mTDrYb?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/7p7cWhhTFj-kiooooXyqDIXKoKXDaTYit_LEn4VTpDhqs2bMb0L_89l_sH9BSdYYY4Ztn0bTVSfzZ9n1VEbtDs6YsOc6YwX57FKemosD_VMqyVu-P6vc5tysFtY5dH0j-6CyaCwGt2Ff7-2l2WOfSwaNNI7mrukgr_y_Eewy4nCDCLF6fLgqSNUC8_EJKH7U?purpose=fullsize" width="150" />
-
-Ensuite :
-
-* Circuit Breaker
-* Retry + Backoff + Jitter
-* Timeout
-* Bulkhead
-* Event-Driven Architecture
-* Kafka / RabbitMQ
-* CQRS
-* Saga
-* Transactional Outbox
-* Eventual Consistency
-* Service Discovery
-* BFF
-* Database per Service
-* Observability
-* Distributed Tracing
-
----
-
-# 🟠 Niveau 3 — Senior / System Design Interview
-
-<img src="https://images.openai.com/static-rsc-4/ijmaYp-2Y3lW_yABvpHMrKuZKkhqJgqv--25gm3A6FcPNEn9FvVcYdLQT1WvECNwztSOtcCFjXH-9jWp4OlpQdysEf6R5qCtzGYkikuTzv9u0X1PcJGEf891kUMcH2esK1d7uLl4w-c_KQS8edUVDEz0xLkszgxPoawrjwREzc_ut5Nfxconv-MdKwW6K16d?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/-7mLH1o3R35Dd3QMoqXD18zhMrbNLshXINAzUVSkwwS4KIV2TW7wplS1BOHa8ZxgRQmSg2V7jb6k8TnvOKX0Ur6PUt5C1C7DGcyWrdfdynXbMWfqiup7xgoJLyJVX1U0ZgkgRI363XNTHEqHiY1eFJQ41mJuTEPij3yYtId_lvIk5Ze8v8Tp-EJ3-j8HsTns?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/aKZGF6EZ5-Bw7eDdAstFeECD02h7U9efGAHzDrFft8t4SKqTs5C0HjldH3qDypg4xNBrbA3kHDEj_8uCk53vQNk4HxObC0j2ZwQP5aVnKnONAJQv3DyfJD_MzByShePa2P2dLffTTYoyLxigV4p13ggxmaiWp_AZ25Ip-H5BtD1PmR6gijarjcamfZowSyuG?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/0sVkoYni471cHtviAsr9c8lEurQ9G4nMQLl-djA1OaZTOlap8tEwLbhekLeRVl2OruBbmvKuHLKmwVJ4DMmKamJAF5am2dZ6tV0UjNSMTz36CgL2WJ0KhvBfG4S12lqL5fly7IlQuvb8TQFuIrXXQtCLmdUOwR2gobsjZekIEnPmL2hJxbd2CAKoKM1xCiIy?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/CNjxm16Q77IKJKZzhb39lIRdUoQpq-xqD4g9ZxRPAtFAeAGBdl-M9H5SY0B18Jw_MeXcPlzmGQ0Hjm9StbtRu3OujoZqzFVMy6EJs6_fbIRWGrzbBu9iCXnz9IqU8GaIZ5RZzyQfIsAU6RD2MSK5vXqd0HNV-0m02xvpCyrJhm6jmNMCPosShoYM7pYwNNQt?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/8qNMjh4WjG_2ZEJyTty5r9H5DuSE9BvjgXi6_Hgdyo6Wqvvx_sDq1F-_ijNl07XAwTjlFLg_b1SrkY5Ffobm8epGy6R4EQ5aTpyuVQHcdA-J0EUSHt0UIIOuI3nkCurUw6PB9nLEx_5yjEEn_AvN9GIqzKVrSHaHPnguoKpGfXlmTK5Xv4sQx5dn4mvV_egT?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/RlCShHSmcwVJKYlAIf7Ijd8b-HvMytPt4rX_BDU4cDgeSifJiOQmntIcWY2rEvfwuaV60PiS1YxaahdWUUfS4ixQYfWPOrhMMFZFkDHsM6JATvoaIOu8jPYInHZ3WeWEbnGAOAzHJyfjw2pPDqqU5o4jJ2Q-UEEpKPYH7B6azKWc-q_C7WtxBVr9rR6OeeZ7?purpose=fullsize" width="150" />
-
-Approfondis :
-
-* Consistent Hashing
-* Leader Election
-* Distributed Consensus
-* Quorum
-* Event Sourcing
-* CDC
-* Multi-Region Architecture
-* Failover
-* PACELC
-* Distributed Locks
-* Exactly-Once Semantics
-* Backpressure
-* Hot Partitions
-* Disaster Recovery
-* RTO / RPO
-* SLI / SLO / SLA
-
----
-
-# 🔴 Niveau 4 — Staff Engineer / Architect
-
-<img src="https://images.openai.com/static-rsc-4/vhNU3H0xxLJehshF_MyM_gveRGU9IH5LBkylRI_Z1cngcrSISwWz351sOxbyVFZOduOaiUC3tcQrT5FSNrsA8Ibz6yMJ9aEaVAabfulVM2tiwbukAXVKtLO7vtu3yHdpbFU1CwE8sHMXJKgJCkccWyQef6oJnXO28XqGX2d49t3Xvfmd74HdziGNdHviKCMU?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/wE6CQ53FE8_duUQ7dYXHFA896-c5fxEXyhNJRqdXUNxORSnchmfwS70IYkjlZ1q4plf0PAcKxEV5BRKLjGx5vdSBI8aIqmQuRmGcv6CpDMfnA2I4LbZ5kH_zMgNae4JlFabUmbou13MQicI2A580hl8ZWLvY8vvuh-5r0CPclmBMf1cto5WfHtATmvkZHqKG?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/SoHMg7GE98WARwLUz6vPOM5BfQqfOZTMt3kgC6WZQiX2JeUew39YW_fCcTQUEKHbpL28D02Gv2NZQlVuRPT-UxbgcdMCm68DOkJUYpntZg5LDCdHp6zZUM4E7BHP6TENn506YOtfz08ZsvirboZ_mE2VMmG6B2-aMyrKv0_h-NdsGzzShdTL1s9P5KUwAnQl?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/-cA55b8N9KqiMUPJomIJUK_arIgSEayihNtgUuMTFKTgYkcjeqbnCwr2xPhvUsHQB_xKqVNzbyLXASotkdd9dGu5epJrNNB9cL3c8Bzf1PzyNkwrKFvDySzSmZy7xmojDPBzxAEbMwNLl0MGC-dBuLV9gf3HDbRngft4NGAzbKcw2i5BwgBQdKezDA-tKr1K?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/1mlZiWVA4ST1pzUWRV4E0vV7z2c_Rgo7PCZy3bPv1tOQLsvivBfG0lLNjtTS-EkbxOWShC2QspkTLsV3gBW19EPBY2E0KTV4OKiWk_0fhw3sAC1L9XDx8YC539N_-9DkvaVzqGhU80kc84kybQkn-PA2XbA4WBHXEIL6OdQRxJQwt6m3t-8CF_Bbhg1I2k4V?purpose=fullsize" width="150" />
-
-<img src="https://images.openai.com/static-rsc-4/Xfihbs_AZ3obLHysLVn0tl4p4t34mvRNFzcMI7j6Swc-_Qs3WKzTF2EIWwg_oNheWE1TJpCQPHXdTyAkdFr3n-z_T-2Ri-IUT80wm2Yg3wMttjd9CoBKw2M1Xm5cW_dqvV4oTDwXYsQLOAI0BvUyHQ0SUrNQUxtPLLuUK_RroR0e-3al5njWjeCQWAeRW92M?purpose=fullsize" width="150" />
-
-Enfin :
-
-* Domain-Driven Design
-* Bounded Context
-* Context Mapping
-* Anti-Corruption Layer
-* Strangler Fig
-* Cell-Based Architecture
-* Multi-Tenancy
-* Control Plane / Data Plane
-* Zero Trust Architecture
-* Architecture Decision Records — ADR
-* Evolutionary Architecture
-* Platform Engineering
-* Multi-Region Active/Active
-* Data Sovereignty
-* Capacity Planning
-
----
-
-# 🎯 Ordre que je recommande
-
-Pour éviter de partir dans tous les sens, suis cette chaîne :
-
-**1. Architecture**
-→ **2. HTTP/API**
-→ **3. Load Balancing**
-→ **4. Scalabilité**
-→ **5. Cache**
-→ **6. Base de données**
-→ **7. Replication & Sharding**
-→ **8. Distributed Systems**
-→ **9. Messaging**
-→ **10. Résilience**
-→ **11. Event-Driven**
-→ **12. Transactions distribuées**
-→ **13. Microservices**
-→ **14. Observabilité**
-→ **15. Sécurité**
-→ **16. Cloud / Kubernetes**
-→ **17. System Design avancé**
-
-Pour un Software Engineer travaillant notamment avec **Java/Spring Boot, Angular, PostgreSQL, Docker/Kubernetes et des architectures distribuées**, cette progression permet de relier les concepts de System Design à des situations que tu peux réellement implémenter plutôt que de simplement mémoriser les définitions.
