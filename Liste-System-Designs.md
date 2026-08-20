@@ -7,13 +7,9 @@ Voici la version complète, organisée en **23 catégories**, avec une illustrat
 ## 1. 🏗️ Fondamentaux d'architecture
 
 <img src="https://images.openai.com/static-rsc-4/vtLEQPgACD4ZHsqNFq3XR-4gaGbwn0gmL8IoqUGekO9QxQ8i3SDX8AlDSIJ9E056PFv4Ct4CbJtHA-Q3zRuCDnXjKOrKK36juUezVTmAEbxXiOw957SZ1ohgzMLIRr11Dp6f4IlYibcDKDBWra416bIQJDfoRUc4gTlNGa2ZHP6Z9kZ7_-1v6dOqWlE4n-HJ?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/lK2iDcQkIcqpLygspsHTi2_DANfTpk1XyNa9PP8nu4ngD3b13E4_ewnoa_lV4jSGVAasdqdkW-_lA3rqwa1-EtG5ninWAsytTmgacSlk5j9xI6XzAnJU8E0vxISQYecUpIY13gTvKP2DSA6zQHKm-inKQdSC6kEjv6nU7aRHyjbaMcae4oRN1YkmrKKpB7Ws?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/nUSTU19BornNQM2yFRvOU1ooIDJa9nujXWsLzCjXWbWD6orUYFwMAI1QgM-0Cdae0j-nU34hFh71tNSFj5z0zZNZjzKUUl78YghsYPDC8F31wzpodNGGdUhYg_B3MUQYjZI7qDhLdQDeSbh4h_vDROUJEUVyLVAH1AokjVZgzJ3CnGfR_tJZGHf6nkj8pARw?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/pBhtSGP4JdYOe31iS9H5KIhTL8Lucg5OF0G0JWAvrt8odjOLntCjjl37B8a6ZjCHe-aGzY0i3EV53Lm2A0oyC09NHXigT7ATb0ZTjBDspVtJbjxSL2xS4nWoM61sLC22ypm5F0FhYBpWJnWxg773bMWIC2un93R7EX27r0sIlGajpdsK8v2AKCByRiALr6Bh?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/JdaUz9sp4ln4xO728rxUJwtUIXlK89FQVm-JZ92qFQEyPYmOKe-wNyevdx4oq9KZd8fLdcBPJeq9dG3qMlDolWvch6Ahl13h_4m23OMDVVDcl26tEhmcnSHJ8Shuyd7EoD7ID_SfXA0D7RIU4PGylvtOxOWgWemPR6u5QwaNhN3hXnyzz3101r4hNutqhKIZ?purpose=fullsize" width="150" />
 
 ### Architectures à connaître
@@ -38,13 +34,9 @@ Voici la version complète, organisée en **23 catégories**, avec une illustrat
 ## 2. 📈 Scalabilité & Performance
 
 <img src="https://images.openai.com/static-rsc-4/4ofHBoO8pbHYGrmsco7oCT3f1Nrcpff0bQbK53cN-Tp8u_Y_sciNT-hdYljjUro4Z5jfGt5eGZRTiGBaQcxnR8rBC458BXYyInUaK3rWZAlliIlQwlNXUWOQTPBasm8E8rfRVQBUE02tlBztP100Z6d_pSDCC7FeyVEhzlK5D0gWx5vjl4vpfacjyBwQPgdL?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/AQpVdTVzZDSvzW-_o0-uP8mdj6uJPMQ8TMhBEBkr1JhgA8LvctkC7_MIqiyiJFx1CwMoclSjrtA21SZD3PuP3ubRkFund3A45oHsjPxJ0aycUF_i3cq9mKd_houfO8xBmb_a6-rbc8dQuu8zXFIZ9zqOSxqDVnV3VKHgZe4sLfS7UtY6wgt2D-KFUbcIls5c?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/8a_TWUN3v-DgskLGl3mQD7F4dG0uxmSoJXvpFSbg0yqUFR-qxWqb3TVnYqaOfDMlt4Bv7PgymNa0a8_72n7uxa68kHPpM_fYK7c7WvL5ngZmWoBvvkfJK7vtqB8GYBUbMCC3NwIMov4fuX9zYbct9ZpH5syjzTe0USY2viowWJ_wGy3pIQbHza30ttIz6uxm?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/Eom2pR6f6rChHb_U6Eh0rk1kqaZ9qNqkivXYhWXqn-gMCqc6tOStcvzF1gANc9zulGI8cRAFWWyE6Amwapkd0mZKbM_V-rFwMug5qlC75avHc3WH4btvhQMcdX3KoXYSjeYkORZsq4Cx4sE4w_wUiL8SJZZUObA8mVpyMA8xu8tVMfW1B9SpIWCvK0W-Zkfk?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/kyunyExQArZfg1bnYwMrJncvZC3Az61wiaTXjpu-_SeDsJOE8dRllie0dHVYnrgzFWBzH2Lya84PF-3SXE4-pZjDqfp6HEI1Ippl32hrKGBQ9sH6xwpbV5Bvc3pVWBaXrqWNSFgV8RF7P_Zg1DYiIYT-EbQvrP9X9HlSJcz3oEHUC2O3rKwVEfp6Q4SSMhhO?purpose=fullsize" width="150" />
 
 ### Concepts
@@ -84,15 +76,10 @@ Voici la version complète, organisée en **23 catégories**, avec une illustrat
 ## 3. 🔄 Communication entre services
 
 <img src="https://images.openai.com/static-rsc-4/upDLzON240nmiar59sG3zmtVOwMCW4ArihVs9V8K8ZFsul5pghCVGt06E9kIU0309OuEkjreB-FwcI3x6s2yQm4YuS0pn2EwDbH7cI_DQSiI_iNoExQlLVFcOCurZbSG7gnGKHVvMXGML7BoqVd0VHZnQ1cfADfWzigNNAt41iF0v847KBUUpjg7GMV-zafx?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/41W6dZikkVsNHhtCybbiyr3JS3S6vAvcnw535DuOgzOhPzNFsVNxyHQnfsi7-PuCh9JKYSVSEpVa4YmTNO577oN-GtnBJsO2NGXS9j_IkA2FzjmZ17t3FEibiR9ky-VPgoeQXwzAPp4tUoAHJ-xw4Xpg9pIXy4AXRxcXErCzKkU55wb0fuvyfstiVdJySlBP?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/vn1DqfeKHt17X_V_dl6JTBNtMrSxFZ8F73GjQGtFDBzhrOLBCsVmlbv_IyjUrQKjpDgA2pILiA-BMsdoBtiSIiZy6XbRL2R9i1xuH7Qgx7fna_veie3bXNbm60j9iU1MrhUnYwXU1YjbpMHLI6R5Be-5nMzcNmwvGAR_8rjRwjDouLV6Lg8WPHAINUfrApOL?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/9zEdrz2TPyb_ZW1z843Csx2QnekB6CUqlDhiPv362Mj3JRsTQ0JTeOLqM6_V4xnOQLoYcb0AffodDcyAL30QU3Rz7nYP-0IIJY4gwwR9rRv_ShfnLlnkTu9lxeKpR39Ecn2jktTpUAeUQ-H0VmHI1ONZecZSeQWrEcKu7vf_MwB5Y2Yr9xWNQFEHk2IYdxeZ?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/tDr2NlHI6cBma8Rn882Hri88iBO2vsdUjBBrrvJmErFuyR6woeVeU7ApvGxhfrKK25dZeIlw-OM0sETi61Ms7u-HbHNx1XtNOkO2xPvHWcWxQhvcQ-ZTbkzeMp1oJ23aPLZWNd5dXpfL70Ki59o5wbYKk_zu4aeVzfmDeOoL5qqa-zXJ8TT8BvkhBEfEHArv?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/nI94fod64bq6YAR4pBcbgwxveB3U4RIrxCtxncmReW5jrNRWo4sl53L-dZXeMX3K3p34RmLhqqm41hTyyDRSs4rqXymUi24xljn5FAHl0aFvj5Fx7yd6laQI5mOgCIuzhdzT1jtWakDATdgiykkxNVj3ZNd4ftLiBvaK713g168SoATSB1mV7eBWIO3YAnbU?purpose=fullsize" width="150" />
 
 ### Communication synchrone
@@ -133,13 +120,9 @@ Technologies typiques :
 ## 4. 🚪 API & Edge Architecture
 
 <img src="https://images.openai.com/static-rsc-4/6kc4dPTyxCwWPtylqTHYfnPzxYbSHq6Kfp5fpEIuOx8es3bKjI45wLFr0pj81wxeBre2bm7ZYH2cwEjuvKse8IlEAN2p3XYv7v3j442oYIU0GpMffMohZXAzxoAvyM0Z47vfB8-i7rtkVd0OtMmTuyiI3_EfRdV7H8i5xmU-gT8_YwqHcMvpaZnx2Doyt9Od?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/RvLpDgfbsNZuwNHThfiTBksh07zuIfCUMC5QD2KZejXMk1JYhcmeeGsEk30MdsE1tG8S2ECKNx-wkSSLwIxbGu1KJOQdlxLpUZEbKabe3AlX8ZkoDbX8zMvKg1zZkYOizBAXkXT2aZaP1wsk2022FFU7RfjSpCXUoDPMWXqL5RkD_6o7oaYnPXBGIN2PaVPY?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/uGIUBWITDX_bQcB4YaHut6K1iR8rgqRi5IYkfevRJqHLYLaRaGd9HLmG65ZJpWLcQuu7zScfA7ZdAT42tx6wH-A_l9-q8RRl56mUG7ZIo7FDbwVAvH1S5P9lagMguxNXycIlcUhyjVF_CTdfc8aeGardmXvppxGHDIxw3cZavrO5_A6s6OqhBpW6oiP2EDNP?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/-8U9zD55TVPRx1UDhKqTmiR67YLohaXUs88LIJYTU74Wx0zfy0fGwOBAUbVaxs6YB0OVQb9H_wOktrfZZ1Vl2lmzBLMWzuFNBZcqzGZcJzb92bAPdgnsNy0fDYOUWbISHrvNehu_G-w26ebVKdKkfkv7JwP8IUyqHlqwcTwiClCH5S9iqHb9ytSGguof5yje?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/KhVUTiasJOkx7FQylh78M2c3_U5XsTJYW4RrxwMHc0m_IjRR-LP72VE5SYopxUNUegvB6bDPHEQRsRmc66O6rmfKbMlx-U_F8mC3exRb46NanFfhPWAP5pf4mREZuGA_Bfdmw_DfE_IEq0lsXvXXtPqZrtwwig46uddJvNf2SYHGlWxB-vavw2GpnYaLXF94?purpose=fullsize" width="150" />
 
 ### Patterns
@@ -172,15 +155,10 @@ Technologies typiques :
 # 5. 🛡️ Résilience & Fault Tolerance
 
 <img src="https://images.openai.com/static-rsc-4/wwDVDM7SCFfYzrKp6MaoQTPkX-EwcLCll0pHzNjNAc5gaM7yyU_W931IXNxfyI72JVv4xFBtPuMtbbNSQ1jM7yDZd5R2VfES7N2SH-Yn4K-XWpCeoZ0qul7M1ME6bwv4IV3Oh9AShAbAEbVSo43P1XONZEwgt8d7gC0Ax7Kp-GUpj0hHa8rHpJmXWAndmNzX?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/FbGcOQGa-LWSKiMhe0OOiv2uz39ILUBupqfnLr8pP0J0VEtNiRj8oPsg_m3TsG8KUifZvzULsQtKcr7GMsvh3m_h29k9Q5wEWpz1QV45oiUmZD03UusQNvIiI7XsNQKn2o-DegzYNuKuMCZ0XJM_X7h6shP7zUfHhKyvIZvnpUae3Edu3inlOScENxb_PSpX?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/VvvfTKtL6HizZ743PwcimF9-Qel6OpFi9_uiJcOUHSo7v7u5DeLgdZFdBKbI7ZKGQFXX9OnHj9JIWo3YmlNWHZqqBJWfeLLevYtU5Z4W_0EHVTErxRKCJJzMQozd32QxLUlql1E-_5jHwWYC7NGtAfpmgCXVEGBYgI4rlev00usP9u5i3zPCHLNmBoisUWy7?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/WeaC83d4BFrtzpYse2lzaxs7ZyslsITGXDOn2PQylvFowW6A-SC8f_KsqwoLn6SbsnGGMiQyJBWoHa2JTG8ljU2SNDss1JUfP2-VCsfG2EaQctudCrPYdbBkMuzXd5JkYsot22YrUAuQYANJToDMo-p2fd_EdY2LrhN6qqTCqeM_69h1LG0HjvrVBKZR53xe?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/DOEr1COBI7o2631TYuKlTb7VRXMssUIAoo62Ku7qgUHq3qjz5JcUD626YOWQ4Ff7wWctEzf-ZDVFQb9L3TxlHNORN9DyBKMEBuRXlZqqcXnGm_rqxA6dHE7GIwo6Jow2oVsy-I0968idWKdxr6oebnJEb_v0X9RQMiCya2Wx8DW3ySwhINgpUpLsOy470-4i?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/XBWksod7o6nbNPPzkHOlP46BpnM2Hfk_j_qsTDrJ86C83SrVRUtNNdXlhg1k_A7KGGq2NgsITEOCRZI6H2gbRk_Xl3mKCebPR4q2qlCoZzg5ytyefFQedbm4yd40TMwHvpZ07kccBdl7ZN6E0DmNCFXsr0lv3F_5fZM3KVtV3K-Giog1PIrI9e_cpiaBU_T2?purpose=fullsize" width="150" />
 
 ### Patterns essentiels
@@ -211,13 +189,9 @@ Une combinaison classique :
 # 6. 🌐 Distributed Systems
 
 <img src="https://images.openai.com/static-rsc-4/fNJ9v5xJA_zmqfcvM9TYOKlR_LzryVbVIiX2xkKGKLc-Ojc1cVXc_lmUPGTWpu8V21_k5I9F9ytFlN7SFKZ5MnhwdKsGftGKH9EGlmx4Ij6REC-_obvfrg_xlAcouUXCOenqtQ4JL78HlvX2hIrmUok0bqk04PgPU--goesxj_IKI6MKAZrAbsUPdwgo-NOg?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/QpPlMGQwDqCOiD9pyDVhvi2gehdPMO2JwlbLXZvB_wCGS-KdBshRurdeaOcgCkPDzRgmVIo_d8UWG4rxFXuaTWWWTuavxBAcBs0cBzjQh65LiMYzYpeZ2y03BYgLSuasEyxEIrIYH7As8XpRxrPNbGFcgRL3GNxgTDcfXy6qpo6KkklE4G4Ziu6kYeFKWkVA?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/c46qAs_NIr6Ko3OCPhCIi2yojekpbiiGcoKcAHDN4rM-t8mLkKWZKOM6cnMy8zMqHyFQJREL3SCLN5PBbNKMOM737INsWL9couy1Pk0HgKiPk4cCa3-s_oNo-aqEUBZUrGemqdzI3jdfeOC6WVF0du4QLZeUP9Fa5XmZYU5MKsZ3Y3iSsvOUCyUGJW8a5ISP?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/GxMU_6arhFcf-iX8aHt8YJScU5dzfA1rIQwzCETKlAMuN56dwA8AiAT7CqDWHvTVfXu3h8MCt1s4QPpWaMJmMahbQnce-gy8BjGlTEQlTY0F8mmgbpq-snEPrEnxlVMie9Xith86Y5t0fI2n8nE2Uzk06hiwlMeAKSV7zympispmzWwQOUeWBnY4wIYcnzvX?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/jmicxyq6z3iwgCywS31jkBkYYt1zChVzLA1Ru-o9LjT7cSThhAqyWBfp7cSJWYzqRRi77fB1-tMUYF2WNegz7n7LGm3I_9KxcxK4GcU7QvThpZxWKDoxIXJHInCLPbbalfTxuNxKGw47WcuZF6kmoyc2bupiHYW9QVWrT1DpDzIo9UIoNHYjeRr_pnBQ6dSq?purpose=fullsize" width="150" />
 
 ### Concepts fondamentaux
@@ -251,13 +225,9 @@ Une combinaison classique :
 # 7. 🗄️ Gestion des données
 
 <img src="https://images.openai.com/static-rsc-4/O0wfKg72IOoa8HvaPIrqyHu4_PHhOH9Obgt5c25H8EuiNb1Xe5E192a0KXT1szWWoE6DqiWEb3AVqMPJkfTs5AW4xc4UVwuj7ZGCuIBf1wSFev8Z3G4GYUnwXOQLTN8T43z14VgvvitYG3My6sIfbO48OMrmqWdQwy5-Spy1lk5lJ9UjTqdW-D2gkVT9hKL7?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/WAa4u3N_jECQb0pwx9RaeGpTvwKC4S1L66gk8rF2L3ZYrw3DPIN0U0YYNREjgQpUD_oXPghN0lxMn0_MTbo98NhWV1Ra1TU8aLdVS7UTVfzPg6HCzcA3uWDXgLBN4UxfQf49fDGcL4Xul8nHic1F0CZ5bggFEywq5tWISv1RF0zpXu6ipyKjg5VOEtLXtSZq?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/lRrznvnF1KB5nzIHtkE1GmC6Zj3ncPUBou2nWhSIL4eNwQiShsVYg1Z79-v0bOyhFf-F4XavSN7n1cDBY-Q5-NELBz5gi4c4zx4xwVHiTjT1ghHyZ09M6lrhwh-gs9xeOCs7tXClhXtporrMdLIuVRwR4P47FZjxih7NLzv6rMetdEKUzMTE0nLhGzjpHEER?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/hpdU3Eu5w2Gu8msR8dFZCRrH5upRrYq21Q4qRNFlTPTo82rIPEa0mNvjaT-Ko6qagyS7VYk1tiuZpmWFI4pNUSEdk_yTDIzjgKJ0I6bWOmzv1Rll2st32KKCxLALtIiJ55d4ATXVCJo0qhX3vPVir-xxYX14QwyLwESzaHdpTxBo4H0wAGQ0k23BUhA_W1Zg?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/3q7liG0sOfntO5FtFj3p_EEhOXVfm4loQp5AmhmHQtxO5SrEV_bfNMpzdV6zWfkcPqst85GS7-Xt8QcbkbjZSPpuIhXAFgR7orKoq-XKAI23Gb-OcAN1SLDuMOCivrfbM2QAeh0Ds-9oVPvJ-uRhLiYyWDNURHxXWiEBKj7wAb0Sv8Ut9Cn2F4q9-CuZdV4E?purpose=fullsize" width="150" />
 
 ### Types de bases
@@ -292,15 +262,10 @@ Une combinaison classique :
 # 8. 💳 Transactions distribuées
 
 <img src="https://images.openai.com/static-rsc-4/IB0aUaIGV_QMLrDs0PmdjBtpQQRVTgqzDsUgoOQdwDFDutH-A_l7pWELZQNLh-hl5tDn5ma2EBR5NkAk-w5WXoNq__F3TxH0XkRu2iwJT-B5E0HlmjKq3KdYsa7PbZgBXU1WGFcNSRqElcwGXDLOld2XiRFN955WaIWs3wv3MkJAq9YRczbB-4lFIhZ9MCI3?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/xmiCtXUG6n5LdCGIyA2cObENXJjXNhmVR_taOZx0wPdXJeSibx7quUgeT9uzkgMbiad6o55tNWxcsmZ7GV4HGZVJTE9mLgo4uNvtr1MQwdE4rR8px_MW_ix5B23wZYbNW5Dw2dxoN-CFB5UXw75jzcva6BNGhB4S5zxX4h4DVaAcRS25wfv-IM2DHO6lScCz?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/SiVfFD77mwaIp4Fa3mZU1HL8Kg8YUzuSfUXHgN-VVPLPI_E1e6el-SGkMGJpuY9JxtAXaMKgp5nR0R76pY4_MuJdnp-rDvebK1FGZF3pMK9KLxwECkUS07mZ1pcg5rwxnKN13EM-BeL2cOUxbt4N8sTbd_zOkhf92DF0hPZyb37xfScqT4kffgMp-Pzl869i?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/22lJH_K2tscI_8Vd18OPR-CVqNZ0MXGa9VDZAwGgawx0Z8JBHcdHovTn2OpdxkQF2X8X-J7gDgrNKlV6jcIj0AEhOt9l9nEOdQPfeKrL9DYL9RRP1T807P84SCvnDOh30UFn5kiq69S4lQP8LSLvxUoZZejC2OBUFGu5xIcmw6niwMlPvot73PQC15F4IAAd?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/YDHEXXWa_aiRMncxDdpKRA7-jm0uZ3MKPNYaGVi2P_Ek_xNAGw8n6_Dg1FG5Hn8S5dCoShpWKsJxYboVVyMRPWr7uoUYmHa6boKny5EsD8TZ_cRj0-7NVeh12Kw8qpcl7zLYsDQthnSD3P_H5Pci0BH2V4lZaLKVqyVtjCRJl7LGaQPp2iUmzBgyKTQ5IpYO?purpose=fullsize" width="150" />
-
 <img src="https://images.openai.com/static-rsc-4/HT6P2m0D9Ber1W-V0qfkM7KRhNVlb6KqC0S0jnt4-Jsllt1wP7GFqS4M7nXTiXd-azlmSXuJPPfnGtQU7S2DjwkGxH0caXGemJnRFBjXmBH9ppy6P1YfvCrt9okpVRUf2ix_4oQosk6I6JePdU06pXq7WYZHjET_cevRLXgItMVKRYNtIIpU7fd7Ud0njSkl?purpose=fullsize" width="150" />
 
 ### Concepts
