@@ -1,6 +1,6 @@
 # 🧠 System Design — Roadmap complète pour Software Engineer
 
-Voici la version complète, organisée en **23 catégories**, avec une illustration pour chaque grande notion, puis les concepts à maîtriser. À la fin, je conserve une progression **Niveau 1 → Niveau 4**.
+Voici organisée en **23 catégories**, un Roadmap de System Design pour un Développeur FullStack avec une illustration pour chaque grande notion, puis les concepts à maîtriser. 
 
 ---
 
