@@ -6,11 +6,13 @@ Voici la version complète, organisée en **23 catégories**, avec une illustrat
 
 ## 1. 🏗️ Fondamentaux d'architecture
 
+<div>
 <img src="https://images.openai.com/static-rsc-4/vtLEQPgACD4ZHsqNFq3XR-4gaGbwn0gmL8IoqUGekO9QxQ8i3SDX8AlDSIJ9E056PFv4Ct4CbJtHA-Q3zRuCDnXjKOrKK36juUezVTmAEbxXiOw957SZ1ohgzMLIRr11Dp6f4IlYibcDKDBWra416bIQJDfoRUc4gTlNGa2ZHP6Z9kZ7_-1v6dOqWlE4n-HJ?purpose=fullsize" width="150" />
 <img src="https://images.openai.com/static-rsc-4/lK2iDcQkIcqpLygspsHTi2_DANfTpk1XyNa9PP8nu4ngD3b13E4_ewnoa_lV4jSGVAasdqdkW-_lA3rqwa1-EtG5ninWAsytTmgacSlk5j9xI6XzAnJU8E0vxISQYecUpIY13gTvKP2DSA6zQHKm-inKQdSC6kEjv6nU7aRHyjbaMcae4oRN1YkmrKKpB7Ws?purpose=fullsize" width="150" />
 <img src="https://images.openai.com/static-rsc-4/nUSTU19BornNQM2yFRvOU1ooIDJa9nujXWsLzCjXWbWD6orUYFwMAI1QgM-0Cdae0j-nU34hFh71tNSFj5z0zZNZjzKUUl78YghsYPDC8F31wzpodNGGdUhYg_B3MUQYjZI7qDhLdQDeSbh4h_vDROUJEUVyLVAH1AokjVZgzJ3CnGfR_tJZGHf6nkj8pARw?purpose=fullsize" width="150" />
 <img src="https://images.openai.com/static-rsc-4/pBhtSGP4JdYOe31iS9H5KIhTL8Lucg5OF0G0JWAvrt8odjOLntCjjl37B8a6ZjCHe-aGzY0i3EV53Lm2A0oyC09NHXigT7ATb0ZTjBDspVtJbjxSL2xS4nWoM61sLC22ypm5F0FhYBpWJnWxg773bMWIC2un93R7EX27r0sIlGajpdsK8v2AKCByRiALr6Bh?purpose=fullsize" width="150" />
 <img src="https://images.openai.com/static-rsc-4/JdaUz9sp4ln4xO728rxUJwtUIXlK89FQVm-JZ92qFQEyPYmOKe-wNyevdx4oq9KZd8fLdcBPJeq9dG3qMlDolWvch6Ahl13h_4m23OMDVVDcl26tEhmcnSHJ8Shuyd7EoD7ID_SfXA0D7RIU4PGylvtOxOWgWemPR6u5QwaNhN3hXnyzz3101r4hNutqhKIZ?purpose=fullsize" width="150" />
+</div>
 
 ### Architectures à connaître
 
