@@ -4,7 +4,7 @@ Oui. Je te propose un **vrai tutoriel progressif**, en partant de ce que tu conn
 
 # 1. Quarkus, c'est quoi ?
 <!-- Image 1 -->
-<img src="https://images.openai.com/static-rsc-4/6j0lGTarI123EQzaMIZa-wS38GGmCuYG8fjAmYWhReOd6BcIVftwHNqscJnsnhYfnP7idnyTpXjS0RCLVeb8yJjeLXts0sX-jhihB-o_v_hOXsmlyvuSIgoGEtLVCzub_I075B5ARN5OcMCQDgew-JLfyfM3TpO33uVLr1RRxdUaPU4vOtmSla0UbxsaxHGF?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
+<img src="https://images.openai.com/static-rsc-4/6j0lGTarI123EQzaMIZa-wS38GGmCuYG8fjAmYWhReOd6BcIVftwHNqscJnsnhYfnP7idnyTpXjS0RCLVeb8yJjeLXts0sX-jhihB-o_v_hOXsmlyvuSIgoGEtLVCzub_I075B5ARN5OcMCQDgew-JLfyfM3TpO33uVLr1RRxdUaPU4vOtmSla0UbxsaxHGF?purpose=fullsize" width="500" height="500" style="object-fit: contain;" />
 
 <!-- Image 2 -->
 <img src="https://images.openai.com/static-rsc-4/UlYRxd9g-8b2tSZf4dPsVBh2skCuy8r9y43ZSSMs7UnjdQgTw85n4jQKw824KYj9KnGeuixD3jI0lgmpFLwEQ2inD5XRJzt4kzkKFpsG2h_u_-T6pZkROVLLt_fvpaB19uq_4IArHgJHiR3xwDCfuQe-4ZWgymLbAR6kRdjRS5XEn0No3Dgz4qjkxLlvKPlr?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
