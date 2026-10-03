@@ -4,7 +4,7 @@ Oui. Je te propose un **vrai tutoriel progressif**, en partant de ce que tu conn
 
 # 1. Quarkus, c'est quoi ?
 
-<div>
+<div align="center">
 <!-- Image 1 -->
 <img src="https://images.openai.com/static-rsc-4/6j0lGTarI123EQzaMIZa-wS38GGmCuYG8fjAmYWhReOd6BcIVftwHNqscJnsnhYfnP7idnyTpXjS0RCLVeb8yJjeLXts0sX-jhihB-o_v_hOXsmlyvuSIgoGEtLVCzub_I075B5ARN5OcMCQDgew-JLfyfM3TpO33uVLr1RRxdUaPU4vOtmSla0UbxsaxHGF?purpose=fullsize" width="300" height="300" style="object-fit: contain;" />
 
@@ -15,14 +15,17 @@ Oui. Je te propose un **vrai tutoriel progressif**, en partant de ce que tu conn
 <img src="https://images.openai.com/static-rsc-4/DEOxkFVgYJ9txmNMHxP0JCRb15MLQjZbtuJbs8gloBJ_Pp2GMaYud5DgB7jis2_K2NykfXwh8hd8u58bjeReHPBfTCnmG8CFs_E2o50e9bCpboXG4kgtom9LBEgatrLcHdJrTts_Y9uAiypOt0wFIQT9TcbFsJKtbiITaqN9NsKBeYiUDs2Tz6bOXQDBZ8gd?purpose=fullsize" width="300" height="300" style="object-fit: contain;" />
 </div>
 
+<div align="center">
 <!-- Image 4 -->
-<img src="https://images.openai.com/static-rsc-4/irVCDcNa3Z408JELdek750jvLkhIjvxuKyihJmjtuJnOaLgO-sTWZwwZl0KBQHWBT7hBaXLuTvenjAaCGiK2XE5rm9C4fJ5dctXbbTcjH3vyWcdlkOOaKd4lnDkAa98GjZZQEx8PWNOkxNGPS7XjV6zG540WWMm5W-KpKiJSN6qQVI7Ap3MF0OxifcielZTG?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
+<img src="https://images.openai.com/static-rsc-4/irVCDcNa3Z408JELdek750jvLkhIjvxuKyihJmjtuJnOaLgO-sTWZwwZl0KBQHWBT7hBaXLuTvenjAaCGiK2XE5rm9C4fJ5dctXbbTcjH3vyWcdlkOOaKd4lnDkAa98GjZZQEx8PWNOkxNGPS7XjV6zG540WWMm5W-KpKiJSN6qQVI7Ap3MF0OxifcielZTG?purpose=fullsize" width="300" height="300" style="object-fit: contain;" />
 
 <!-- Image 5 -->
-<img src="https://images.openai.com/static-rsc-4/e6LUEkhotgrmecEszUPsldEoNaCshV4AnYAnamPA-LFSMraliPchThzoJoYskWovefXGG1e97RDdBQ5KW02M4K2zbvmA1daRPEcRNeEqsqFzkm-XSG9PfnCxsLt4pXQxM7qqVqaGvnyfkCv7OSlTHzwUrxXfzUN0C5KODqY1lsZx0WpHz0ZVArUKpFDLIuf2?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
+<img src="https://images.openai.com/static-rsc-4/e6LUEkhotgrmecEszUPsldEoNaCshV4AnYAnamPA-LFSMraliPchThzoJoYskWovefXGG1e97RDdBQ5KW02M4K2zbvmA1daRPEcRNeEqsqFzkm-XSG9PfnCxsLt4pXQxM7qqVqaGvnyfkCv7OSlTHzwUrxXfzUN0C5KODqY1lsZx0WpHz0ZVArUKpFDLIuf2?purpose=fullsize" width="300" height="300" style="object-fit: contain;" />
 
 <!-- Image 6 -->
-<img src="https://images.openai.com/static-rsc-4/Ol3Sz0eSsSCNwmRUbBlthAg-LiDdnlxma4l77YlXazyxu6P5PoilXpRvGRusnGDBTNpO-Lm3juD0Ysz3OjbYiGnh-W7XyENrqVVjy88tLfDcmc0M66cwRmm6ghqGhOVCk8c9Cpo1qyghI2w89GJbzLVdkIucu7Eijb19gi8KoIPe3a97iBINpY4QE1YTZrDq?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
+<img src="https://images.openai.com/static-rsc-4/Ol3Sz0eSsSCNwmRUbBlthAg-LiDdnlxma4l77YlXazyxu6P5PoilXpRvGRusnGDBTNpO-Lm3juD0Ysz3OjbYiGnh-W7XyENrqVVjy88tLfDcmc0M66cwRmm6ghqGhOVCk8c9Cpo1qyghI2w89GJbzLVdkIucu7Eijb19gi8KoIPe3a97iBINpY4QE1YTZrDq?purpose=fullsize" width="300" height="300" style="object-fit: contain;" />
+</div>
+
 **Quarkus est un framework Java conçu pour les applications cloud-native**, notamment :
 
 * microservices ;
