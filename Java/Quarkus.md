@@ -3,19 +3,23 @@ Oui. Je te propose un **vrai tutoriel progressif**, en partant de ce que tu conn
 > **Versioning :** la documentation officielle actuelle de Quarkus indique une branche 4.x ; certaines extensions affichent actuellement des versions 4.0.0.Beta1. Les exemples ci-dessous utilisent les API Quarkus modernes (`quarkus-rest`, `quarkus-rest-jackson`, Panache, etc.). ([Quarkus][1])
 
 # 1. Quarkus, c'est quoi ?
+<!-- Image 1 -->
+<img src="https://images.openai.com/static-rsc-4/6j0lGTarI123EQzaMIZa-wS38GGmCuYG8fjAmYWhReOd6BcIVftwHNqscJnsnhYfnP7idnyTpXjS0RCLVeb8yJjeLXts0sX-jhihB-o_v_hOXsmlyvuSIgoGEtLVCzub_I075B5ARN5OcMCQDgew-JLfyfM3TpO33uVLr1RRxdUaPU4vOtmSla0UbxsaxHGF?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
 
-![Image](https://images.openai.com/static-rsc-4/6j0lGTarI123EQzaMIZa-wS38GGmCuYG8fjAmYWhReOd6BcIVftwHNqscJnsnhYfnP7idnyTpXjS0RCLVeb8yJjeLXts0sX-jhihB-o_v_hOXsmlyvuSIgoGEtLVCzub_I075B5ARN5OcMCQDgew-JLfyfM3TpO33uVLr1RRxdUaPU4vOtmSla0UbxsaxHGF?purpose=fullsize)
+<!-- Image 2 -->
+<img src="https://images.openai.com/static-rsc-4/UlYRxd9g-8b2tSZf4dPsVBh2skCuy8r9y43ZSSMs7UnjdQgTw85n4jQKw824KYj9KnGeuixD3jI0lgmpFLwEQ2inD5XRJzt4kzkKFpsG2h_u_-T6pZkROVLLt_fvpaB19uq_4IArHgJHiR3xwDCfuQe-4ZWgymLbAR6kRdjRS5XEn0No3Dgz4qjkxLlvKPlr?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
 
-![Image](https://images.openai.com/static-rsc-4/UlYRxd9g-8b2tSZf4dPsVBh2skCuy8r9y43ZSSMs7UnjdQgTw85n4jQKw824KYj9KnGeuixD3jI0lgmpFLwEQ2inD5XRJzt4kzkKFpsG2h_u_-T6pZkROVLLt_fvpaB19uq_4IArHgJHiR3xwDCfuQe-4ZWgymLbAR6kRdjRS5XEn0No3Dgz4qjkxLlvKPlr?purpose=fullsize)
+<!-- Image 3 -->
+<img src="https://images.openai.com/static-rsc-4/DEOxkFVgYJ9txmNMHxP0JCRb15MLQjZbtuJbs8gloBJ_Pp2GMaYud5DgB7jis2_K2NykfXwh8hd8u58bjeReHPBfTCnmG8CFs_E2o50e9bCpboXG4kgtom9LBEgatrLcHdJrTts_Y9uAiypOt0wFIQT9TcbFsJKtbiITaqN9NsKBeYiUDs2Tz6bOXQDBZ8gd?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
 
-![Image](https://images.openai.com/static-rsc-4/DEOxkFVgYJ9txmNMHxP0JCRb15MLQjZbtuJbs8gloBJ_Pp2GMaYud5DgB7jis2_K2NykfXwh8hd8u58bjeReHPBfTCnmG8CFs_E2o50e9bCpboXG4kgtom9LBEgatrLcHdJrTts_Y9uAiypOt0wFIQT9TcbFsJKtbiITaqN9NsKBeYiUDs2Tz6bOXQDBZ8gd?purpose=fullsize)
+<!-- Image 4 -->
+<img src="https://images.openai.com/static-rsc-4/irVCDcNa3Z408JELdek750jvLkhIjvxuKyihJmjtuJnOaLgO-sTWZwwZl0KBQHWBT7hBaXLuTvenjAaCGiK2XE5rm9C4fJ5dctXbbTcjH3vyWcdlkOOaKd4lnDkAa98GjZZQEx8PWNOkxNGPS7XjV6zG540WWMm5W-KpKiJSN6qQVI7Ap3MF0OxifcielZTG?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
 
-![Image](https://images.openai.com/static-rsc-4/irVCDcNa3Z408JELdek750jvLkhIjvxuKyihJmjtuJnOaLgO-sTWZwwZl0KBQHWBT7hBaXLuTvenjAaCGiK2XE5rm9C4fJ5dctXbbTcjH3vyWcdlkOOaKd4lnDkAa98GjZZQEx8PWNOkxNGPS7XjV6zG540WWMm5W-KpKiJSN6qQVI7Ap3MF0OxifcielZTG?purpose=fullsize)
+<!-- Image 5 -->
+<img src="https://images.openai.com/static-rsc-4/e6LUEkhotgrmecEszUPsldEoNaCshV4AnYAnamPA-LFSMraliPchThzoJoYskWovefXGG1e97RDdBQ5KW02M4K2zbvmA1daRPEcRNeEqsqFzkm-XSG9PfnCxsLt4pXQxM7qqVqaGvnyfkCv7OSlTHzwUrxXfzUN0C5KODqY1lsZx0WpHz0ZVArUKpFDLIuf2?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
 
-![Image](https://images.openai.com/static-rsc-4/e6LUEkhotgrmecEszUPsldEoNaCshV4AnYAnamPA-LFSMraliPchThzoJoYskWovefXGG1e97RDdBQ5KW02M4K2zbvmA1daRPEcRNeEqsqFzkm-XSG9PfnCxsLt4pXQxM7qqVqaGvnyfkCv7OSlTHzwUrxXfzUN0C5KODqY1lsZx0WpHz0ZVArUKpFDLIuf2?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/Ol3Sz0eSsSCNwmRUbBlthAg-LiDdnlxma4l77YlXazyxu6P5PoilXpRvGRusnGDBTNpO-Lm3juD0Ysz3OjbYiGnh-W7XyENrqVVjy88tLfDcmc0M66cwRmm6ghqGhOVCk8c9Cpo1qyghI2w89GJbzLVdkIucu7Eijb19gi8KoIPe3a97iBINpY4QE1YTZrDq?purpose=fullsize)
-
+<!-- Image 6 -->
+<img src="https://images.openai.com/static-rsc-4/Ol3Sz0eSsSCNwmRUbBlthAg-LiDdnlxma4l77YlXazyxu6P5PoilXpRvGRusnGDBTNpO-Lm3juD0Ysz3OjbYiGnh-W7XyENrqVVjy88tLfDcmc0M66cwRmm6ghqGhOVCk8c9Cpo1qyghI2w89GJbzLVdkIucu7Eijb19gi8KoIPe3a97iBINpY4QE1YTZrDq?purpose=fullsize" width="80" height="80" style="object-fit: contain;" />
 **Quarkus est un framework Java conçu pour les applications cloud-native**, notamment :
 
 * microservices ;
